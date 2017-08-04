@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Lesson 2: Essential Content Markup</title>
+    <meta name="description" content="Introduction to Intelligent Markup">
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="canonical" href="http://localhost:4000/lessons/02-content-markup.html">
+    <link rel="alternate" type="application/rss+xml" title="Web Design I" href="/feed.xml">
+
+    <!---->
+</head>
+<body class="container-fluid">
+<nav class="site-header navbar row">
+    <div class="">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#site-nav" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="site-title navbar-brand" href="/">Web Design I</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-default" id="site-nav">
+            <ul class="nav navbar-nav">
+                <li><a class="page-link" href="/lessons/">Lessons</a></li>
+                <li><a class="page-link" href="/activities/">Activities</a></li>
+                <li><a class="page-link" href="/support/">Support</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="pagify page-lesson">
+    <h1 class="page-title">Lesson 2: Essential Content Markup</h1>
+    <div class="content">
+        <h3 id="introduction-to-intelligent-markup">Introduction to Intelligent Markup</h3>
+
+<p>With an overview of HTML under your belt from the last module, you should recall that HTML is simply a “language” we use for marking content with tags that provide structure and meaning to the content for the context of the World Wide Web.</p>
+
+<p>The basic markup we’ve covered so far allowed us to create a valid HTML document:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+    <span class="nt">&lt;head&gt;</span>
+        <span class="nt">&lt;title&gt;</span>Page Title goes here<span class="nt">&lt;/title&gt;</span>
+        <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"UTF-8"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/head&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+        Content goes here ...
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre>
+</div>
+
+<p>But this is pretty boring, right? No interesting content here. So how do we get from here to something more interesting like, say, the content on this page, with headings, paragraphs, and lists?</p>
+
+<p>Many people have learned basic HTML like we covered in the last module. But what separates the professionals from the newbies is attention to detail and a knack for fine-tuned ability to apply the most appropriate markup possible to the content at hand. Many people overlook these details because they are not complicated. And while they can become second nature to a trained expert, they are also taken for granted by many cursory content writers.</p>
+
+<p>These crucial skills come down to this: can you distinguish a heading from a paragraph and a paragraph from a list?</p>
+
+<h3 id="block-level-content-markup">Block-level Content Markup</h3>
+
+<p>A small set of elements provide the backbone  for all other tags. These are the block-level content tags that include headings, paragraphs, lists, and block quotes. A larger set of inline elements provide the ability to mark more nuanced content.</p>
+
+<h4 id="headings-and-paragraphs">Headings and Paragraphs</h4>
+
+<dl>
+  <dt><strong>2.1: Paragraphs and headings…</strong></dt>
+  <dd>…form the backbone of well-structured web content. HTML offers the <code class="highlighter-rouge">&lt;p&gt;</code> tag for paragraphs and six levels of headings, <code class="highlighter-rouge">&lt;h1&gt;</code> – <code class="highlighter-rouge">&lt;h6&gt;</code>.</dd>
+</dl>
+
+<p><strong><em>Read chapter 2 (pp.40-44, 52) and chapter 3 from Duckett.</em></strong></p>
+
+<p>The author has introduced us to a number of tags that help us mark HTML content. He has also introduced the subject of semantic markup. Let’s review some important tags that were covered:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">&lt;p&gt;</code> – Paragraph – This tag is the most basic of tags for text content. If you’re not sure what content is, start by marking it as a paragraph.</li>
+  <li><code class="highlighter-rouge">&lt;h1&gt;</code> – Primary heading – This tag is used to mark the single most important heading of a section or page. In most sites I build, I use this to mark the branding or site’s name.</li>
+  <li><code class="highlighter-rouge">&lt;h2&gt;</code> – Secondary heading – This tag is used to mark the direct subheadings under an <code class="highlighter-rouge">&lt;h1&gt;</code> tag. In other words, if I was to make an outline of the heading structure (headings, sub-headings, sub-sub headings, etc.) of my web page, <code class="highlighter-rouge">&lt;h2&gt;</code> tags would be the point in the outline directly underneath the <code class="highlighter-rouge">&lt;h1&gt;</code> tag.</li>
+  <li><code class="highlighter-rouge">&lt;h3&gt;</code> – Tertiary heading – Like the <code class="highlighter-rouge">&lt;h2&gt;</code> tag, this tag marks subheadings, but this time, subheadings that fall directly under the <code class="highlighter-rouge">&lt;h2&gt;</code> tags.</li>
+  <li><code class="highlighter-rouge">&lt;h4&gt;</code>, <code class="highlighter-rouge">&lt;h5&gt;</code>, <code class="highlighter-rouge">&lt;h6&gt;</code> – Fourth-, Fifth- and Sixth-level headings – These three tags each mark successive levels of subheadings each under the one higher in the “outline.”</li>
+</ul>
+
+<p>It may be tempting when you’re learning to use a heading level in order to make a heading look larger or smaller. But this is not semantic! When we’re writing HTML we should be focused on the meaning of the content—the semantics of the content. We will affect the appearance of elements later with CSS (size, color, weight, spacing, font, etc.).</p>
+
+<h4 id="long-quotations">Long Quotations</h4>
+
+<dl>
+  <dt><strong>2.2: Long quotations…</strong></dt>
+  <dd>…can be marked with the <code class="highlighter-rouge">&lt;blockquote&gt;</code> tag.</dd>
+</dl>
+
+<p>One final helpful tag to discuss is the <code class="highlighter-rouge">&lt;blockquote&gt;</code> tag, which is used to mark a long quotation. If a quotation takes up an entire sentence or more, use <code class="highlighter-rouge">&lt;blockquote&gt;</code> to identify it. Check it out:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;blockquote&gt;</span>
+    <span class="nt">&lt;p&gt;</span>A quiet answer 
+       turns away wrath.<span class="nt">&lt;/p&gt;</span> 
+<span class="nt">&lt;/blockquote&gt;</span>
+</code></pre>
+</div>
+
+<p>Notice that the quote is wrapped with a paragraph first and then the paragraph is wrapped with a <code class="highlighter-rouge">&lt;blockquote&gt;</code>. If your quotation has several paragraphs, wrap the whole set with one <code class="highlighter-rouge">&lt;blockquote&gt;</code>:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;blockquote&gt;</span>
+    <span class="nt">&lt;p&gt;</span>When wickedness comes, contempt comes also, 
+       and with dishonor comes disgrace.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>The words of a man’s mouth are deep waters; 
+       the fountain of wisdom is a bubbling brook.<span class="nt">&lt;/p&gt;</span> 
+<span class="nt">&lt;/blockquote&gt;</span>
+</code></pre>
+</div>
+
+<h4 id="lists">Lists</h4>
+
+<dl>
+  <dt><strong>2.3: List markup…</strong></dt>
+  <dd>…provides an excellent way to mark up related series of data. The <code class="highlighter-rouge">&lt;ul&gt;</code> and <code class="highlighter-rouge">&lt;ol&gt;</code>, and <code class="highlighter-rouge">&lt;dl&gt;</code> elements group series of <code class="highlighter-rouge">&lt;li&gt;</code> elements to form itemized lists and the <code class="highlighter-rouge">&lt;dl&gt;</code> element groups series of <code class="highlighter-rouge">&lt;dt&gt;</code> and <code class="highlighter-rouge">&lt;dd&gt;</code> to form definition lists.</dd>
+</dl>
+
+<p>Headings and paragraphs add a good bit of structure to our content and account for a good majority of basic web content. Another set of tags to add to your library is the list markup tags. Lists should be used in HTML content any time you identify a group of items that follow a list-like pattern. Examples include the following:</p>
+
+<ul>
+  <li>A set of step-by-step instructions</li>
+  <li>A group of products</li>
+  <li>A series of features or highlighted facts</li>
+  <li>… and much more!</li>
+</ul>
+
+<p>You’ll discover when you really dig into it, that there are many more lists in our content than we often realize. In fact, one way to make web content more approachable is to break out those lists into structured markup using these tag sets.</p>
+
+<p>There are two categories of lists:</p>
+
+<ol>
+  <li>Itemized lists:
+    <ol>
+      <li>Itemized lists are made of a group of list items, <code class="highlighter-rouge">&lt;li&gt;</code> tags grouped either as an ordered list <code class="highlighter-rouge">&lt;ol&gt;</code> or unordered list <code class="highlighter-rouge">&lt;ul&gt;</code>.</li>
+      <li>Use ordered lists to mark a series of items that are presented in a specific and intentional order such as steps in a process. Items grouped in an ordered list <code class="highlighter-rouge">&lt;ol&gt;</code> will appear numbered by default, but CSS can adjust this.</li>
+      <li>Use unordered lists to mark a series of items that form a list but don’t have a particular order to them such as a list of features or a list of products that aren’t sorted in any way. Items grouped in an unordered list <code class="highlighter-rouge">&lt;ul&gt;</code> will appear bulleted by default, but CSS can adjust this.</li>
+      <li><code class="highlighter-rouge">&lt;ul&gt;</code> and <code class="highlighter-rouge">&lt;ol&gt;</code> may only contain <code class="highlighter-rouge">&lt;li&gt;</code> elements as their direct children, but <code class="highlighter-rouge">&lt;li&gt;</code> elements can contain any other markup, including sub-lists. We’ll look at this more later in the course.</li>
+    </ol>
+  </li>
+  <li>Definition lists:
+    <ol>
+      <li>Definition lists contain a series of term-and-definition pairs marked by definition term <code class="highlighter-rouge">&lt;dt&gt;</code> and definition description <code class="highlighter-rouge">&lt;dd&gt;</code> tags and grouped by a definition list <code class="highlighter-rouge">&lt;dl&gt;</code> tag.</li>
+      <li>Use definition lists when you have a set of terms and descriptions such as a vocabulary list or reference list.</li>
+      <li><code class="highlighter-rouge">&lt;dl&gt;</code> tags can only contain <code class="highlighter-rouge">&lt;dt&gt;</code> and <code class="highlighter-rouge">&lt;dd&gt;</code> tags as their direct children.</li>
+    </ol>
+  </li>
+</ol>
+
+<h3 id="inline-content-markup">Inline Content Markup</h3>
+
+<dl>
+  <dt><strong>2.4: Inline content markup…</strong></dt>
+  <dd>…allows for finesse in structuring smaller chunks of content. This larger library of tags add meaning and structure to your content usually inside of block-level elements. A short list of additional tags to know is: <code class="highlighter-rouge">&lt;em&gt;</code>, <code class="highlighter-rouge">&lt;strong&gt;</code>, <code class="highlighter-rouge">&lt;q&gt;</code>, <code class="highlighter-rouge">&lt;cite&gt;</code>, <code class="highlighter-rouge">&lt;abbr&gt;</code>, <code class="highlighter-rouge">&lt;sup&gt;</code>, <code class="highlighter-rouge">&lt;sub&gt;</code>, <code class="highlighter-rouge">&lt;i&gt;</code>, and <code class="highlighter-rouge">&lt;b&gt;</code>.</dd>
+</dl>
+
+<p>Now that you have a basic library of typographical markup including headings, paragraphs, and lists, there are a number of tags that add additional finesse.</p>
+
+<p><strong><em>Read chapter 2 (pp. 45–48; 51–60) from Duckett.</em></strong> Note that p.50 introduces semantic markup, which we discuss in more detail later in this module. My definition differs slightly from the author’s definition.</p>
+
+<p>Here is a small set of useful tags that allows you to add more nuanced meaning to your content:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">&lt;em&gt;</code> – Add emphasis to content. The result by default is for text to be italicized.</li>
+  <li><code class="highlighter-rouge">&lt;strong&gt;</code> – Add strong emphasis to content. The result by default is for text to be bolded.</li>
+  <li><code class="highlighter-rouge">&lt;q&gt;</code> – Mark a short quotation.</li>
+  <li><code class="highlighter-rouge">&lt;cite&gt;</code> – Identify the citation or source for a quotation or reference.</li>
+  <li><code class="highlighter-rouge">&lt;abbr&gt;</code> – Mark an abbreviation or acronym.</li>
+  <li><code class="highlighter-rouge">&lt;sup&gt;</code> – Mark superscript text such as the “nd” in 2^nd.</li>
+  <li><code class="highlighter-rouge">&lt;sub&gt;</code> – Mark subscript text such as the “2” on O<sub>2</sub>.</li>
+  <li><code class="highlighter-rouge">&lt;i&gt;</code> – Add italics to content without adding emphasis, such as marking the title of a book. Remember that <code class="highlighter-rouge">&lt;em&gt;</code> is better to use when italics are added for actual emphasis.</li>
+  <li><code class="highlighter-rouge">&lt;b&gt;</code> – Add boldface to content without adding emphasis. Most times, you’ll probably want to use <code class="highlighter-rouge">&lt;strong&gt;</code> since bolding is often used to mark content that has strong emphasis. But for cases where you simply want to portray a slightly different voice or style through bolding, this tag can be helpful.</li>
+</ul>
+
+<p>Others you may want to look up include <code class="highlighter-rouge">&lt;br/&gt;</code>, <code class="highlighter-rouge">&lt;hr/&gt;</code>, <code class="highlighter-rouge">&lt;span&gt;</code>, <code class="highlighter-rouge">&lt;ins&gt;</code>, <code class="highlighter-rouge">&lt;del&gt;</code>, <code class="highlighter-rouge">&lt;dfn&gt;</code>, <code class="highlighter-rouge">&lt;pre&gt;</code>, and <code class="highlighter-rouge">&lt;code&gt;</code>.</p>
+
+<h3 id="semantic-markup">Semantic Markup</h3>
+
+<dl>
+  <dt><strong>2.5: Semantic markup…</strong></dt>
+  <dd>…means using the best possible markup for the content at hand. While the tags are easy to memorize, it takes practice and input from an expert to develop this skill, but it sets the professional apart from the novice.</dd>
+</dl>
+
+<p>Even monkeys can apply these basic tags to content. What makes the difference for us is an intelligent application of tags that don’t just affect appearance, but rather, tags that add meaning that matches what the content actually is.</p>
+
+<p><em>Semantic markup</em> is markup that adds meaning to content. In other words, true web professionals think critically about the markup they use rather than just throwing this tag or that tag around content. Instead of shortcuts, they strive to use the most appropriate tag. Note that this definition differs from the one Duckett provided on pages 49–50. In the past, authors defined a series of tags as “semantic” and others as “non-semantic” or “presentational.” I’ve come to conclude that what is more core to the ideal of semantic markup is not as much defining some tags as semantic and others as not, but rather, in how and when tags are used. It’s simple: figure out what a block or chunk of content is and apply the best possible tag to match that content’s meaning.</p>
+
+<p>What usually gets in the way is that many automated website creation tools use WYSIGYG (what you see is what you get) editors that separate the content editing from the actual markup. While this is helpful for people who don’t understand HTML, many of these tools automate the markup and add programmed best-guess markup instead of intentional human markup.</p>
+
+<p>Another factor that compounds the problem is that many users don’t think about content semantically. They’re used to applying formatting to make things look good, and the most common method is to change the font, change the size, change the color, add bolding or italics, or add an underline. But on the web, all of these presentation changes result in more markup unless one understands CSS and HTML well. The result otherwise is messy, unwieldy code. As a budding web professional, you should strive for clean, flexible code. When it comes to semantics, here are some things to watch out for:</p>
+
+<ol>
+  <li><em>Use specific tags to mark content rather than generic ones.</em> In your journey you’ll see <code class="highlighter-rouge">&lt;div&gt;</code> tags and <code class="highlighter-rouge">&lt;span&gt;</code> tags marking blocks that really ought to be paragraphs and headings or other more refined tags.</li>
+  <li><em>Adjust headings to ensure strong hierarchy.</em> You may be tempted to apply a heading specifically for the way it looks. That’s silly. CSS allows you to alter the way any tag looks, so you should apply a heading that makes sense for the hierarchy of the document instead.</li>
+  <li><em>When appropriate, use headings instead of bolded paragraphs.</em> Since people are used to creating their own headings by changing a paragraph’s font size and making it bold, you may be tempted to do the same. If you bold an entire paragraph, consider whether you ought instead to just make it a heading. But do make sure it really is a heading first and that it really needs to be bolded.</li>
+  <li><em>Use appropriate inline markup instead of more generic presentational markup.</em> The <code class="highlighter-rouge">&lt;i&gt;</code> and <code class="highlighter-rouge">&lt;b&gt;</code> tags are short and sweet, but have limited semantic value. <code class="highlighter-rouge">&lt;em&gt;</code> and <code class="highlighter-rouge">&lt;strong&gt;</code> are better choices when emphasis or strong emphasis is needed. For example, use <code class="highlighter-rouge">&lt;i&gt;</code> to mark a book title (where italics are typically employed, but emphasis is not necessary added), but use <code class="highlighter-rouge">&lt;em&gt;</code> to add emphasis (as in the phrase, “I hate lima beans”). Both result in text that is italicized, but <code class="highlighter-rouge">&lt;em&gt;</code> is a better choice in the second example because it marks actual emphasized text whereas <code class="highlighter-rouge">&lt;i&gt;</code> simply adds italics.</li>
+</ol>
+
+<h4 id="steps-for-applying-semantic-markup">Steps for Applying Semantic Markup</h4>
+
+<p>To actually apply the concept of semantic markup in context, follow this process:</p>
+
+<ul>
+  <li>Assume all blocks are paragraphs to start and apply the <code class="highlighter-rouge">&lt;p&gt;</code> tag to each distinct block of text.</li>
+  <li>Read the content you’re intending to markup and analyze its structure. Consider which elements might become headings and plan the heading structure.</li>
+  <li>Based on your analysis, revise the markup to add the appropriate headings.</li>
+  <li>Then consider if any elements form a list. Consider which list type is best, then revise the markup to apply this structure.</li>
+  <li>Finally, take a detailed look to add appropriate inline markup, block quotations, and other semantic markup to enhance the content’s meaning and structure.</li>
+</ul>
+
+<p>As you get to know HTML better, you’ll begin to see the world differently. Instead of just seeing a web page you might begin to wonder what HTML markup is actually being used. And if you dig in and look at what others have done, you might be horribly surprised to find a tangled ugly mess. Having taken this course, you are capable of writing much better markup!</p>
+
+<h3 id="block-level-vs-inline-tags">Block-level vs. Inline Tags</h3>
+
+<dl>
+  <dt><strong>2.6: Block-level vs. Inline elements</strong></dt>
+  <dd>Block-level elements such as <code class="highlighter-rouge">&lt;h1&gt;</code>–<code class="highlighter-rouge">&lt;h6&gt;</code>, <code class="highlighter-rouge">&lt;p&gt;</code> fill 100% of their container and allow contents to wrap inside of them. Inline elements such as <code class="highlighter-rouge">&lt;a&gt;</code>, <code class="highlighter-rouge">&lt;em&gt;</code>, <code class="highlighter-rouge">&lt;strong&gt;</code> and others only take up the space their content requires.</dd>
+</dl>
+
+<p>As we’ve covered a lot of tags so far it is important to call out one more way we categorize them. All tags are considered either block-level or inline.</p>
+
+<p><em>Block-level</em> tags fill 100% of their container’s width regardless of how much content they contain. So a paragraph will technically span the width of its container even if the content in that paragraph does not fill that space. But if the content does fill that space, the browser knows to wrap the text from line to line.</p>
+
+<p>Block-level tags we’ve covered so far include:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;h1&gt;</span> <span class="nt">&lt;h2&gt;</span> <span class="nt">&lt;h3&gt;</span> <span class="nt">&lt;h4&gt;</span> <span class="nt">&lt;h5&gt;</span> <span class="nt">&lt;h6&gt;</span> <span class="nt">&lt;p&gt;</span> <span class="nt">&lt;blockquote&gt;</span> <span class="nt">&lt;ul&gt;</span> <span class="nt">&lt;ol&gt;</span> <span class="nt">&lt;li&gt;</span> <span class="nt">&lt;dl&gt;</span> <span class="nt">&lt;dt&gt;</span> <span class="nt">&lt;dd&gt;</span> 
+</code></pre>
+</div>
+
+<p>And a few more we’ll cover later in the course are:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div&gt;</span> <span class="nt">&lt;header&gt;</span> <span class="nt">&lt;footer&gt;</span> <span class="nt">&lt;article&gt;</span> <span class="nt">&lt;aside&gt;</span> <span class="nt">&lt;nav&gt;</span> <span class="nt">&lt;section&gt;</span>
+</code></pre>
+</div>
+
+<p><em>Inline tags</em> only occupy the width that their content requires. So an <code class="highlighter-rouge">&lt;em&gt;</code> tag only takes up as much space as the words inside that tag take up; an image will naturally take up as much space as needed based on its pixel width and height.</p>
+
+<p>Inline tags covered so far are:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;b&gt;</span> <span class="nt">&lt;i&gt;</span> <span class="nt">&lt;em&gt;</span> <span class="nt">&lt;strong&gt;</span> <span class="nt">&lt;q&gt;</span> <span class="nt">&lt;cite&gt;</span> <span class="nt">&lt;abbr&gt;</span> <span class="nt">&lt;sub&gt;</span> <span class="nt">&lt;sup&gt;</span>, etc.
+</code></pre>
+</div>
+
+<p>And others we’ll cover later in the course are:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;a&gt;</span> <span class="nt">&lt;img/&gt;</span>
+</code></pre>
+</div>
+
+<p>This distinction is important to note because it will have an impact on the CSS properties that can be used with these elements, which we will discuss later in the course. For now, ensure you can can categorize tags as they’ve been distinguished in this module.</p>
+
+<h3 id="prepare-to-apply">Prepare to Apply</h3>
+
+<p>The application activity that accompanies this module challenges you to apply typography and faux hyperlinks to content from static design comps. Review the first video in this module for a demonstration of this process, and ensure that you can do the following:</p>
+
+<ul>
+  <li>Recognize the difference between paragraphs, headings, and lists.</li>
+  <li>Analyze the structure of a set of content, particularly the structure of headings from primary to secondary, to tertiary and beyond.</li>
+  <li>Recognize lists in unusual formats such as inline or in grids.</li>
+  <li>Apply inline markup to add more refined meaning to content.</li>
+</ul>
+
+<h3 id="study-tools">Study Tools</h3>
+
+<p>Review the key takeaways from this module. Memorize each of the following tags or attributes and understand what it is used for:</p>
+
+<h4 id="block-level-content-tags">Block-level Content Tags</h4>
+
+<ul>
+  <li><code class="highlighter-rouge">&lt;p&gt;</code></li>
+  <li><code class="highlighter-rouge">&lt;h1&gt;</code> – <code class="highlighter-rouge">&lt;h6&gt;</code> (each one counts as a separate tag here)</li>
+  <li><code class="highlighter-rouge">&lt;blockquote&gt;</code></li>
+  <li><code class="highlighter-rouge">&lt;ol&gt;</code></li>
+  <li><code class="highlighter-rouge">&lt;ul&gt;</code></li>
+  <li><code class="highlighter-rouge">&lt;li&gt;</code></li>
+  <li><code class="highlighter-rouge">&lt;dl&gt;</code></li>
+  <li><code class="highlighter-rouge">&lt;dd&gt;</code></li>
+  <li><code class="highlighter-rouge">&lt;dt&gt;</code></li>
+</ul>
+
+<h4 id="inline-content-tags">Inline Content Tags</h4>
+
+<ul>
+  <li><code class="highlighter-rouge">&lt;abbr&gt;</code></li>
+  <li><code class="highlighter-rouge">&lt;q&gt;</code></li>
+  <li><code class="highlighter-rouge">&lt;cite&gt;</code></li>
+  <li><code class="highlighter-rouge">&lt;i&gt;</code></li>
+  <li><code class="highlighter-rouge">&lt;b&gt;</code></li>
+  <li><code class="highlighter-rouge">&lt;em&gt;</code></li>
+  <li><code class="highlighter-rouge">&lt;strong&gt;</code></li>
+  <li><code class="highlighter-rouge">&lt;sup&gt;</code></li>
+  <li><code class="highlighter-rouge">&lt;sub&gt;</code></li>
+</ul>
+
+<h4 id="standalone-tags">Standalone Tags</h4>
+
+<ul>
+  <li><code class="highlighter-rouge">&lt;br/&gt;</code></li>
+  <li><code class="highlighter-rouge">&lt;hr/&gt;</code></li>
+</ul>
+
+    </div>
+</main>
+
+<footer class="row site-footer">
+    <div class="col-md-3">
+        <h2 class="footer-brand">Web Design I</h2>
+        <p>Copyright &copy;2016 by <a href="http://philschanely.com">Phil Schanely</a>. All rights reserved.</p>
+    </div>
+    <div class="col-md-9">
+        <p>Basic course in HTML and CSS built originally for Cedarville University&#39;s Interactive Design program.
+</p>
+        <ul class="list-inline">
+            <li><a href="http://cedarville.edu">Cedarville</a></li>
+            <li><a href="http://moodle.cedarville.edu">Moodle</a></li>
+            <li><a href="http://codio.com">Codio</a></li>
+            <li><a href="http://invisionapp.com">InVision</a></li>
+        </ul>
+    </div>
+</footer>
+<script type="text/javascript" src="/js/vendor-min.js"></script>
+<script type="text/javascript" src="/js/scripts.js"></script>
+</body>
+</html>

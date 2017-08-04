@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Lesson 8: The Box Model</title>
+    <meta name="description" content="The Box Model">
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="canonical" href="http://localhost:4000/lessons/08-box-model.html">
+    <link rel="alternate" type="application/rss+xml" title="Web Design I" href="/feed.xml">
+
+    <!---->
+</head>
+<body class="container-fluid">
+<nav class="site-header navbar row">
+    <div class="">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#site-nav" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="site-title navbar-brand" href="/">Web Design I</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-default" id="site-nav">
+            <ul class="nav navbar-nav">
+                <li><a class="page-link" href="/lessons/">Lessons</a></li>
+                <li><a class="page-link" href="/activities/">Activities</a></li>
+                <li><a class="page-link" href="/support/">Support</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="pagify page-lesson">
+    <h1 class="page-title">Lesson 8: The Box Model</h1>
+    <div class="content">
+        <h3 id="the-box-model">The Box Model</h3>
+
+<dl>
+  <dt><strong>8.1: The box model…</strong></dt>
+  <dd>…is a conceptual framework for understanding the series of CSS properties that affect elements’ size, border, background, and spacing.</dd>
+</dl>
+
+<p>Working with CSS basic properties and typography so far has allowed us to learn the ropes of CSS and have a lot more control of how our content looks. But we haven’t had much control over layout adjustments yet. This topic will be covered in the next few modules as these skills involve several different layers.
+In this module we will lay the foundation by looking at the box model. In the next module we’ll talk about how to achieve more complex layouts using the float and clear properties. In the following two modules we’ll look at even more possibilities with relative and absolute positioning.</p>
+
+<p><strong><em>Read chapter 13 from Duckett</em></strong> for an explanation of many of the box model properties.</p>
+
+<p>Once again, the assigned reading from the Duckett textbook provided an excellent summary of the tools and concepts behind the box model. This set of CSS properties allows us to control the dimensions (width and height), white space (margin and padding), borders (border and related properties), and background colors and imagery (background and its related properties) to add even more visual finesse to our HTML elements (these will be covered in the upcoming Duckett reading from chapter 14).</p>
+
+<p>Here is a table summarizing the properties, their uses, potential values, and common examples:</p>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Property</td>
+      <td>What it does</td>
+      <td>Value options</td>
+      <td>Examples</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td><code class="highlighter-rouge">width</code></td>
+      <td>Controls content box width</td>
+      <td><code class="highlighter-rouge">auto</code> | amount in <code class="highlighter-rouge">px</code>, <code class="highlighter-rouge">em</code>, or <code class="highlighter-rouge">%</code></td>
+      <td><code class="highlighter-rouge">width:500px;</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">height</code></td>
+      <td>Controls content box height</td>
+      <td><code class="highlighter-rouge">auto</code> | amount in <code class="highlighter-rouge">px</code>, <code class="highlighter-rouge">em</code>, or <code class="highlighter-rouge">%</code></td>
+      <td><code class="highlighter-rouge">height:auto;</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">margin</code></td>
+      <td>Adds or removes outer whitespace (outside border)	auto</td>
+      <td>amount in <code class="highlighter-rouge">px</code>, <code class="highlighter-rouge">em</code>, or <code class="highlighter-rouge">%</code></td>
+      <td><code class="highlighter-rouge">margin:10px 20px;</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">padding</code></td>
+      <td>Adds or removes inner whitespace (inside border)</td>
+      <td>amount in <code class="highlighter-rouge">px</code>, <code class="highlighter-rouge">em</code>, or <code class="highlighter-rouge">%</code></td>
+      <td><code class="highlighter-rouge">padding:30px 10px 50px 40px;</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">border-width</code></td>
+      <td>Controls the thickness of the border</td>
+      <td>amount in <code class="highlighter-rouge">px</code> | <code class="highlighter-rouge">thin</code> | <code class="highlighter-rouge">medium</code> | <code class="highlighter-rouge">thick</code></td>
+      <td><code class="highlighter-rouge">border-width:5px;</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">border-style</code></td>
+      <td>Controls the style or type of the border</td>
+      <td><code class="highlighter-rouge">solid</code> | <code class="highlighter-rouge">dotted</code> | <code class="highlighter-rouge">dashed</code> | <code class="highlighter-rouge">double</code> | <code class="highlighter-rouge">groove</code> | <code class="highlighter-rouge">ridge</code> | <code class="highlighter-rouge">inset</code> | <code class="highlighter-rouge">outset</code> | <code class="highlighter-rouge">hidden</code></td>
+      <td><code class="highlighter-rouge">border-style:solid;</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">border-color</code></td>
+      <td>Controls the color of the border</td>
+      <td>Color keyword, hex code, <code class="highlighter-rouge">rgb()</code>, <code class="highlighter-rouge">rgba()</code>, <code class="highlighter-rouge">hsl()</code>, or <code class="highlighter-rouge">hsla()</code> color code</td>
+      <td><code class="highlighter-rouge">border-color:#ef4520;</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">border</code></td>
+      <td>Adds or removes border around content dimensions and padding</td>
+      <td>Shorthand that allows you to write all the border types in one property</td>
+      <td><code class="highlighter-rouge">border:1px solid #000;</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">background-color</code></td>
+      <td>Controls the color of a box’s background area, the area inside the border behind padding whitespace and content</td>
+      <td>Color keyword, hex code, <code class="highlighter-rouge">rgb()</code>, <code class="highlighter-rouge">rgba()</code>, <code class="highlighter-rouge">hsl()</code>, or <code class="highlighter-rouge">hsla()</code> color code</td>
+      <td><code class="highlighter-rouge">background-color:#ef4520;</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">background-image</code></td>
+      <td>Allows us to specify an image to appear and possibly tile in the box’s background area</td>
+      <td><code class="highlighter-rouge">url('path/to/image.jpg')</code></td>
+      <td><code class="highlighter-rouge">background-image:url("images/logo.png");</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">background-repeat</code></td>
+      <td>Allows us to set if and how a background image will tile</td>
+      <td><code class="highlighter-rouge">repeat</code> | <code class="highlighter-rouge">repeat-x</code> | <code class="highlighter-rouge">repeat-y</code> | <code class="highlighter-rouge">no-repeat</code></td>
+      <td><code class="highlighter-rouge">background-repeat:no-repeat;</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">background-position</code></td>
+      <td>Provides the origin location for a background image</td>
+      <td><code class="highlighter-rouge">xpx ypx</code> | <code class="highlighter-rouge">x% y%</code> | <code class="highlighter-rouge">left top</code> | <code class="highlighter-rouge">left center</code> | <code class="highlighter-rouge">left bottom</code> | <code class="highlighter-rouge">right top</code> | <code class="highlighter-rouge">right center</code> | <code class="highlighter-rouge">right bottom</code> | <code class="highlighter-rouge">center top</code> | <code class="highlighter-rouge">center center</code> | <code class="highlighter-rouge">center bottom</code></td>
+      <td><code class="highlighter-rouge">background-position:center top;</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">background-attachment</code></td>
+      <td>Sets whether an image stays fixed as content scrolls or whether it moves with the content</td>
+      <td><code class="highlighter-rouge">fixed</code> | <code class="highlighter-rouge">scroll</code></td>
+      <td><code class="highlighter-rouge">background-attachment:fixed;</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">background</code></td>
+      <td>Shortcut property to set all background settings at once</td>
+      <td>Any background property values separated by a space.</td>
+      <td><code class="highlighter-rouge">background:#fff url("image.png") repeat-y fixed left;</code></td>
+    </tr>
+    <tr>
+      <td><code class="highlighter-rouge">box-sizing</code></td>
+      <td>Determines which box properties are included when width and height are set.</td>
+      <td><code class="highlighter-rouge">content-box</code> is the default; <code class="highlighter-rouge">border-box</code> ensures that padding and borders are both included in dimension settings.</td>
+      <td><code class="highlighter-rouge">box-sizing:border-box</code></td>
+    </tr>
+  </tfoot>
+</table>
+
+<h3 id="revisiting-block-vs-inline">Revisiting Block vs. Inline</h3>
+
+<dl>
+  <dt><strong>8.2: We can convert between Block and Inline formatting…</strong></dt>
+  <dd>…using the <code class="highlighter-rouge">display</code> property. This become helpful particularly when trying to apply box model settings to inline elements.</dd>
+</dl>
+
+<p>Earlier in the course we discussed how all HTML elements are either inline or block-level elements. It is important to note that box model styles behave differently for these. The simple statement is that the box model does not work on inline elements. The long statement begins with the fact that browsers allow different box-model settings on inline elements and interpret them differently. So, favoring the simple statement in this introductory course, avoid using box-model settings on inline elements.</p>
+
+<p>However, a CSS property allows you to convert elements to block-level elements (or to inline if desired): the display property. This accepts the several values including block, inline and none.</p>
+
+<ul>
+  <li><code class="highlighter-rouge">display:block</code> converts an element to a block-level element. This is very helpful, particularly with elements such as hyperlinks that are part of a navigation list. This way we can add <code class="highlighter-rouge">padding</code> around the link and set a background color, then use the <code class="highlighter-rouge">:hover</code> pseudo-class to provide an altered appearance when the user hovers over the link.</li>
+  <li><code class="highlighter-rouge">display:inline</code> converts an element to an inline element. This is occasionally helpful such as when you have an <code class="highlighter-rouge">&lt;h1</code>&gt; and a <code class="highlighter-rouge">&lt;p&gt;</code> inside a <code class="highlighter-rouge">&lt;header&gt;</code>. If the <code class="highlighter-rouge">&lt;h1&gt;</code> is the brand and the <code class="highlighter-rouge">&lt;p&gt;</code> is a tagline and you want them to appear on the same line, you could set them both to <code class="highlighter-rouge">display:inline</code>. However, many times it is more effective to use the <code class="highlighter-rouge">float</code> property or flex box to get elements to appear side-by-side—and that is covered in the next module.</li>
+  <li><code class="highlighter-rouge">display:none</code> makes an element altogether invisible. This can be helpful when adding interactive elements later in your studies or for toggling the visibility of certain elements in responsive web design (which is covered later in this course).</li>
+</ul>
+
+<h3 id="simplifying-box-dimensions">Simplifying Box Dimensions</h3>
+
+<dl>
+  <dt><strong>8.3: The <code class="highlighter-rouge">box-sizing:border-box</code> setting…</strong></dt>
+  <dd>…allows us to simplify controlling and calculating box dimensions because it ensures <code class="highlighter-rouge">padding</code> and <code class="highlighter-rouge">border</code> are included inside an element’s <code class="highlighter-rouge">width</code> and <code class="highlighter-rouge">height</code> setting instead of outside these.</dd>
+</dl>
+
+<p>The box model is very helpful for understanding the properties that contribute to any element’s size, spacing, stroke and fill. One trick to note is the relationship between spacing, border and size properties in relation to controlling an elements overall dimensions.</p>
+
+<p>First of all, note that by default, margin, padding, border and width/height all add up to create the box’s total dimensions. For example, what are the total width and height of this element:</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.box</span> <span class="p">{</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="m">500px</span><span class="p">;</span>
+    <span class="nl">height</span><span class="p">:</span> <span class="m">150px</span>
+    <span class="n">margin</span><span class="p">:</span> <span class="m">10px</span> <span class="m">5px</span> <span class="m">10px</span> <span class="m">5px</span><span class="p">;</span>
+    <span class="nl">padding</span><span class="p">:</span><span class="m">10px</span><span class="p">;</span>
+    <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="no">black</span><span class="p">;</span> 
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>By default, <code class="highlighter-rouge">width</code> and <code class="highlighter-rouge">height</code> control the dimensions of the element’s content box (the actual area the text or other content fills) and then <code class="highlighter-rouge">padding</code>, <code class="highlighter-rouge">border</code>, and <code class="highlighter-rouge">margin</code> all wrap around that size.</p>
+
+<p>So if we wanted to figure out the total width we’d need to run the following calculation:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code> 500px     (width)                     --&gt; 500px
+   5px × 2 (margin on left and right)  --&gt;  10px
+  10px × 2 (padding on left and right) --&gt;  20px
++  1px × 2 (border on left and right)  --&gt;   2px
+-----------
+ 532px
+</code></pre>
+</div>
+
+<p>The height would be the following:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code> 150px     (height)                    --&gt; 150px
+  10px × 2 (margin on top and bottom)  --&gt;  20px
+  10px × 2 (padding on top and bottom) --&gt;  20px
++  1px × 2 (border on top and bottom)  --&gt;   2px
+-----------
+ 192px
+</code></pre>
+</div>
+
+<p>If this seems overly complex, consider using the <code class="highlighter-rouge">box-sizing</code> property to simplify this a little.</p>
+
+<p>But if you set this property…</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nt">box-sizing</span><span class="nd">:border-box</span><span class="o">;</span>
+</code></pre>
+</div>
+
+<p>…then the <code class="highlighter-rouge">width</code> and <code class="highlighter-rouge">height</code> settings control the total space from border to border. So in this model, only <code class="highlighter-rouge">margin</code> adds to this overall size.</p>
+
+<p>So to modify the example above:</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.box</span> <span class="p">{</span>
+    <span class="nl">box-sizing</span><span class="p">:</span><span class="n">border-box</span><span class="p">;</span>
+    <span class="nl">width</span><span class="p">:</span> <span class="m">500px</span><span class="p">;</span>
+    <span class="nl">height</span><span class="p">:</span> <span class="m">150px</span>
+    <span class="n">margin</span><span class="p">:</span> <span class="m">10px</span> <span class="m">5px</span> <span class="m">10px</span> <span class="m">5px</span><span class="p">;</span>
+    <span class="nl">padding</span><span class="p">:</span><span class="m">10px</span><span class="p">;</span>
+    <span class="nl">border</span><span class="p">:</span> <span class="m">1px</span> <span class="nb">solid</span> <span class="no">black</span><span class="p">;</span> 
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Now the total width is simply:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>  500px     (width)                    --&gt; 500px
++   5px x 2 (margin on left and right) --&gt;  10px
+------------
+  510px 
+</code></pre>
+</div>
+
+<p><code class="highlighter-rouge">border</code> and <code class="highlighter-rouge">padding</code> are simply included in the <code class="highlighter-rouge">500px</code> setting for width, so technically, the content box is now smaller (<code class="highlighter-rouge">478px</code> to be exact). This may be tricky at first, but I believe you’ll find it much simpler to get used to controlling box dimensions if you also use <code class="highlighter-rouge">box-sizing:border-box</code>.</p>
+
+<h3 id="creating-and-centering-a-single-column-layout">Creating and Centering a Single-column Layout</h3>
+
+<dl>
+  <dt><strong>8.4: Center elements from a layout perspective…</strong></dt>
+  <dd>…using <code class="highlighter-rouge">auto</code> margin on left and right and setting a width on the element.</dd>
+</dl>
+
+<p>The most basic of websites today will typically have a set of page content filling a certain width and centered in the browser window, as pictured below.</p>
+
+<p><img src="/images/market-centered.jpg" alt="" /></p>
+
+<p>This single-column layout is created by setting width on an element such as <code class="highlighter-rouge">&lt;body&gt;</code> and then using the <code class="highlighter-rouge">auto</code> setting for left and right margin:</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nt">body</span> <span class="p">{</span>
+    <span class="nl">width</span><span class="p">:</span><span class="m">990px</span><span class="p">;</span>
+    <span class="nl">margin</span><span class="p">:</span><span class="m">0</span> <span class="nb">auto</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>This centering effect can also be used at other levels to create centered layout elements. In a situation like the one below, a <code class="highlighter-rouge">&lt;header&gt;</code> has a background color but has no width set, so it is filling the browser window’s width. Then an <code class="highlighter-rouge">&lt;h1&gt;</code> and a <code class="highlighter-rouge">&lt;p&gt;</code> inside it each have a width set along with auto margin on the left and right.</p>
+
+<p><img src="/images/market-centered-2.jpg" alt="" /></p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nt">header</span> <span class="p">{</span>
+    <span class="nl">background-color</span><span class="p">:</span><span class="no">red</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">header</span> <span class="nt">h1</span> <span class="p">{</span>
+    <span class="nl">width</span><span class="p">:</span><span class="m">930px</span><span class="p">;</span>
+    <span class="nl">margin</span><span class="p">:</span><span class="m">0</span> <span class="nb">auto</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">header</span> <span class="nt">p</span> <span class="p">{</span>
+    <span class="nl">width</span><span class="p">:</span><span class="m">930px</span><span class="p">;</span>
+    <span class="nl">margin</span><span class="p">:</span><span class="m">0</span> <span class="nb">auto</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<h3 id="styling-with-images-and-other-effects">Styling with Images and Other Effects</h3>
+
+<dl>
+  <dt><strong>8.5: The <code class="highlighter-rouge">background-...</code> settings…</strong></dt>
+  <dd>…allow a variety of layering effects including laying text over a texture or image and creating tiling patterns.</dd>
+</dl>
+
+<p><strong><em>Read chapter 16 from Duckett</em></strong> for details about how to work with images in CSS, including setting dimensions of images in your markup as well as how to add images as a background behind other HTML elements. You also get a preview of the float property, which we’ll discuss more in the next module.</p>
+
+<p>Note pp.413–416 in particular for a summary of the various settings that control backgrounds of boxes.</p>
+
+<p>When we design entire webpage layouts we often include visual effects that we need to export and use in our CSS as backgrounds on elements. Consider the backgrounds in the elements on this page:</p>
+
+<p><img src="/images/andrew-peterson.jpg" alt="" /></p>
+
+<p>Here you can see a texture fills the browser window beyond the boundaries of the “page,” while a different texture sits directly behind each of the elements on the page. In this case the back-most texture is likely added onto the <code class="highlighter-rouge">&lt;body&gt;</code> tag (which fills the entire browser window), while each content module also has its own background image or color. Complex layering is very easy to accomplish thanks to the box model and the way elements contain other elements in HTML.</p>
+
+<p>But in order to create these effects we must export images from our design comps successfully. Here are some things to consider:</p>
+
+<ul>
+  <li>Backgrounds can tile in CSS so only export a small piece of a texture when that texture can repeat either in all directions, top to bottom, or left to right.</li>
+  <li>Watch for images that layer on top of other textures. Rather than exporting the image and the texture, separate the two and export the top image on a transparent background. Then you can achieve the same layered effect using HTML and CSS.</li>
+  <li>JPEG is a good default format to use for exporting slices unless they have transparency in which case PNG is likely the best so as to achieve smooth transparency and colors.</li>
+</ul>
+
+<h3 id="more-on-color-in-css">More on Color in CSS</h3>
+
+<p><strong><em>Read chapter 11 from Duckett</em></strong> for more details about working with color in CSS.</p>
+
+<p>Note pp.251–254 in particular where RGB, Hex, and RGBA are discussed. On p.254 Duckett brings up <code class="highlighter-rouge">opacity</code> and <code class="highlighter-rouge">rgba</code>. Note the following differences:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">opacity</code> is an actual <em>CSS property</em> that governs the transparency of the entire element selected. Therefore, use <code class="highlighter-rouge">opacity</code> when you want to make an entire element and its content semi-transparent.</li>
+  <li><code class="highlighter-rouge">rgba</code> is a potential <em>color value</em> you can use for the <code class="highlighter-rouge">color</code> or <code class="highlighter-rouge">background-color</code> properties. It is therefore useful when you want to set just a semi-transparent color such as on a background.</li>
+</ul>
+
+<h3 id="study-tools">Study Tools</h3>
+
+<p>Memorize each of the following CSS properties or values:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">width</code></li>
+  <li><code class="highlighter-rouge">height</code></li>
+  <li><code class="highlighter-rouge">margin</code></li>
+  <li><code class="highlighter-rouge">padding</code></li>
+  <li><code class="highlighter-rouge">border-width</code></li>
+  <li><code class="highlighter-rouge">border-style</code></li>
+  <li><code class="highlighter-rouge">border-color</code></li>
+  <li><code class="highlighter-rouge">border</code></li>
+  <li><code class="highlighter-rouge">background-image</code></li>
+  <li><code class="highlighter-rouge">background-color</code></li>
+  <li><code class="highlighter-rouge">background-repeat</code></li>
+  <li><code class="highlighter-rouge">background-position</code></li>
+  <li><code class="highlighter-rouge">background-attachment</code></li>
+  <li><code class="highlighter-rouge">background</code></li>
+  <li><code class="highlighter-rouge">box-sizing</code></li>
+  <li><code class="highlighter-rouge">display</code></li>
+</ul>
+
+    </div>
+</main>
+
+<footer class="row site-footer">
+    <div class="col-md-3">
+        <h2 class="footer-brand">Web Design I</h2>
+        <p>Copyright &copy;2016 by <a href="http://philschanely.com">Phil Schanely</a>. All rights reserved.</p>
+    </div>
+    <div class="col-md-9">
+        <p>Basic course in HTML and CSS built originally for Cedarville University&#39;s Interactive Design program.
+</p>
+        <ul class="list-inline">
+            <li><a href="http://cedarville.edu">Cedarville</a></li>
+            <li><a href="http://moodle.cedarville.edu">Moodle</a></li>
+            <li><a href="http://codio.com">Codio</a></li>
+            <li><a href="http://invisionapp.com">InVision</a></li>
+        </ul>
+    </div>
+</footer>
+<script type="text/javascript" src="/js/vendor-min.js"></script>
+<script type="text/javascript" src="/js/scripts.js"></script>
+</body>
+</html>

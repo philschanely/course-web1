@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Lesson 12: Layout Patterns</title>
+    <meta name="description" content="Introduction">
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="canonical" href="http://localhost:4000/lessons/12-layout-patterns.html">
+    <link rel="alternate" type="application/rss+xml" title="Web Design I" href="/feed.xml">
+
+    <!---->
+</head>
+<body class="container-fluid">
+<nav class="site-header navbar row">
+    <div class="">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#site-nav" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="site-title navbar-brand" href="/">Web Design I</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-default" id="site-nav">
+            <ul class="nav navbar-nav">
+                <li><a class="page-link" href="/lessons/">Lessons</a></li>
+                <li><a class="page-link" href="/activities/">Activities</a></li>
+                <li><a class="page-link" href="/support/">Support</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="pagify page-lesson">
+    <h1 class="page-title">Lesson 12: Layout Patterns</h1>
+    <div class="content">
+        <h3 id="introduction">Introduction</h3>
+
+<p>Most layouts on the web can be created easily with the flex box settings. There are a relatively small number of patterns that can be applied to such situations.</p>
+
+<p>First conduct layout analysis in order to identify rows and columns. Then, consider which of the patterns that follow fits each row the best. Apply the overall settings but customize the particular values as needed.</p>
+
+<h3 id="pattern-a-row-on-its-own">Pattern A: Row on its own</h3>
+
+<p>The simplest pattern to build out is a row of content that contains no actual columns; all elements inside the row stack on top of each other according to default behavior. In such a case <strong>DO NOT</strong> use <code class="highlighter-rouge">display:flex</code> on the row; I’m calling these out to show you many things that can be done without flex box.</p>
+
+<h4 id="a1-row-spanning-full-width-of-outer-container">A1: Row spanning full width of outer container</h4>
+
+<p>A row on its own might simply span all or most of the width of its container:</p>
+
+<p><img src="/images/layout-patterns-A1.png" alt="" /></p>
+
+<p><strong>HTML:</strong></p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"intro"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h2&gt;</span>Lorem Ipsum Dolor Sit Amet.<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Duis vel fermentum tortor...<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+<p><strong>CSS:</strong> only add settings for border and spacing if needed. DO NOT use <code class="highlighter-rouge">display:flex;</code> on such a row.</p>
+
+<h4 id="a2-row-with-restricted-width">A2: Row with restricted width</h4>
+
+<p>A row on its own might also have a restricted width but nothing on either side of it:</p>
+
+<p><img src="/images/layout-patterns-A2.png" alt="" /></p>
+
+<p><strong>HTML:</strong></p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"followup-1"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h2&gt;</span>Sed mollis, diam vitae<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Suspendisse vel dui lobortis...<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Suspendisse potenti. Mauris...<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+<p><strong>CSS:</strong> Set the restricted width and spacing as needed. In this case:</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.followup-1</span> <span class="p">{</span>
+    <span class="nl">margin</span><span class="p">:</span><span class="m">0</span> <span class="m">0</span> <span class="m">20px</span> <span class="m">120px</span><span class="p">;</span>
+    <span class="nl">width</span><span class="p">:</span><span class="m">760px</span><span class="p">;</span>
+    <span class="nl">padding</span><span class="p">:</span><span class="m">30px</span> <span class="m">0</span> <span class="m">20px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<h4 id="a3-centered-row-with-restricted-width">A3: Centered row with restricted width</h4>
+
+<p>A row on its own with a restricted width might be intended to appear “centered” inside its overall container. Such a setup is simpler:</p>
+
+<p><img src="/images/layout-patterns-A3.png" alt="" /></p>
+
+<p><strong>HTML:</strong></p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"followup-2"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"images/followup-2.png"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;h2&gt;</span>Integer tincidunt, sem pharetra<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Sapien lectus vestibulum...<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+<p><strong>CSS:</strong> Simply set the restricted width and then use <code class="highlighter-rouge">auto</code> for the left and right <code class="highlighter-rouge">margin</code> such as:</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.followup-2</span> <span class="p">{</span>
+    <span class="nl">margin</span><span class="p">:</span><span class="m">20px</span> <span class="nb">auto</span> <span class="m">40px</span> <span class="nb">auto</span><span class="p">;</span>
+    <span class="nl">width</span><span class="p">:</span><span class="m">760px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>You’ll often see me use a width plus <code class="highlighter-rouge">margin:0 auto</code> to center a layout element.</p>
+
+<h4 id="a4-row-on-its-own-with-background-image">A4: Row on its own with background image</h4>
+
+<p>Another common variation of the row on its own is the “faux column” we discussed earlier. Here there is still only content inside the row stacked one on top of the other, but it feels different because there is also a background image that adds the impression of another column or other content. Whether the content is centered or offset in some way, we’ll have to use padding to create the offset. We <strong>cannot</strong> use <code class="highlighter-rouge">auto</code> with <code class="highlighter-rouge">padding</code> as we did with <code class="highlighter-rouge">margin</code> but must instead use a valid dimension using pixels or percentage. Sometimes a <code class="highlighter-rouge">height</code> setting also comes in handy.</p>
+
+<p><img src="/images/layout-patterns-A4a.png" alt="" /></p>
+
+<p><strong>HTML:</strong></p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"followup-3"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h2&gt;</span>Integer id sapien a ipsum faucibus<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Integer dapibus nibh quis...<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;ul&gt;</span>
+        <span class="nt">&lt;li&gt;</span>Ut et mauris accumsan...<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span>Nullam et velit quis enim...<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span>Duis congue ligula sem, sit...<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span>Cras condimentum ut quam...<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span>Duis congue ligula sem, sit...<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+<p><strong>CSS:</strong> Here we assume <code class="highlighter-rouge">width</code> is either <code class="highlighter-rouge">100%</code> or the default <code class="highlighter-rouge">width</code> value and just adding <code class="highlighter-rouge">padding</code> and a <code class="highlighter-rouge">height</code> setting. <code class="highlighter-rouge">box-sizing:border-box</code> also often proves useful here.</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.followup-3</span> <span class="p">{</span>
+    <span class="nl">background</span><span class="p">:</span><span class="no">black</span> 
+        <span class="sx">url(images/followup-3.png)</span>
+        <span class="nb">left</span> <span class="nb">top</span> <span class="nb">no-repeat</span><span class="p">;</span>
+    <span class="nl">box-sizing</span><span class="p">:</span><span class="n">border-box</span><span class="p">;</span>
+    <span class="nl">padding</span><span class="p">:</span><span class="m">30px</span> <span class="m">20px</span> <span class="m">0</span> <span class="m">520px</span><span class="p">;</span>
+    <span class="nl">height</span><span class="p">:</span><span class="m">360px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p><img src="/images/layout-patterns-A4b.png" alt="" /></p>
+
+<p><strong>HTML:</strong></p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hero"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h2&gt;</span>Sed rutrum ligula.<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Ac lacus mattis <span class="ni">&amp;raquo;</span><span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+<p><strong>CSS:</strong> Here as in the previous example we use <code class="highlighter-rouge">padding</code> and <code class="highlighter-rouge">height</code> with the background settings to achieve the overall offset. But we’ve also center-aligned the text for the <code class="highlighter-rouge">&lt;h2&gt;</code> and the <code class="highlighter-rouge">&lt;a&gt;</code>.</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.hero</span> <span class="p">{</span>
+    <span class="nl">background</span><span class="p">:</span><span class="sx">url(images/hero.png)</span> 
+        <span class="nb">top</span> <span class="nb">center</span> <span class="nb">no-repeat</span><span class="p">;</span>
+    <span class="nl">box-sizing</span><span class="p">:</span><span class="n">border-box</span><span class="p">;</span>
+    <span class="nl">padding</span><span class="p">:</span><span class="m">520px</span> <span class="m">420px</span> <span class="m">0</span><span class="p">;</span>
+    <span class="nl">height</span><span class="p">:</span><span class="m">720px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.hero</span> <span class="nt">a</span> <span class="p">{</span>
+    <span class="nl">border</span><span class="p">:</span><span class="m">1px</span> <span class="nb">solid</span> <span class="no">white</span><span class="p">;</span>
+    <span class="nl">display</span><span class="p">:</span><span class="nb">block</span><span class="p">;</span>
+    <span class="nl">text-align</span><span class="p">:</span><span class="nb">center</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.hero</span> <span class="nt">h2</span> <span class="p">{</span>
+    <span class="nl">text-align</span><span class="p">:</span><span class="nb">center</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<h3 id="pattern-b-row-with-columns">Pattern B: Row with columns</h3>
+
+<p>Building off of the basics or working with rows, we next examine patterns that make use of columns in various forms.</p>
+
+<h4 id="b1-equal-sized-columns">B1. Equal-sized columns</h4>
+
+<p>When all the columns inside a row are the same size the solution can be very simple, especially if all the items are the same element or have a class in common. Just use a nested selector in order to provide styles for the whole set of elements.</p>
+
+<p><img src="/images/layout-patterns-B1a.png" alt="" /></p>
+
+<p><strong>HTML:</strong></p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"categories"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"images/category-1.png"</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;h3&gt;</span>Sed convallis magna<span class="nt">&lt;/h3&gt;</span>
+            <span class="nt">&lt;p&gt;</span>Sit amet orci finibus...<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"images/category-2.png"</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;h3&gt;</span>Ut non condimentum<span class="nt">&lt;/h3&gt;</span>
+            <span class="nt">&lt;p&gt;</span>Proin finibtus eros risus.<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"images/category-3.png"</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;h3&gt;</span>Ut dignissim in odio<span class="nt">&lt;/h3&gt;</span>
+            <span class="nt">&lt;p&gt;</span>Aliquam vehicula quis arcu...<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre>
+</div>
+
+<p><strong>CSS:</strong> The <code class="highlighter-rouge">flex:1</code> setting is a flexible way to set them all to the same size but feel free to set a pixel or percentage value instead if you like.</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.categories</span> <span class="p">{</span> 
+    <span class="nl">display</span><span class="p">:</span><span class="n">flex</span><span class="p">;</span>
+    <span class="nl">justify-content</span><span class="p">:</span><span class="n">space-around</span><span class="p">;</span>
+    <span class="nl">margin</span><span class="p">:</span><span class="m">0</span><span class="p">;</span>
+    <span class="nl">padding</span><span class="p">:</span><span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.categories</span> <span class="nt">li</span> <span class="p">{</span>
+    <span class="nl">flex</span><span class="p">:</span><span class="m">1</span><span class="p">;</span> <span class="c">/* or a width setting */</span>
+    <span class="nl">margin-bottom</span><span class="p">:</span><span class="m">20px</span><span class="p">;</span>
+    <span class="nl">list-style</span><span class="p">:</span><span class="nb">none</span><span class="p">;</span> <span class="c">/* disables bullets */</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Sometimes you might find that you need to adjust either the first item in the set or the last item in the set (such as to cancel a border or some spacing). Keep in mind that you can set up the overall settings with a broad selector as described above but then provide an override setting using the :first-child or :last-child pseudo-class selectors.</p>
+
+<p><img src="/images/layout-patterns-B1b.png" alt="" /></p>
+
+<p><strong>HTML:</strong></p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"leaders"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"lead"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h3&gt;</span>Curabitur augue libero<span class="nt">&lt;/h3&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Pellentesque eget ultrices...<span class="nt">&lt;/p&gt;</span>
+        ...
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"lead"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h3&gt;</span>Praesent id purus<span class="nt">&lt;/h3&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Nec sem bibendum bibendum at...<span class="nt">&lt;/p&gt;</span> 
+        ...
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"lead"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;h3&gt;</span>Suspendisse maximus<span class="nt">&lt;/h3&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Tempor felis in volutpat...<span class="nt">&lt;/p&gt;</span>
+        ...
+    <span class="nt">&lt;/div&gt;</span> 
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+<p><strong>CSS:</strong> Here we put a border on the right side of most elements but cancel it on the <code class="highlighter-rouge">:last-child</code>. As a result we have reverted to using <code class="highlighter-rouge">padding</code> to space the items side-to-side instead of <code class="highlighter-rouge">justify-contents</code> on the container.</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.leaders</span> <span class="p">{</span> <span class="nl">display</span><span class="p">:</span><span class="n">flex</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.lead</span> <span class="p">{</span>
+    <span class="nl">flex</span><span class="p">:</span><span class="m">1</span><span class="p">;</span> <span class="c">/* or a width setting */</span>
+    <span class="nl">padding</span><span class="p">:</span><span class="m">20px</span> <span class="m">20px</span> <span class="m">0</span><span class="p">;</span>
+    <span class="nl">margin</span><span class="p">:</span><span class="m">20px</span> <span class="m">0</span><span class="p">;</span>
+    <span class="nl">border-right</span><span class="p">:</span><span class="m">1px</span> <span class="nb">solid</span> <span class="m">#869396</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.lead</span><span class="nd">:last-child</span> <span class="p">{</span> <span class="nl">border-right</span><span class="p">:</span><span class="nb">none</span><span class="p">;</span> <span class="p">}</span>
+</code></pre>
+</div>
+
+<h4 id="b2-uneven-columns">B2: Uneven columns</h4>
+
+<p>On the other hand, if the columns inside the row are different sizes, its best to target each individually and set the desired size.</p>
+
+<p><img src="/images/layout-patterns-B2.png" alt="" /></p>
+
+<p><strong>HTML:</strong></p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"features"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"feature left"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"images/feature-left.png"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;p&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"feature right"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"images/feature-right.png"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;p&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+<p><strong>CSS:</strong></p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="c">/* Key settings for the layout */</span>
+<span class="nc">.features</span> <span class="p">{</span> 
+    <span class="nl">display</span><span class="p">:</span><span class="n">flex</span><span class="p">;</span> 
+    <span class="nl">justify-content</span><span class="p">:</span><span class="n">space-between</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.features</span> <span class="nc">.left</span> <span class="p">{</span>
+    <span class="nl">width</span><span class="p">:</span><span class="m">480px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.features</span> <span class="nc">.right</span> <span class="p">{</span>
+    <span class="nl">width</span><span class="p">:</span><span class="m">680px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c">/* Other settings you might find helpful here */</span>
+<span class="nc">.features</span> <span class="nt">a</span> <span class="p">{</span>
+    <span class="nl">padding</span><span class="p">:</span><span class="m">20px</span><span class="p">;</span>
+    <span class="nl">display</span><span class="p">:</span> <span class="nb">block</span><span class="p">;</span>
+    <span class="nl">color</span><span class="p">:</span><span class="no">white</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.features</span> <span class="nt">img</span> <span class="p">{</span> <span class="nl">display</span><span class="p">:</span><span class="nb">block</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.features</span> <span class="nc">.left</span> <span class="nt">a</span> <span class="p">{</span> <span class="nl">background-color</span><span class="p">:</span><span class="m">#a2e500</span><span class="p">;</span> <span class="p">}</span>
+<span class="nc">.features</span> <span class="nc">.right</span> <span class="nt">a</span> <span class="p">{</span> <span class="nl">background-color</span><span class="p">:</span><span class="m">#6e00ff</span><span class="p">;</span> <span class="p">}</span>
+</code></pre>
+</div>
+
+<h4 id="b3-spacing-columns">B3: Spacing columns</h4>
+
+<p>Adding onto B1 and B2, if you need spacing (whitespace) between columns, your solution should depend on whether the columns have a background image or color, or if there’s a border between the columns.</p>
+
+<ul>
+  <li><strong>No backgrounds</strong> – in this case it is simplest to use <code class="highlighter-rouge">padding</code> to enforce the spacing. Thanks to <code class="highlighter-rouge">box-sizing: border-box</code> you can keep the <code class="highlighter-rouge">width</code> set at the total space a column occupies and add padding inside of that space. See how spacing is established in the example provided with B1a. above. Alternatively, set <code class="highlighter-rouge">justify-content:space-between</code> on the row instead to make this even simpler.</li>
+  <li><strong>No backgrounds but a border in-between</strong> – you can actually follow the same pattern as above and use padding in combination with <code class="highlighter-rouge">width</code>, <code class="highlighter-rouge">border settings</code>, and <code class="highlighter-rouge">box-sizing:border-box</code>. See how spacing is established in the example provided with B1b above. It might not be helpful to use <code class="highlighter-rouge">justify-content:space-between</code> in this situation.</li>
+  <li><strong>Backgrounds, with or without border</strong> – in this situation, you need to use <code class="highlighter-rouge">padding</code> to provide the desired inset spacing between the text content and the outer edges of the background. This is much simpler if you’re also using <code class="highlighter-rouge">box-sizing:border-box</code> since this allows both padding and border to be included in the width setting. But spacing outside the edges needs to be accomplished with <code class="highlighter-rouge">margin</code>. See how spacing is established in the example provided with B2 above. Here the <code class="highlighter-rouge">justify-content:space-between</code> setting is once again very helpful.</li>
+</ul>
+
+<h4 id="b4-centered-columns">B4: Centered columns</h4>
+
+<p>Flexbox makes centering columns very easy. The <code class="highlighter-rouge">justify-content:center</code> setting achieves this affect. In this case <code class="highlighter-rouge">flex:1</code> on the items will lead them to all be the same width but fill the whole row. If this is not desired use a <code class="highlighter-rouge">width</code> setting on the items instead.</p>
+
+<p><img src="/images/layout-patterns-B4.png" alt="" /></p>
+
+<p><strong>HTML:</strong> Here the <code class="highlighter-rouge">header ul</code> gets treated like a row as opposed to the whole <code class="highlighter-rouge">&lt;header&gt;</code>. We’re showing the larger context for your benefit.</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;header&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>Lorem Ipsum<span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;nav&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Cras Diam<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Vel Dolor<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Egestas<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Protitor<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/nav&gt;</span>
+<span class="nt">&lt;/header&gt;</span>
+</code></pre>
+</div>
+
+<p><strong>CSS:</strong> Here we use the very helpful <code class="highlighter-rouge">center</code> setting for <code class="highlighter-rouge">justify-content</code> to quickly ensure the <code class="highlighter-rouge">li</code> elements align on the center axis. Note that instead of <code class="highlighter-rouge">flex:1</code> though we need a <code class="highlighter-rouge">width</code> value to ensure the items don’t just fill the container. We use <code class="highlighter-rouge">auto</code> to just allow the elements to be as wide as their contents demand. We then use <code class="highlighter-rouge">margin</code> to enforce even spacing between the items.</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nt">header</span> <span class="nt">ul</span> <span class="p">{</span> 
+    <span class="nl">justify-content</span><span class="p">:</span><span class="nb">center</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nt">header</span> <span class="nt">li</span> <span class="p">{</span>
+    <span class="nl">width</span><span class="p">:</span><span class="nb">auto</span><span class="p">;</span>
+    <span class="nl">list-style</span><span class="p">:</span><span class="nb">none</span><span class="p">;</span>
+    <span class="nl">margin</span><span class="p">:</span><span class="m">0</span> <span class="m">20px</span><span class="p">;</span>
+    <span class="nl">padding</span><span class="p">:</span><span class="m">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<h4 id="b5-restricted-width-row-with-columns">B5: Restricted-width row with columns</h4>
+
+<p>Building off of the other patterns so far, sometimes you’ll have a row that has a restricted width that also has columns in it. In such a case, you should first set up the restricted width settings on the row using the patterns described above in A1–4, then treat the columns as needed inside of the resulting space as described in B1–3. Also be careful where you apply the <code class="highlighter-rouge">.row</code> so that it is on the direct parent element for the columns.</p>
+
+<h3 id="pattern-c-tiles">Pattern C: Tiles</h3>
+
+<p>Tiles can be implemented where a set of elements form a predictable series of rows and columns, typically where all items occupy the same width and height, such as in a product thumbnail list.</p>
+
+<p>This is easy to achieve with flex box by setting <code class="highlighter-rouge">flex-flow:row wrap</code> on the row. In this case you should be sure to use <code class="highlighter-rouge">width</code> settings on the items rather than <code class="highlighter-rouge">flex</code> settings.</p>
+
+<p><img src="/images/layout-patterns-C.png" alt="" /></p>
+
+<p><strong>HTML:</strong></p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"row products"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"..."</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;b</span> <span class="na">class=</span><span class="s">"name"</span><span class="nt">&gt;</span>Sed convallis<span class="nt">&lt;/b&gt;</span>
+            <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"price"</span><span class="nt">&gt;</span>$5.99<span class="nt">&lt;/span&gt;</span>
+        <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    ...
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre>
+</div>
+
+<p><strong>CSS:</strong></p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.products</span> <span class="p">{</span>
+    <span class="nl">justify-content</span><span class="p">:</span><span class="n">space-between</span><span class="p">;</span>
+    <span class="nl">flex-flow</span><span class="p">:</span><span class="n">row</span> <span class="n">wrap</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.products</span> <span class="nt">li</span> <span class="p">{</span>
+    <span class="nl">width</span><span class="p">:</span><span class="m">300px</span><span class="p">;</span>
+    <span class="nl">margin-bottom</span><span class="p">:</span><span class="m">30px</span><span class="p">;</span>
+    <span class="nl">list-style</span><span class="p">:</span><span class="nb">none</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>Note as well that the items inside each of these tiles can be set up using flex box tiling. The three items—image, name, price—have a predictable pattern of size. The image fills the “row” while the name and price sit beside each other. Check out the simple settings to achieve this:</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.products</span> <span class="nt">li</span> <span class="p">{</span>
+    <span class="nl">width</span><span class="p">:</span><span class="m">300px</span><span class="p">;</span>
+    <span class="nl">margin-bottom</span><span class="p">:</span><span class="m">30px</span><span class="p">;</span>
+    <span class="nl">list-style</span><span class="p">:</span><span class="nb">none</span><span class="p">;</span>
+    <span class="nl">display</span><span class="p">:</span><span class="n">flex</span><span class="p">;</span>
+    <span class="nl">justify-content</span><span class="p">:</span><span class="n">space-between</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.products</span> <span class="nt">img</span> <span class="p">{</span>
+    <span class="nl">width</span><span class="p">:</span><span class="m">100%</span><span class="p">;</span>
+    <span class="nl">margin-bottom</span><span class="p">:</span><span class="m">20px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.products</span> <span class="nc">.name</span> <span class="p">{</span>
+    <span class="nl">margin-left</span><span class="p">:</span><span class="m">10px</span><span class="p">;</span>
+    <span class="nl">width</span><span class="p">:</span><span class="m">195px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nc">.products</span> <span class="nc">.price</span> <span class="p">{</span>
+    <span class="nl">margin-right</span><span class="p">:</span><span class="m">85px</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<h4 id="centered-tiles">Centered tiles</h4>
+
+<p>Following the same idea as in B4, tiles inside can easily be centered  by placing <code class="highlighter-rouge">justify-content:center</code> on the row.</p>
+
+<h4 id="tile-exceptions">Tile exceptions</h4>
+
+<p>Chances are that the item at the beginning or end of each row will need some overrides applied in order to achieve the desired effect. First apply desired overall tile settings for width, height, margin, and padding.</p>
+
+<p>In order to affect the first item on each row in the tile set you can use this formula for the pseudo-class selector…</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="o">[</span><span class="nt">tile</span> <span class="nt">item</span> <span class="nt">selector</span><span class="o">]</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">xn</span><span class="o">+</span><span class="nt">1</span><span class="o">)</span> 
+</code></pre>
+</div>
+
+<p>…where <em>x</em> is the number of items in a row.</p>
+
+<p>To affect the last item in each row in the tile set use this formula for the pseudo-class selector…</p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="o">[</span><span class="nt">tile</span> <span class="nt">item</span> <span class="nt">selector</span><span class="o">]</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">xn</span><span class="o">)</span> 
+</code></pre>
+</div>
+
+<p>…where <em>x</em> is the number of items in a row.</p>
+
+    </div>
+</main>
+
+<footer class="row site-footer">
+    <div class="col-md-3">
+        <h2 class="footer-brand">Web Design I</h2>
+        <p>Copyright &copy;2016 by <a href="http://philschanely.com">Phil Schanely</a>. All rights reserved.</p>
+    </div>
+    <div class="col-md-9">
+        <p>Basic course in HTML and CSS built originally for Cedarville University&#39;s Interactive Design program.
+</p>
+        <ul class="list-inline">
+            <li><a href="http://cedarville.edu">Cedarville</a></li>
+            <li><a href="http://moodle.cedarville.edu">Moodle</a></li>
+            <li><a href="http://codio.com">Codio</a></li>
+            <li><a href="http://invisionapp.com">InVision</a></li>
+        </ul>
+    </div>
+</footer>
+<script type="text/javascript" src="/js/vendor-min.js"></script>
+<script type="text/javascript" src="/js/scripts.js"></script>
+</body>
+</html>

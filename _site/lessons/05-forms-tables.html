@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Lesson 5: Forms, Tables, and Other Elements</title>
+    <meta name="description" content="Collecting Information with Forms">
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="canonical" href="http://localhost:4000/lessons/05-forms-tables.html">
+    <link rel="alternate" type="application/rss+xml" title="Web Design I" href="/feed.xml">
+
+    <!---->
+</head>
+<body class="container-fluid">
+<nav class="site-header navbar row">
+    <div class="">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#site-nav" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="site-title navbar-brand" href="/">Web Design I</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-default" id="site-nav">
+            <ul class="nav navbar-nav">
+                <li><a class="page-link" href="/lessons/">Lessons</a></li>
+                <li><a class="page-link" href="/activities/">Activities</a></li>
+                <li><a class="page-link" href="/support/">Support</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="pagify page-lesson">
+    <h1 class="page-title">Lesson 5: Forms, Tables, and Other Elements</h1>
+    <div class="content">
+        <h3 id="collecting-information-with-forms">Collecting Information with Forms</h3>
+
+<dl>
+  <dt><strong>5.1: We collect information from users through form markup.</strong></dt>
+  <dd>This makes the most sense when it is paired with additional programming code that processes the information.</dd>
+</dl>
+
+<p>One last set of tags that is helpful to know is the set of tags that are used to mark online forms. These tags allow us to collect information from users. However, note up front that while these tags set us up to collect information, a form must be paired with additional programming in order for that information to be processed in a meaningful way. In this course, our focus will be on using semantic markup to format forms, and, later, in applying CSS to make them appear in a visually pleasing and usable way. The programming skills necessary to process forms is a large topic that falls outside of the scope of this course.</p>
+
+<p><strong><em>Read chapter 7 from Duckett.</em></strong></p>
+
+<h3 id="semantic-form-markup">Semantic Form Markup</h3>
+
+<dl>
+  <dt><strong>5.2: Semantic markup with forms…</strong></dt>
+  <dd>is often accomplished through tasteful use of lists lists.</dd>
+</dl>
+
+<p>Having read from Duckett, you should now have a sense of the markup we use to create and contain form elements. This includes the container <code class="highlighter-rouge">&lt;form&gt;</code> tag and the form control tags such as <code class="highlighter-rouge">&lt;input&gt;</code>, <code class="highlighter-rouge">&lt;select&gt;</code>, <code class="highlighter-rouge">&lt;option&gt;</code>, and <code class="highlighter-rouge">&lt;textarea&gt;</code>.</p>
+
+<p>But the book does not demonstrate the most semantic structure for marking up forms. Let’s think for a moment about the structure of the content we put in forms and the tags we have in our library to use. I’d like to pose the following:</p>
+
+<ul>
+  <li>Most often, a form contains a list of fields the user should complete. Therefore, it makes sense for many forms to mark them as a list. This applies both to the overall set of fields in the form as well as to sub-lists such as checklist or radio buttons that are part of a set.</li>
+  <li>In some cases, a field is better marked as a paragraph. Examples include submit button that could stand on its own apart from the other fields in the form, or a very short form that reads as a single sentence, such as one you’d use to subscribe to a newsletter.</li>
+</ul>
+
+<p>So consider this as a prototype for how to mark up a simple form:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;form</span> <span class="na">method=</span><span class="s">”get”</span> <span class="na">action=</span><span class="s">”confirm.html”</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>
+        <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">”email”</span><span class="nt">&gt;</span>Subscribe to our newsletter:<span class="nt">&lt;/label&gt;</span> 
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">”text”</span> <span class="na">name=</span><span class="s">”email”</span> <span class="na">placeholder=</span><span class="s">”you@example.com”</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">”submit”</span> <span class="na">name=</span><span class="s">”subscribe”</span> <span class="na">value=</span><span class="s">”Subscribe”</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</code></pre>
+</div>
+
+<p>Consider this as a prototype for how to mark up a more complex form in a meaningful way:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;form</span> <span class="na">method=</span><span class="s">”get”</span> <span class="na">action=</span><span class="s">”confirm.html”</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul&gt;</span>
+        <span class="nt">&lt;li&gt;</span>
+            <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">”name”</span><span class="nt">&gt;</span>Your name:<span class="nt">&lt;/label&gt;</span> 
+            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">”text”</span> <span class="na">name=</span><span class="s">”name”</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span>
+            <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">”age”</span><span class="nt">&gt;</span>Your age:<span class="nt">&lt;/label&gt;</span> 
+            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">”text”</span> <span class="na">name=</span><span class="s">”age”</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;</span>
+            <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">”gender”</span><span class="nt">&gt;</span>Your gender:<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;ul&gt;</span>
+                <span class="nt">&lt;li&gt;&lt;input</span> <span class="na">type=</span><span class="s">”radio”</span> <span class="na">name=</span><span class="s">”gender”</span> <span class="na">value=</span><span class="s">”male”</span> <span class="nt">/&gt;</span> Male<span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;li&gt;&lt;input</span> <span class="na">type=</span><span class="s">”radio”</span> <span class="na">name=</span><span class="s">”gender”</span> <span class="na">value=</span><span class="s">”female”</span> <span class="nt">/&gt;</span> Female<span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;p&gt;&lt;input</span> <span class="na">type=</span><span class="s">”submit”</span> <span class="na">name=</span><span class="s">”save”</span> <span class="na">value=</span><span class="s">”Save</span> <span class="na">Info</span><span class="err">”</span> <span class="nt">/&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;/form&gt;</span>
+</code></pre>
+</div>
+
+<p>There are many different structures forms could follow off of this and they can get quite complex. In this course, we’ll use mostly simple structures like these.</p>
+
+<h3 id="marking-information-with-tables">Marking Information with Tables</h3>
+
+<dl>
+  <dt><strong>5.3: Table markup was misused in the past…</strong></dt>
+  <dd>…for creating print-like layouts, but this method is no longer accepted as good practice. CSS should be used instead. Tables should be used only to mark up data in the forms of rows and columns.</dd>
+</dl>
+
+<p>Another set of markup that will be beneficial to know is table markup.</p>
+
+<p><strong><em>Read chapter 6 from Duckett.</em></strong> The author does an excellent job describing table markup and when to use them to mark up tabular data. Remember that simple lists are better marked with unordered, ordered, or definition lists. Table markup makes it easy to create very clean and well-organized tables to present data or information that is multidimensional.</p>
+
+<p>It is important to note that a very outdated method for creating page layouts is still taught and in use throughout the web, but it is NOT acceptable in this course. In the past, table rows and cells were discovered to be helpful for creating column-based layouts like what we see in print designs. The trend hit big and really made a significant improvement for web designers. However, tables are NOT semantic representations of content. Today, we use CSS to construct our layouts, which allows us to use much more semantic structural markup instead of marking content in table rows and cells.</p>
+
+<h3 id="other-markup-past-present-and-future">Other Markup: Past, Present and Future</h3>
+
+<p>You might have noticed to this point that several other tags have been identified or used in the Duckett textbook that were not specifically addressed in these guides. You might also run into other markup as you explore existing sites. There a number of reasons for this:</p>
+
+<ul>
+  <li>The world wide web is in many ways a living garden whose caretakers are constantly trimming, redressing, arranging, and replanting. This means that some tags we used to use a lot are at times replaced with new elements. Others are recognized as detrimental to the development of the web and are deprecated, being discouraged from common use. We’re also continuing to find new tags that the original creators of HTML never imagined would be useful. The World Wide Web Consortium, AKA, the W3C is the formal body that reviews and approves new specifications for many things on the web, including the tags that are acceptable to use in HTML. We keep an eye on this and update our content as needed over time.</li>
+  <li>I’ve called out the most common useful and meaningful elements that I believe are essential for budding web designers to memorize and use. Others may not be covered here for reasons discussed above, such as that they are not used anymore, of little practical use, or are new enough that they are not fully used or even understood. Again, we keep an eye on what’s happening in the web community and update as needed. 
+Should you decide you enjoy this field and move into it for a career, you too will learn to keep a pulse on what’s happening to stay current.</li>
+</ul>
+
+<h3 id="prepare-to-apply">Prepare to Apply</h3>
+
+<p>Before continuing with this module’s exercises, make sure you understand how to:</p>
+
+<ul>
+  <li>use the <code class="highlighter-rouge">&lt;form&gt;</code>, <code class="highlighter-rouge">&lt;input&gt;</code>, <code class="highlighter-rouge">&lt;select&gt;</code>, and <code class="highlighter-rouge">&lt;textarea&gt;</code> tags.</li>
+  <li>use semantic markup to provide structure to forms.</li>
+  <li>use table markup to format data into rows and columns.</li>
+</ul>
+
+<h3 id="study-tools">Study Tools</h3>
+
+<p>Review the key takeaways from this module. Memorize each of the following tags or attributes and understand what they are used for:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">&lt;form&gt;</code></li>
+  <li><code class="highlighter-rouge">&lt;input/&gt;</code> and <code class="highlighter-rouge">type</code> attribute and what each value accomplishes: <code class="highlighter-rouge">text</code>, <code class="highlighter-rouge">password</code>, <code class="highlighter-rouge">submit</code>, <code class="highlighter-rouge">radio</code>, <code class="highlighter-rouge">checkbox</code></li>
+  <li><code class="highlighter-rouge">&lt;select&gt;</code> and <code class="highlighter-rouge">&lt;option&gt;</code></li>
+  <li><code class="highlighter-rouge">&lt;textarea&gt;</code></li>
+  <li><code class="highlighter-rouge">&lt;table&gt;</code></li>
+  <li><code class="highlighter-rouge">&lt;th&gt;</code></li>
+  <li><code class="highlighter-rouge">&lt;td&gt;</code></li>
+  <li><code class="highlighter-rouge">&lt;tr&gt;</code></li>
+</ul>
+
+    </div>
+</main>
+
+<footer class="row site-footer">
+    <div class="col-md-3">
+        <h2 class="footer-brand">Web Design I</h2>
+        <p>Copyright &copy;2016 by <a href="http://philschanely.com">Phil Schanely</a>. All rights reserved.</p>
+    </div>
+    <div class="col-md-9">
+        <p>Basic course in HTML and CSS built originally for Cedarville University&#39;s Interactive Design program.
+</p>
+        <ul class="list-inline">
+            <li><a href="http://cedarville.edu">Cedarville</a></li>
+            <li><a href="http://moodle.cedarville.edu">Moodle</a></li>
+            <li><a href="http://codio.com">Codio</a></li>
+            <li><a href="http://invisionapp.com">InVision</a></li>
+        </ul>
+    </div>
+</footer>
+<script type="text/javascript" src="/js/vendor-min.js"></script>
+<script type="text/javascript" src="/js/scripts.js"></script>
+</body>
+</html>

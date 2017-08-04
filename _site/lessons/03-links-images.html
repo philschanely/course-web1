@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Lesson 3: Links and Images</title>
+    <meta name="description" content="Hyperlinks">
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="canonical" href="http://localhost:4000/lessons/03-links-images.html">
+    <link rel="alternate" type="application/rss+xml" title="Web Design I" href="/feed.xml">
+
+    <!---->
+</head>
+<body class="container-fluid">
+<nav class="site-header navbar row">
+    <div class="">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#site-nav" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="site-title navbar-brand" href="/">Web Design I</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-default" id="site-nav">
+            <ul class="nav navbar-nav">
+                <li><a class="page-link" href="/lessons/">Lessons</a></li>
+                <li><a class="page-link" href="/activities/">Activities</a></li>
+                <li><a class="page-link" href="/support/">Support</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="pagify page-lesson">
+    <h1 class="page-title">Lesson 3: Links and Images</h1>
+    <div class="content">
+        <h3 id="hyperlinks">Hyperlinks</h3>
+
+<dl>
+  <dt><strong>3.1: Hyperlinks</strong></dt>
+  <dd>Hyperlinks are created with the <code class="highlighter-rouge">&lt;a&gt;</code> tag. This usually wraps some HTML content such as text or an image that acts as the anchor for the link.</dd>
+</dl>
+
+<p>Markup that gives structure to content provides a foundation for building web pages. But what makes web documents different from other documents is that web documents can include hyperlinks that connect them to each other.</p>
+
+<p><strong><em>Read chapter 4 (pp. 74-80, 85-90) from Duckett</em></strong> to learn some of the basics about using the <code class="highlighter-rouge">&lt;a&gt;</code> tag and its attributes.</p>
+
+<p>Chapter 4 covers the <code class="highlighter-rouge">&lt;a&gt;</code> tag and how to link to websites and pages within your own website. To provide you additional practice with these concepts, let’s start by looking more at how to add <code class="highlighter-rouge">&lt;a&gt;</code> tags and configure them to point to a website on the Internet.</p>
+
+<p>First of all, note that when we create hyperlinks we tend to call them just “links,” and they are created with the <code class="highlighter-rouge">&lt;a&gt;</code> tag. This tag technically represents a “hyperlink anchor,” since such a link is the launching point or anchor from which a user clicks to connect to another site, page, or document. However, there are a few other tags that could be confused with the <code class="highlighter-rouge">&lt;a&gt;</code> tag.</p>
+
+<p>Compare the <code class="highlighter-rouge">&lt;a&gt;</code> tag to two other tags that you might mistake as hyperlinks:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Tag</th>
+      <th style="text-align: left">What it stands for</th>
+      <th style="text-align: left">Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">&lt;a&gt;</code></td>
+      <td style="text-align: left">Hyperlink anchor</td>
+      <td style="text-align: left">This creates actual hyperlink anchors, commonly referred to as “links.” Usually when we talk casually about “links” we really mean hyperlinks, or <code class="highlighter-rouge">&lt;a&gt;</code> tags.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">&lt;link/&gt;</code></td>
+      <td style="text-align: left">Script link</td>
+      <td style="text-align: left">This is placed in the <code class="highlighter-rouge">&lt;head&gt;</code> element in order to import resources such as CSS style sheets. This is NOT a hyperlink or used to create links in the <code class="highlighter-rouge">&lt;body&gt;</code> tag even though it seems obviously named as a “link.” We will call these “Script Links” or “head link tags.”</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><code class="highlighter-rouge">&lt;li&gt;</code></td>
+      <td style="text-align: left">List item</td>
+      <td style="text-align: left">This marks items in a list. It is NOT at all related to a link, even though it could appear to be an abbreviation for “link.” They represent “list item.” And for the record, we usually pronounce this tag as an an acronym “l-i” (or “el-eye”) not “lee.”</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>So make sure you understand that when you want to create a link in your content you use the <code class="highlighter-rouge">&lt;a&gt;</code> tag, not 
+<code class="highlighter-rouge">&lt;link/&gt;</code> or <code class="highlighter-rouge">&lt;li&gt;</code>. These serve other purposes.
+Observe each of these tags used correctly in the following code snippet:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;html&gt;</span>
+    <span class="nt">&lt;head&gt;</span>
+        <span class="nt">&lt;title&gt;</span>Testing some tags<span class="nt">&lt;/title&gt;</span>
+        <span class="nt">&lt;link</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">src=</span><span class="s">"styles.css"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/head&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+        <span class="nt">&lt;ol&gt;</span>
+            <span class="nt">&lt;li&gt;</span>This is item 1 in a list.<span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li&gt;</span>This is item 2 in a list.<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ol&gt;</span>
+        <span class="nt">&lt;p&gt;&lt;a</span> <span class="na">href=</span><span class="s">"http://cedarville.edu"</span><span class="nt">&gt;</span>This is a hyperlink 
+           to the Cedarville homepage.<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>   
+    <span class="nt">&lt;/body&gt;</span> 
+<span class="nt">&lt;/html&gt;</span>
+</code></pre>
+</div>
+
+<h3 id="pointing-to-files-with-paths">Pointing to Files with Paths</h3>
+
+<dl>
+  <dt><strong>3.2 <code class="highlighter-rouge">href</code> and Paths</strong></dt>
+  <dd>The <code class="highlighter-rouge">href</code> attribute must be set in order for a hyperlink to point to the desired file or URL.</dd>
+</dl>
+
+<p>Now that you grasp the difference between <code class="highlighter-rouge">&lt;a&gt;</code> tags and other tags newbies often mistake for hyperlinks, let’s talk about how to configure them to point to websites using the href attribute. This stands for hyperlink reference and it indicates which website, page, or file our <code class="highlighter-rouge">&lt;a&gt;</code> tag should point to. The attribute value for the href attribute is referred to as a path as it indicates the address from here to some location on the Internet. So in this example…</p>
+
+<p><code class="highlighter-rouge">&lt;a href="http://www.example.com"&gt;Click me&lt;/a&gt;</code></p>
+
+<p>…when the user clicks the link “Click me” they will be taken to <code class="highlighter-rouge">http://www.example.com</code>. As discussed in chapter 4 from Duckett, this is an absolute URL or absolute path, pointing outside of whatever site this link is actually in, to the default web page for the site <code class="highlighter-rouge">http://www.example.com</code>. Whenever we point to a website other than our own, make sure that…</p>
+
+<ul>
+  <li>the path always begins with <code class="highlighter-rouge">http://</code></li>
+  <li>the domain name and any specific page is spelled correctly</li>
+</ul>
+
+<p>A helpful tip to ensure you get the right path is to actually visit the desired website in a browser, and then copy and paste the URL into your href attribute. Then just ensure that it starts with <code class="highlighter-rouge">http://</code>.</p>
+
+<dl>
+  <dt><strong>3.3: Relative paths…</strong></dt>
+  <dd>…point from one file to another file within the same computer directory, be it further into a folder structure, or a few folders up from the current file.</dd>
+</dl>
+
+<p><strong><em>Read chapter 4 (pp. 81-84, 91-92) from Duckett</em></strong> to learn more about linking to files using paths and to see a summary of this chapter on links.</p>
+
+<p>Duckett goes on in chapter 4 to describe relative URLs or relative paths which allow us to point to files within our own site. Examine the chart that follows for more details and examples.</p>
+
+<ul>
+  <li>
+    <p>For files that reside in the same folder as the one from which we are pointing, we simply enter the file name and extension as the link path.</p>
+
+    <p>Here, the path from <code class="highlighter-rouge">index.html</code> to <code class="highlighter-rouge">styles.css</code> is: <code class="highlighter-rouge">styles.css</code></p>
+
+    <p><img src="/images/path-direct.png" alt="" /></p>
+  </li>
+  <li>
+    <p>If the file is deeper inside a folder and that folder is inside the same folder as the one from which we are pointing, we start by naming that folder, then entering a <code class="highlighter-rouge">/</code> forward slash, then listing the name of the file in that folder.</p>
+
+    <p>Here, the path from <code class="highlighter-rouge">index.html</code> to <code class="highlighter-rouge">list.html</code> is: <code class="highlighter-rouge">products/list.html</code></p>
+
+    <p><img src="/images/path-down.png" alt="" /></p>
+  </li>
+  <li>
+    <p>If the file is several folders in, just continue to list each progressive folder.</p>
+
+    <p>Here, the path from <code class="highlighter-rouge">index.html</code> to <code class="highlighter-rouge">clogs.html</code> is: <code class="highlighter-rouge">products/men/shoes/clogs.html</code></p>
+
+    <p><img src="/images/path-multi-down.png" alt="" /></p>
+  </li>
+  <li>
+    <p>If the file is in a folder that is outside of the current file’s folder, start with <code class="highlighter-rouge">../</code> which moves out one folder. Continue to move out successive layers with more <code class="highlighter-rouge">../</code> if needed.</p>
+
+    <p>Here, the path from index.html to list.html is: <code class="highlighter-rouge">../list.html</code></p>
+
+    <p><img src="/images/path-up.png" alt="" /></p>
+  </li>
+  <li>
+    <p>Finally, enter the folder name to begin moving back inward again. Continue adding folders until you reach the desired folder and then enter the desired file name as in the first point above.</p>
+
+    <p>Here, the path from the <code class="highlighter-rouge">index.html</code> in the <code class="highlighter-rouge">men</code> folder to <code class="highlighter-rouge">catalogue.pdf</code> is: <code class="highlighter-rouge">../../docs/catalogue.pdf.	</code></p>
+
+    <p><img src="/images/path-up-and-down.png" alt="" /></p>
+  </li>
+</ul>
+
+<dl>
+  <dt><strong>3.4: <code class="highlighter-rouge">id</code> references and placeholder links</strong></dt>
+  <dd>The <code class="highlighter-rouge">#</code> pound sign can be used in <code class="highlighter-rouge">href</code> attributes as a placeholder or to point to another element in the document using its <code class="highlighter-rouge">id</code> attribute.</dd>
+</dl>
+
+<p>We can also link within a document by pointing to elements that have an id value. Imagine you have document that has an <code class="highlighter-rouge">&lt;h1&gt;</code> at the very top with an id of brand. Also imagine it is a very long page. In order to help users quickly get back to the top of the page, you could put a hyperlink at the bottom like this:</p>
+
+<p><code class="highlighter-rouge">&lt;a href="#brand"&gt;Back to top&lt;/a&gt;</code></p>
+
+<p>Notice that the href attribute here simply points to the element that has an id of brand. So when a user clicks this link, they’ll be taken right back up to the top of the document where that <code class="highlighter-rouge">&lt;h1&gt;</code> is located. You can use this principle to link to any element in a document as long as it has an id set.</p>
+
+<p>Note as well that if you want to enter a link to a file but you don’t know where the file is yet or you haven’t created it yet, the best thing to do is provide just a # as the href as a placeholder. The result is that the link appears in the browser, but when the user clicks on it, they’re not taken anywhere. Just don’t forget to come back later and provide an actual path!</p>
+
+<h3 id="image-markup">Image Markup</h3>
+
+<dl>
+  <dt><strong>3.5: Images</strong></dt>
+  <dd>Images are created with the <code class="highlighter-rouge">&lt;img/&gt;</code> tag and the desired image is indicating using the <code class="highlighter-rouge">src</code> attribute.</dd>
+</dl>
+
+<p>Our final area of focus is in creating markup that allows us to incorporate image files into our web pages.</p>
+
+<p><strong><em>Read chapter 5 from Duckett.</em></strong></p>
+
+<p>So far we’ve talked about paths in the context of adding hyperlinks from one document to the next. Chapter 5 from Duckett elaborates on how to use paths and the <code class="highlighter-rouge">&lt;img/&gt;</code> tag in order to insert images into our markup. The <code class="highlighter-rouge">&lt;img/&gt;</code> tag is one of those tricky self-closing tags; so we DO NOT do this:</p>
+
+<p><code class="highlighter-rouge">&lt;img&gt;&lt;/img&gt;</code></p>
+
+<p>Instead we do this:</p>
+
+<p><code class="highlighter-rouge">&lt;img/&gt;</code></p>
+
+<p>But just like this, we have no idea which image is to be inserted. So we use the <code class="highlighter-rouge">src</code> attribute to provide the path to the desired image:</p>
+
+<p><code class="highlighter-rouge">&lt;img src="images/logo.png" /&gt;</code></p>
+
+<p>This assumes that in the current folder there is another folder called <code class="highlighter-rouge">images</code> and in it is an image, <code class="highlighter-rouge">logo.png</code>.</p>
+
+<h4 id="the-alt-attribute">The <code class="highlighter-rouge">alt</code> Attribute</h4>
+
+<dl>
+  <dt><strong>3.6: The <code class="highlighter-rouge">alt</code> attribute…</strong></dt>
+  <dd>…is used on images particularly to provide plain text explanations of the image or text content in the image.</dd>
+</dl>
+
+<p>While Duckett discusses <code class="highlighter-rouge">&lt;img/&gt;</code> elements and their attributes in more detail, one you should note in particular is the <code class="highlighter-rouge">alt</code> attribute. This allows us to provide alternate text for an image. There are several instances where this is necessary:</p>
+
+<ul>
+  <li>Provide a caption for an image if the image’s surrounding content does not provide this. This also allows search engines to discover content of images in case this is relevant for your users.</li>
+  <li>Provide fallback text for an image that contains text so that if the image is not available, the user will see text rather than just a broken image icon.\</li>
+  <li>It is a best practice to provide the <code class="highlighter-rouge">alt</code> attribute for every image you insert. The only common exceptions are when the image is purely decorative (it adds no content to the page, but adds a visual embellishment) or when surrounding text provides a clear enough caption for the image.</li>
+</ul>
+
+<h4 id="content-in-images">Content in Images</h4>
+
+<dl>
+  <dt><strong>3.7: Images with text content</strong></dt>
+  <dd>When choosing which images to include in your markup versus apply using CSS, distinguish between images that contribute content vs. embellishment. Ensure that images with significant text content are marked semantically and be sure to record the text content of the image using the <code class="highlighter-rouge">alt</code> attribute.</dd>
+</dl>
+
+<p>We can do a lot today with CSS, especially when it comes to creating graphical layouts. We’ll learn more about this later in the course. But now, as you learn how to include images in your content, it is important to consider what images you should include in your markup versus leave out with the intent of applying with with CSS later.</p>
+
+<p>As you study a document to mark up and encounter images, ask yourself whether the image contributes to the content or embellishes through decoration. Leave out any images that might be consider decoration or could be part of the background (textures, patterns, large background images, etc.).</p>
+
+<p>Be on the watch specifically for text content in images. As mentioned earlier, the <code class="highlighter-rouge">&lt;img/&gt;</code> tag allows text content to be recorded in the alt attribute. But why would text be in an image to begin with? Sometimes web designers prefer to create heading text as images so as to have more control of the font and related properties. When that information is frozen as pixels in an image (or line art in an SVG graphic) the the designer can maintain control of kerning, color, and font properties. This is not recommended today since we have access to many more fonts that we used to.</p>
+
+<p>One very common set of content to include as an image is the company’s logo or wordmark, since this is often desired to be 100% consistent for branding reasons. This will also often be the worthy name of the site, so it might be best marked with an <code class="highlighter-rouge">&lt;h1&gt;</code> tag. The <code class="highlighter-rouge">&lt;img/&gt;</code> tag can go inside the <code class="highlighter-rouge">&lt;h1&gt;</code>. Then be sure to provide the text content of the logo in the alt attribute of the <code class="highlighter-rouge">&lt;img/&gt;</code> tag. Consider this markup for the Cedarville University website’s masthead as a pattern that is used in many sites:</p>
+
+<p><img src="/images/cu-masthead.png" alt="" /></p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;header</span> <span class="na">id=</span><span class="s">"site-masthead"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h1&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"images/logo.png"</span> 
+             <span class="na">alt=</span><span class="s">"Cedarville University"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/h1&gt;</span>
+    <span class="nt">&lt;nav</span> <span class="na">id=</span><span class="s">"nav-main"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/nav&gt;</span>
+<span class="nt">&lt;/header&gt;</span>
+</code></pre>
+</div>
+
+<h4 id="other-image-attributes-and-markup">Other Image Attributes and Markup</h4>
+
+<p>Here are a few more comments on content from chapter 5:</p>
+
+<ul>
+  <li>Be sure to check out the <code class="highlighter-rouge">&lt;figure&gt;</code> and <code class="highlighter-rouge">&lt;figcaption&gt;</code> elements Duckett discusses near the end of chapter 5 for a modern example of how to provide captions for images.</li>
+  <li>I consider it helpful to leave off any <code class="highlighter-rouge">width</code> or <code class="highlighter-rouge">height</code> attributes on images. This allows you to instead control its dimensions with CSS, making it flexible to scale and resize on different devices. At the time this module was written the field was in a transitional period regarding best practice for flexible images.</li>
+</ul>
+
+<h4 id="placeholder-images">Placeholder Images</h4>
+
+<dl>
+  <dt><strong>3.8: Placeholders for images</strong></dt>
+  <dd>If you don’t have an actual image yet, you can provide a <code class="highlighter-rouge">src</code> path of <code class="highlighter-rouge">#</code> for a placeholder or make use of the service provided at <code class="highlighter-rouge">http://placehold.it</code>.</dd>
+</dl>
+
+<p>Sometimes we want to add an image placeholder in our markup because either we don’t know where the image we want is, or we simply haven’t generated it yet. In such cases, there are two approaches you can use. The simplest is to use a hash for the source instead of a valid path:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"#"</span> <span class="na">alt=</span><span class="s">"Candid shot of the kids at the pool"</span> <span class="nt">/&gt;</span>
+</code></pre>
+</div>
+
+<p>If we look at this in a browser we’ll see an icon representing a broken link, but that is OK; we’ll be placing the actual image path in later. We’d certainly want to replace this <code class="highlighter-rouge">#</code> before we send anything to a client.</p>
+
+<p>Some prefer a more intentional look, so another option is to use a service such as placehold.it like this:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"http://placehold.it/300x200"</span> 
+     <span class="na">alt=</span><span class="s">"Candid shot of the kids at the pool"</span> <span class="nt">/&gt;</span>
+</code></pre>
+</div>
+
+<p>In this case, we’re linking to a dynamic image from another website that shows a grey box with the text <code class="highlighter-rouge">300x200</code> and sized by default at 300 pixels wide and 200 pixels high. Learn more about this service and how to use it at <a href="http://placehold.it/">placehold.it »</a>.</p>
+
+<h4 id="choosing-image-types">Choosing Image Types</h4>
+
+<dl>
+  <dt><strong>3.9: Which Images Types to Use</strong></dt>
+  <dd>JPEG and PNG are great image types for the web, depending on whether or not you need transparency in an image. GIF is another good option when an image has only a few colors.</dd>
+</dl>
+
+<p>Later in the course we’ll talk more about the process by which we export images or “slices” from a design comp in Sketch which we call “slicing.” As you learned about several image formats in the Duckett text, let me suggest a quick process you can walk through when choosing image types:</p>
+
+<ul>
+  <li>Does the image require transparency?
+    <ul>
+      <li>If yes, does the image require either smooth colors such as in photography or gradients, or smooth transparency where some pixels are semitransparent?
+        <ul>
+          <li>If yes to any of these, choose the PNG format.</li>
+          <li>If no to all, choose the GIF format.</li>
+        </ul>
+      </li>
+      <li>If no, does the image require smooth colors such as in photography or gradients?
+        <ul>
+          <li>If yes use either PNG or JPEG.</li>
+          <li>If no consider GIF.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>Bottom line: I typically use either PNG or JPEG depending on whether transparency is needed. Only when an image has just a few colors will I opt to use a GIF.</p>
+
+<h3 id="prepare-to-apply">Prepare to Apply</h3>
+
+<p>Ensure that you can do the following:</p>
+
+<ul>
+  <li>Create valid relative paths</li>
+  <li>Add placeholder images</li>
+  <li>Add images to content with correct paths</li>
+  <li>User <code class="highlighter-rouge">alt</code> attributes correctly</li>
+</ul>
+
+<h3 id="study-tools">Study Tools</h3>
+
+<p>Review the key takeaways from this module. Memorize each of the following tags or attributes and understand what they are used for:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">&lt;a&gt;</code> and <code class="highlighter-rouge">href</code></li>
+  <li><code class="highlighter-rouge">&lt;img/&gt;</code>, <code class="highlighter-rouge">src</code>, and <code class="highlighter-rouge">alt</code></li>
+</ul>
+
+    </div>
+</main>
+
+<footer class="row site-footer">
+    <div class="col-md-3">
+        <h2 class="footer-brand">Web Design I</h2>
+        <p>Copyright &copy;2016 by <a href="http://philschanely.com">Phil Schanely</a>. All rights reserved.</p>
+    </div>
+    <div class="col-md-9">
+        <p>Basic course in HTML and CSS built originally for Cedarville University&#39;s Interactive Design program.
+</p>
+        <ul class="list-inline">
+            <li><a href="http://cedarville.edu">Cedarville</a></li>
+            <li><a href="http://moodle.cedarville.edu">Moodle</a></li>
+            <li><a href="http://codio.com">Codio</a></li>
+            <li><a href="http://invisionapp.com">InVision</a></li>
+        </ul>
+    </div>
+</footer>
+<script type="text/javascript" src="/js/vendor-min.js"></script>
+<script type="text/javascript" src="/js/scripts.js"></script>
+</body>
+</html>

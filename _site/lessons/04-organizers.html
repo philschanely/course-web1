@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Lesson 4: Grouping and Structural Markup</title>
+    <meta name="description" content="Introduction to Grouping and Structural Markup">
+
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="canonical" href="http://localhost:4000/lessons/04-organizers.html">
+    <link rel="alternate" type="application/rss+xml" title="Web Design I" href="/feed.xml">
+
+    <!---->
+</head>
+<body class="container-fluid">
+<nav class="site-header navbar row">
+    <div class="">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#site-nav" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="site-title navbar-brand" href="/">Web Design I</a>
+        </div>
+        <div class="collapse navbar-collapse navbar-default" id="site-nav">
+            <ul class="nav navbar-nav">
+                <li><a class="page-link" href="/lessons/">Lessons</a></li>
+                <li><a class="page-link" href="/activities/">Activities</a></li>
+                <li><a class="page-link" href="/support/">Support</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<main class="pagify page-lesson">
+    <h1 class="page-title">Lesson 4: Grouping and Structural Markup</h1>
+    <div class="content">
+        <h3 id="introduction-to-grouping-and-structural-markup">Introduction to Grouping and Structural Markup</h3>
+
+<p>Another crucial set of new tags to discuss in this module is a set of structural tags that allow us to further organize our markup. This includes the traditional <code class="highlighter-rouge">&lt;div&gt;</code> tag as well as a new set of sectioning tags that are available thanks to HTML5.</p>
+
+<h3 id="html5-structure">HTML5 Structure</h3>
+
+<dl>
+  <dt><strong>4.1: The &lt;section&gt; tag…</strong></dt>
+  <dd>…is used to create a significant group composed of one or more elements. Its derivates, <code class="highlighter-rouge">&lt;header&gt;</code>, <code class="highlighter-rouge">&lt;nav&gt;</code>, <code class="highlighter-rouge">&lt;main&gt;</code>, <code class="highlighter-rouge">&lt;article&gt;</code>, <code class="highlighter-rouge">&lt;aside&gt;</code>, and <code class="highlighter-rouge">&lt;footer&gt;</code>,  can be used for more specific kinds of groups.</dd>
+</dl>
+
+<p>It’s an appropriate time now to discuss the new structural elements that have enhanced how we can organize and group content, and that we will use later to construct layouts: they all relate to the concept of sectioning.</p>
+
+<p><strong><em>Read chapters 8 and 17 from Duckett.</em></strong></p>
+
+<p>Sectioning means dividing our content up into distinct groups of related content. <code class="highlighter-rouge">&lt;section&gt;</code> tags (or their derivatives) should be used when…</p>
+
+<ul>
+  <li>A set of content works as a semantic group, and, ideally, begins with a heading</li>
+  <li>A set of content fills a particular or important role in the context of the site or page and is worth calling out as a significant section of the site</li>
+</ul>
+
+<p>The basic sectioning tag is the <code class="highlighter-rouge">&lt;section&gt;</code> tag. Use this tag to create a section if one of the more specific tags (covered shortly) does not seem appropriate. It is also fine to put section tags within section tags to further subdivide content.</p>
+
+<p>The following are derived from the <code class="highlighter-rouge">&lt;section&gt;</code> tag and provide more specific ways to group content:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">&lt;main&gt;</code> – Almost as open and vague as the <code class="highlighter-rouge">&lt;section&gt;</code> itself, this tag can be used to contain a typical site’s central content that comes between its masthead and footer. More on this to come below…</li>
+  <li><code class="highlighter-rouge">&lt;article&gt;</code> – Use this instead of <code class="highlighter-rouge">&lt;section&gt;</code> when the group of content you’re marking could stand completely on its own without surrounding content. Like the name suggests, a blog entry or article in an online newspaper are good examples of when to use this.</li>
+  <li><code class="highlighter-rouge">&lt;aside&gt;</code> – Use this specifically to mark sidebar content or groups of content inside an <code class="highlighter-rouge">&lt;article&gt;</code> or <code class="highlighter-rouge">&lt;section&gt;</code> that are not critical, but tangential content. If the surrounding content would be just fine without the group in question, an <code class="highlighter-rouge">&lt;aside&gt;</code> is a good sectioning tag to use.</li>
+  <li><code class="highlighter-rouge">&lt;header&gt;</code> – Use this to mark the heading and any other content that forms the overall <code class="highlighter-rouge">&lt;header&gt;</code> or masthead for a particular set of content. It is common to have an <code class="highlighter-rouge">&lt;article&gt;</code> grouping its content, and then inside it to have a <code class="highlighter-rouge">&lt;header&gt;</code>, <code class="highlighter-rouge">&lt;section&gt;</code>, and <code class="highlighter-rouge">&lt;footer&gt;</code> dividing the <code class="highlighter-rouge">&lt;article&gt;</code> content into distinct subsections.</li>
+  <li><code class="highlighter-rouge">&lt;footer&gt;</code> – Use this to mark content that provides additional information or resources relating to a section of content. Note as well that <code class="highlighter-rouge">&lt;footer&gt;</code> and <code class="highlighter-rouge">&lt;header&gt;</code> can be applied at the page level to mark persistent site masthead (<code class="highlighter-rouge">&lt;header&gt;</code>) and site information (<code class="highlighter-rouge">&lt;footer&gt;</code>).</li>
+  <li><code class="highlighter-rouge">&lt;nav&gt;</code> – Use this to mark groups of important navigation links. Every site that has multiple pages should have at least one <code class="highlighter-rouge">&lt;nav&gt;</code> section. Note, however, that this should be reserved for important or high-level link groups; it is not necessary for marking links in content.</li>
+</ul>
+
+<h3 id="common-page-structure">Common Page Structure</h3>
+
+<dl>
+  <dt><strong>4.2: Many sites follow a common structure…</strong></dt>
+  <dd>…that includes the following three components: a masthead, a main content area, and a footer.</dd>
+</dl>
+
+<p>Consider the following design:</p>
+
+<p><img src="/images/organizers-3-parts.png" alt="" /></p>
+
+<p>What kind of overall structure could this page have? Allow me to suggest a structure that fits it and could be used with small modifications for many other sites:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;!DOCTYPE html&gt;</span> 
+<span class="nt">&lt;html&gt;</span>
+    <span class="nt">&lt;head&gt;</span>
+        <span class="nt">&lt;meta</span> <span class="na">charset=</span><span class="s">"utf-8"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;title&gt;</span>[Site/page title goes here]<span class="nt">&lt;/title&gt;</span>
+        <span class="nt">&lt;link</span> <span class="na">type=</span><span class="s">"text/css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">src=</span><span class="s">"styles.css"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/head&gt;</span>
+    <span class="nt">&lt;body&gt;</span>
+         <span class="nt">&lt;header</span> <span class="na">id=</span><span class="s">"site-masthead"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h1&gt;</span>[site name/brand/logo]<span class="nt">&lt;/h1&gt;</span>
+            <span class="nt">&lt;nav</span> <span class="na">id=</span><span class="s">"nav-main"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;ul&gt;</span>
+                    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"index.html"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                    <span class="nt">&lt;li&gt;</span>[... other page names wrapped in a link]<span class="nt">&lt;/li&gt;</span>
+                <span class="nt">&lt;/ul&gt;</span>
+            <span class="nt">&lt;/nav&gt;</span>
+        <span class="nt">&lt;/header&gt;</span>
+        <span class="nt">&lt;section</span> <span class="na">id=</span><span class="s">"site-content"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h2&gt;</span>[Page name]<span class="nt">&lt;/h2&gt;</span>
+            [Miscellaneous content; markup will vary based on site]
+        <span class="nt">&lt;/section&gt;</span>
+        <span class="nt">&lt;footer</span> <span class="na">id=</span><span class="s">"site-info"</span><span class="nt">&gt;</span>
+            [Miscellaneous footer content; markup will vary based on site]
+        <span class="nt">&lt;/footer&gt;</span>
+    <span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre>
+</div>
+
+<p>Notice how we have three core groups directly inside <code class="highlighter-rouge">&lt;body&gt;</code>:</p>
+
+<ul>
+  <li><strong>A masthead.</strong> The site’s branding is the minimum to include here, very often as the <code class="highlighter-rouge">&lt;h1&gt;</code> for the site. This also often contains the site’s navigation. In some cases the <code class="highlighter-rouge">&lt;nav&gt;</code> is placed outside the <code class="highlighter-rouge">&lt;header&gt;</code> but this is a very common convention to group them together collectively as the masthead.</li>
+  <li><strong>A main content area.</strong> This has in the past been marked with <code class="highlighter-rouge">&lt;div&gt;</code> or <code class="highlighter-rouge">&lt;section&gt;</code> but today the <code class="highlighter-rouge">&lt;main&gt;</code> tag is the best to use for this large and diverse area between the masthead and the footer. The page name is often directly inside this area as well as any content specific to that page grouped further as needed.</li>
+  <li><strong>A footer.</strong> This often contains a secondary navigation, copyright information, and other content that supports or explains the site itself.</li>
+</ul>
+
+<h3 id="distinguish-head-terms">Distinguish “head…” terms</h3>
+
+<dl>
+  <dt><strong>4.3: Distinguishing “head…” similarly terms</strong></dt>
+  <dd>Be sure you can distinguish between the <code class="highlighter-rouge">&lt;head&gt;</code> tag, the <code class="highlighter-rouge">&lt;header&gt;</code> tag and the <code class="highlighter-rouge">&lt;h1&gt;</code> – <code class="highlighter-rouge">&lt;h6&gt;</code> tags.</dd>
+</dl>
+
+<p>In reference to the <code class="highlighter-rouge">&lt;header&gt;</code> tag, it is helpful to differentiate this tag from similarly-named but very different tags:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">&lt;head&gt;</code>: the required tag that provides information about the whole HTML document. This one goes right inside the root <code class="highlighter-rouge"><span class="nt">&lt;html&gt;</span></code> element before the <code class="highlighter-rouge">&lt;body&gt;</code> element. Remember, “every HTML document needs a HEAD and a body.”</li>
+  <li><code class="highlighter-rouge">&lt;h1&gt;</code> – <code class="highlighter-rouge">&lt;h6&gt;</code>: tags used to mark actual heading text. These can only be placed inside <code class="highlighter-rouge">&lt;body&gt;</code> and nested inside other container tags like <code class="highlighter-rouge">&lt;div&gt;</code> tags and sectioning tags. Remember, “headINGS mark text.”</li>
+  <li><code class="highlighter-rouge">&lt;header&gt;</code>: sectioning tag used to group headings and other content that marks the start of a section. This must always be inside the <code class="highlighter-rouge">&lt;body&gt;</code> tag or nested within other tags that are inside <code class="highlighter-rouge">&lt;body&gt;</code>. Remember “headERS group one or more headings.”</li>
+</ul>
+
+<h3 id="sections-vs-divs">Sections vs. Divs</h3>
+
+<dl>
+  <dt><strong>4.4: Distinguish between when to use <code class="highlighter-rouge">&lt;div&gt;</code> and when to use <code class="highlighter-rouge">&lt;section&gt;</code></strong></dt>
+  <dd>It is best to use <code class="highlighter-rouge">&lt;div&gt;</code> for everyday grouping of elements; the <code class="highlighter-rouge">&lt;section&gt;</code> tags are best reserved for significant groups of content. When in doubt, use a <code class="highlighter-rouge">&lt;div&gt;</code>.</dd>
+</dl>
+
+<p>Many students struggle to know when they should use sectioning tags and when to use &lt;div&gt; tags. In a nutshell, <code class="highlighter-rouge">&lt;section&gt;</code>, <code class="highlighter-rouge">&lt;main&gt;</code>, <code class="highlighter-rouge">&lt;article&gt;</code>, <code class="highlighter-rouge">&lt;aside&gt;</code>, <code class="highlighter-rouge">&lt;nav&gt;</code>, <code class="highlighter-rouge">&lt;header&gt;</code>, and <code class="highlighter-rouge">&lt;footer&gt;</code> should be used to identify significant groups of content that match their grouped intention. On the other hand, the <code class="highlighter-rouge">&lt;div&gt;</code> tag can be used to provide less significant grouping. Exactly how browsers interpret these tags is an advanced topic you can explore later in your studies. For now, ask yourself, “is this a major <em>section</em> or a minor <em>div</em>ision?” If your answer is a, “a major <em>section</em>,” then consider further the specific content you are grouping to further choose between <code class="highlighter-rouge">&lt;section&gt;</code>, <code class="highlighter-rouge">&lt;article&gt;</code>, <code class="highlighter-rouge">&lt;aside&gt;</code>, <code class="highlighter-rouge">&lt;nav&gt;</code>, <code class="highlighter-rouge">&lt;header&gt;</code>, and <code class="highlighter-rouge">&lt;footer&gt;</code>. And don’t be afraid to experiment. The activities that accompany this module provide an opportunity for you to practice and get feedback; solutions can be rather subjective.</p>
+
+<p>When the sectioning tags discussed above were released, the <code class="highlighter-rouge">&lt;div&gt;</code> tag took a much-needed vacation. Before the sectioning tags, the <code class="highlighter-rouge">&lt;div&gt;</code> was over-worked and underpaid and was used to mark all the different kinds of sections and groups that the <code class="highlighter-rouge">&lt;header&gt;</code>, <code class="highlighter-rouge">&lt;footer&gt;</code>, <code class="highlighter-rouge">&lt;aside&gt;</code>, <code class="highlighter-rouge">&lt;article&gt;</code>, <code class="highlighter-rouge">&lt;nav&gt;</code>, and <code class="highlighter-rouge">&lt;section&gt;</code> tags better represent. As a result, many developers began to replace all <code class="highlighter-rouge">&lt;div&gt;</code> tags with their more appropriate counterparts in the sectioning tags.</p>
+
+<p>However, <code class="highlighter-rouge">&lt;div&gt;</code> still has its uses. The key is that sectioning tags should mark significant sections of content—sections that contribute to the overall structure of the document. Imagine you needed to represent your document in an outline form. What would be the main points in the outline? These things should be marked with sectioning tags. Any sub-points in the outline could also be marked with sectioning tags.</p>
+
+<p>There are still many cases where you want to group related content, but that group is not as significant in the scope of the document. In such cases, the <code class="highlighter-rouge">&lt;div&gt;</code> tag—which stands for “division”—is completely acceptable.</p>
+
+<h3 id="lists-as-structural-markup">Lists as Structural Markup</h3>
+
+<dl>
+  <dt><strong>4.5: List markup can also be used to create structure.</strong></dt>
+  <dd>While <code class="highlighter-rouge">&lt;ol&gt;</code> and <code class="highlighter-rouge">&lt;ul&gt;</code> tags can only contain <code class="highlighter-rouge">&lt;li&gt;</code> tags as direct children, <code class="highlighter-rouge">&lt;li&gt;</code> tags can contain any other kind of tag. This can be very useful for creating complex lists with beautiful, semantic structure.</dd>
+</dl>
+
+<p>One additional structural markup element is the un-intimidating <code class="highlighter-rouge">&lt;li&gt;</code> element. Remember <code class="highlighter-rouge">&lt;li&gt;</code> tags in the context of marking ordered (<code class="highlighter-rouge">&lt;ol&gt;</code>) or unordered (<code class="highlighter-rouge">&lt;ul&gt;</code>) lists? While <code class="highlighter-rouge">&lt;ul&gt;</code> and <code class="highlighter-rouge">&lt;ol&gt;</code> tags can only contain <code class="highlighter-rouge">&lt;li&gt;</code> elements, <code class="highlighter-rouge">&lt;li&gt;</code> tags can contain just about any other tag, from headings and paragraphs to sections and <code class="highlighter-rouge">&lt;div&gt;</code> tags. Therefore, if a group of content is to be marked that follows a repeating pattern to form a larger list of content, consider using a list.</p>
+
+<p>For example, the homepage of many blog websites presents a list of blog posts, as seen in the image on the following page. Each item in that list includes the name, post date, and an excerpt from the entry.</p>
+
+<p><img src="/images/organizers-blog-list.png" alt="" /></p>
+
+<p>In such cases, markup like this could be used:</p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;h2&gt;</span>News<span class="nt">&lt;/h2&gt;</span> 
+<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"blog-feed"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"blog-head"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h3&gt;</span>That’s Right, I Said Bootie.<span class="nt">&lt;/h3&gt;</span>
+            <span class="nt">&lt;p&gt;</span>Posted on ...<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"images/bootie.png"</span> <span class="na">alt=</span><span class="s">"Booties"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"blog-short"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;p&gt;</span>I have a new favorite in the house ...<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"blog-foot"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;p&gt;</span>Posted in ...<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;p&gt;</span>Tagged ...<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"blog-head"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h3&gt;</span>First Things First<span class="nt">&lt;/h3&gt;</span>
+            <span class="nt">&lt;p&gt;</span>Here in Bredebro ...<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"images/fall-boots.png"</span> <span class="na">alt=</span><span class="s">"Fall boots"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"blog-short"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;p&gt;</span>I have a new favorite in the house ...<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"blog-foot"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;p&gt;</span>Posted in ...<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;p&gt;</span>Tagged ...<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"blog-head"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;h3&gt;</span>Fall 2012 Preview<span class="nt">&lt;/h3&gt;</span>
+            <span class="nt">&lt;p&gt;</span>Posted on ...<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">src=</span><span class="s">"images/bootie.png"</span> <span class="na">alt=</span><span class="s">"Booties"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"blog-short"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;p&gt;</span>One of my favorite brands ...<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"blog-foot"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;p&gt;</span>Posted in ...<span class="nt">&lt;/p&gt;</span>
+            <span class="nt">&lt;p&gt;</span>Tagged ...<span class="nt">&lt;/p&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre>
+</div>
+
+<p>Another example on a smaller scale is a product list, where several pieces of information about a product are presented in a repeatable pattern:</p>
+
+<p><img src="/images/organizers-product-list.png" alt="" /></p>
+
+<div class="language-html highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;h2&gt;</span>Products<span class="nt">&lt;/h2&gt;</span> 
+<span class="nt">&lt;h3&gt;</span>Dress<span class="nt">&lt;/h3&gt;</span> 
+<span class="nt">&lt;ul&gt;</span>
+    <span class="nt">&lt;li&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"thumb"</span> <span class="na">src=</span><span class="s">"images/products/boot-1451.jpg"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"name"</span><span class="nt">&gt;</span>Birgmingham Plain Toe Boot GTX<span class="nt">&lt;/h4&gt;</span>
+        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"price"</span><span class="nt">&gt;</span>$230.00<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"thumb"</span> <span class="na">src=</span><span class="s">"images/products/slipon-2954.jpg"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"name"</span><span class="nt">&gt;</span>Pedroso Slip On<span class="nt">&lt;/h4&gt;</span>
+        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"price"</span><span class="nt">&gt;</span>$230.00<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"thumb"</span> <span class="na">src=</span><span class="s">"images/products/shoe-453278.jpg"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"name"</span><span class="nt">&gt;</span>Pedroso Tie<span class="nt">&lt;/h4&gt;</span>
+        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"price"</span><span class="nt">&gt;</span>$230.00<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/li&gt;</span> 
+<span class="nt">&lt;/ul&gt;</span> 
+<span class="nt">&lt;h3&gt;</span>Casual<span class="nt">&lt;/h3&gt;</span> 
+<span class="nt">&lt;ul&gt;</span>
+    <span class="nt">&lt;li&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"thumb"</span> <span class="na">src=</span><span class="s">"images/products/shoe-3684.jpg"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"name"</span><span class="nt">&gt;</span>Turn GTX Tie<span class="nt">&lt;/h4&gt;</span>
+        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"price"</span><span class="nt">&gt;</span>$190.00<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"thumb"</span> <span class="na">src=</span><span class="s">"images/products/shoe-4965875.jpg"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"name"</span><span class="nt">&gt;</span>Street Luxe<span class="nt">&lt;/h4&gt;</span>
+        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"price"</span><span class="nt">&gt;</span>$180.00<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"thumb"</span> <span class="na">src=</span><span class="s">"images/products/shoe-9464246.jpg"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"name"</span><span class="nt">&gt;</span>Walker 2.0 Tie<span class="nt">&lt;/h4&gt;</span>
+        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"price"</span><span class="nt">&gt;</span>$180.00<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/li&gt;</span> 
+<span class="nt">&lt;/ul&gt;</span> 
+<span class="nt">&lt;h3&gt;</span>Outdoor<span class="nt">&lt;/h3&gt;</span> 
+<span class="nt">&lt;ul&gt;</span>
+    <span class="nt">&lt;li&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"thumb"</span> <span class="na">src=</span><span class="s">"images/products/shoe-8466.jpg"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"name"</span><span class="nt">&gt;</span>Turn GTX Tie<span class="nt">&lt;/h4&gt;</span>
+        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"price"</span><span class="nt">&gt;</span>$230.00<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"thumb"</span> <span class="na">src=</span><span class="s">"images/products/shoe-34586.jpg"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"name"</span><span class="nt">&gt;</span>Track II Low<span class="nt">&lt;/h4&gt;</span>
+        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"price"</span><span class="nt">&gt;</span>$210.00<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span>
+</code></pre>
+</div>
+
+<h3 id="prepare-to-apply">Prepare to Apply</h3>
+
+<p>This module’s application activity challenges you to see the invisible structures that group content into layout and conventional elements. Ensure that you can do the following:</p>
+
+<ul>
+  <li>Recognize and label common layout conventions in design comps.</li>
+  <li>Use <code class="highlighter-rouge">&lt;div&gt;</code> tags and the various sectioning tags to organize and group layout elements.</li>
+</ul>
+
+<h3 id="study-tools">Study Tools</h3>
+
+<p>Review the key takeaways from this module. Memorize each of the following tags or attributes and understand what they are used for:</p>
+
+<ul>
+  <li><code class="highlighter-rouge">&lt;div&gt;</code></li>
+  <li><code class="highlighter-rouge">&lt;section&gt;</code></li>
+  <li><code class="highlighter-rouge">&lt;main&gt;</code></li>
+  <li><code class="highlighter-rouge">&lt;nav&gt;</code></li>
+  <li><code class="highlighter-rouge">&lt;header&gt;</code></li>
+  <li><code class="highlighter-rouge">&lt;footer&gt;</code></li>
+  <li><code class="highlighter-rouge">&lt;article&gt;</code></li>
+  <li><code class="highlighter-rouge">&lt;aside&gt;</code></li>
+</ul>
+
+    </div>
+</main>
+
+<footer class="row site-footer">
+    <div class="col-md-3">
+        <h2 class="footer-brand">Web Design I</h2>
+        <p>Copyright &copy;2016 by <a href="http://philschanely.com">Phil Schanely</a>. All rights reserved.</p>
+    </div>
+    <div class="col-md-9">
+        <p>Basic course in HTML and CSS built originally for Cedarville University&#39;s Interactive Design program.
+</p>
+        <ul class="list-inline">
+            <li><a href="http://cedarville.edu">Cedarville</a></li>
+            <li><a href="http://moodle.cedarville.edu">Moodle</a></li>
+            <li><a href="http://codio.com">Codio</a></li>
+            <li><a href="http://invisionapp.com">InVision</a></li>
+        </ul>
+    </div>
+</footer>
+<script type="text/javascript" src="/js/vendor-min.js"></script>
+<script type="text/javascript" src="/js/scripts.js"></script>
+</body>
+</html>
