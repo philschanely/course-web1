@@ -43,7 +43,7 @@ Consider the following design:
 What kind of overall structure could this page have? Allow me to suggest a structure that fits it and could be used with small modifications for many other sites:
 
 ```html
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
@@ -51,7 +51,7 @@ What kind of overall structure could this page have? Allow me to suggest a struc
         <link type="text/css" rel="stylesheet" src="styles.css" />
     </head>
     <body>
-         <header id="site-masthead">
+        <header id="site-masthead">
             <h1>[site name/brand/logo]</h1>
             <nav id="nav-main">
                 <ul>
@@ -71,7 +71,7 @@ What kind of overall structure could this page have? Allow me to suggest a struc
 </html>
 ```
 
-Notice how we have three core groups directly inside `<body>`: 
+Notice how we have three core groups directly inside `<body>`:
 
 * **A masthead.** The site's branding is the minimum to include here, very often as the `<h1>` for the site. This also often contains the site's navigation. In some cases the `<nav>` is placed outside the `<header>` but this is a very common convention to group them together collectively as the masthead.
 * **A main content area.** This has in the past been marked with `<div>` or `<section>` but today the `<main>` tag is the best to use for this large and diverse area between the masthead and the footer. The page name is often directly inside this area as well as any content specific to that page grouped further as needed.
@@ -79,21 +79,21 @@ Notice how we have three core groups directly inside `<body>`:
 
 ### Distinguish "head..." terms
 
-**4.3: Distinguishing "head..." similarly terms**
-: Be sure you can distinguish between the `<head>` tag, the `<header>` tag and the `<h1>` -- `<h6>` tags.
+**4.3: Distinguishing "head..." terms**
+: Be sure you can distinguish between the `<head>` tag, the `<header>` tag and the `<h1>` -- `<h6>` tags from each other.
 
 In reference to the `<header>` tag, it is helpful to differentiate this tag from similarly-named but very different tags:
 
 * `<head>`: the required tag that provides information about the whole HTML document. This one goes right inside the root `<html>` element before the `<body>` element. Remember, “every HTML document needs a HEAD and a body.”
-* `<h1>` -- `<h6>`: tags used to mark actual heading text. These can only be placed inside `<body>` and nested inside other container tags like `<div>` tags and sectioning tags. Remember, “headINGS mark text.”
-* `<header>`: sectioning tag used to group headings and other content that marks the start of a section. This must always be inside the `<body>` tag or nested within other tags that are inside `<body>`. Remember “headERS group one or more headings.”
+* `<h1>` -- `<h6>`: the tags used to mark actual heading text. These can only be placed inside `<body>` and nested inside other container tags like `<div>` tags and sectioning tags. Remember, “headINGS label text.”
+* `<header>`: the sectioning tag used to group headings and other content that marks the start of a section or other group. This must also always be inside the `<body>` tag or nested within other tags that are inside `<body>`. Remember “headERS group headings and other frontmatter.”
 
 ### Sections vs. Divs
 
 **4.4: Distinguish between when to use `<div>` and when to use `<section>`**
 : It is best to use `<div>` for everyday grouping of elements; the `<section>` tags are best reserved for significant groups of content. When in doubt, use a `<div>`.
 
-Many students struggle to know when they should use sectioning tags and when to use <div> tags. In a nutshell, `<section>`, `<main>`, `<article>`, `<aside>`, `<nav>`, `<header>`, and `<footer>` should be used to identify significant groups of content that match their grouped intention. On the other hand, the `<div>` tag can be used to provide less significant grouping. Exactly how browsers interpret these tags is an advanced topic you can explore later in your studies. For now, ask yourself, “is this a major *section* or a minor *div*ision?” If your answer is a, “a major *section*,” then consider further the specific content you are grouping to further choose between `<section>`, `<article>`, `<aside>`, `<nav>`, `<header>`, and `<footer>`. And don’t be afraid to experiment. The activities that accompany this module provide an opportunity for you to practice and get feedback; solutions can be rather subjective. 
+Many students struggle to know when they should use sectioning tags and when to use <div> tags. In a nutshell, `<section>`, `<main>`, `<article>`, `<aside>`, `<nav>`, `<header>`, and `<footer>` should be used to identify significant groups of content that match their grouped intention. On the other hand, the `<div>` tag can be used to provide less significant grouping. Exactly how browsers interpret these tags is an advanced topic you can explore later in your studies. For now, ask yourself, “is this a major *section* or a minor *div*ision?” If your answer is a, “a major *section*,” then consider further the specific content you are grouping to further choose between `<section>`, `<article>`, `<aside>`, `<nav>`, `<header>`, and `<footer>`. And don’t be afraid to experiment. The activities that accompany this module provide an opportunity for you to practice and get feedback; solutions can be rather subjective.
 
 When the sectioning tags discussed above were released, the `<div>` tag took a much-needed vacation. Before the sectioning tags, the `<div>` was over-worked and underpaid and was used to mark all the different kinds of sections and groups that the `<header>`, `<footer>`, `<aside>`, `<article>`, `<nav>`, and `<section>` tags better represent. As a result, many developers began to replace all `<div>` tags with their more appropriate counterparts in the sectioning tags.
 
@@ -103,7 +103,7 @@ There are still many cases where you want to group related content, but that gro
 
 ### Lists as Structural Markup
 
-**4.5: List markup can also be used to create structure.** 
+**4.5: List markup can also be used to create structure.**
 : While `<ol>` and `<ul>` tags can only contain `<li>` tags as direct children, `<li>` tags can contain any other kind of tag. This can be very useful for creating complex lists with beautiful, semantic structure.
 
 One additional structural markup element is the un-intimidating `<li>` element. Remember `<li>` tags in the context of marking ordered (`<ol>`) or unordered (`<ul>`) lists? While `<ul>` and `<ol>` tags can only contain `<li>` elements, `<li>` tags can contain just about any other tag, from headings and paragraphs to sections and `<div>` tags. Therefore, if a group of content is to be marked that follows a repeating pattern to form a larger list of content, consider using a list.
@@ -112,10 +112,10 @@ For example, the homepage of many blog websites presents a list of blog posts, a
 
 ![](/images/organizers-blog-list.png)
 
-In such cases, markup like this could be used: 
+In such cases, markup like this could be used:
 
 ```html
-<h2>News</h2> 
+<h2>News</h2>
 <ul class="blog-feed">
     <li>
         <div class="blog-head">
@@ -167,8 +167,8 @@ Another example on a smaller scale is a product list, where several pieces of in
 ![](/images/organizers-product-list.png)
 
 ```html
-<h2>Products</h2> 
-<h3>Dress</h3> 
+<h2>Products</h2>
+<h3>Dress</h3>
 <ul>
     <li>
         <img class="thumb" src="images/products/boot-1451.jpg" />
@@ -184,9 +184,9 @@ Another example on a smaller scale is a product list, where several pieces of in
         <img class="thumb" src="images/products/shoe-453278.jpg" />
         <h4 class="name">Pedroso Tie</h4>
         <p class="price">$230.00</p>
-    </li> 
-</ul> 
-<h3>Casual</h3> 
+    </li>
+</ul>
+<h3>Casual</h3>
 <ul>
     <li>
         <img class="thumb" src="images/products/shoe-3684.jpg" />
@@ -202,9 +202,9 @@ Another example on a smaller scale is a product list, where several pieces of in
         <img class="thumb" src="images/products/shoe-9464246.jpg" />
         <h4 class="name">Walker 2.0 Tie</h4>
         <p class="price">$180.00</p>
-    </li> 
-</ul> 
-<h3>Outdoor</h3> 
+    </li>
+</ul>
+<h3>Outdoor</h3>
 <ul>
     <li>
         <img class="thumb" src="images/products/shoe-8466.jpg" />
@@ -229,7 +229,7 @@ This module’s application activity challenges you to see the invisible structu
 
 ### Study Tools
 
-Review the key takeaways from this module. Memorize each of the following tags or attributes and understand what they are used for: 
+Review the key takeaways from this module. Memorize each of the following tags or attributes and understand what they are used for:
 
 * `<div>`
 * `<section>`

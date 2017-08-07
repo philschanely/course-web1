@@ -41,15 +41,15 @@ Duckett’s overview of selector types in this chapter provides a helpful introd
         ```css
 ul li {}
         ```
-        
+
         (for all `<li>` tags inside a `<ul>` tag)
-    
+
     * a common class applied? Use a class selector such as...
 
         ```css
 .blog-summary {}
         ```
-        
+
         (for all elements that have a class of blog-summary)
 
     * a combination of these? Use a combination of nested selectors, tag selectors, and `id` and/or `class` selectors as needed. For example...
@@ -58,7 +58,7 @@ ul li {}
             ```css
 .blog-summary p {}
             ```
-            
+
         * to style all `<a>` tags inside a `<nav>` tag that is inside the element that has an `id` of `masthead`, use:
 
             ```css
@@ -68,29 +68,29 @@ ul li {}
 **6.3 Read selectors from the right to the left...**
 : ...to ensure you grasp what element is selected and the context in which that element is expected to be.
 
-The other challenge is being able to talk about selectors and to interpret selector prompts. The first funny thing about this is that we describe a selector from the right to the left, starting with the element that is being styled and moving back to its outer elements. 
+The other challenge is being able to talk about selectors and to interpret selector prompts. The first funny thing about this is that we describe a selector from the right to the left, starting with the element that is being styled and moving back to its outer elements.
 
-For example... 
+For example...
 
-* this rule selects a paragraph: 
+* this rule selects a paragraph:
 
     ```css
 p {}
     ```
-    
+
 * this rule selects a paragraph that is inside a `<div>`:
 
     ```css
 div p {}
     ```
-    
+
 * this rule selects a paragraph that is inside another element with a `class` of `blog-summary`:
 
     ```css
 .blog-summary p {}
     ```
-    
-* this rule selects a paragraph with a `class` of `intro` and that is inside of another element with a `class` of `blog-summary`: 
+
+* this rule selects a paragraph with a `class` of `intro` and that is inside of another element with a `class` of `blog-summary`:
 
     ```css
 .blog-summary p.intro {}
@@ -98,28 +98,28 @@ div p {}
 
 Do you see a pattern? First we describe that target element (and any attributes attached to it) and then move backward to describe outer elements. Also note that we describe each element fully before moving to another element. Let’s take apart the last example piece by piece and build the selector as we go.
 
-**Prompt:** Select a paragraph with a `class` of `intro` that is inside of another element with a `class` of 
+**Prompt:** Select a paragraph with a `class` of `intro` that is inside of another element with a `class` of
 `blog-summary`:
 
-1. Select a paragraph... 
+1. Select a paragraph...
 
     ```css
 p {}
     ```
-		
-2. Select a paragraph with a `class` of `intro`... 
+
+2. Select a paragraph with a `class` of `intro`...
 
     ```css
 p.intro {}
     ```
-		
-3. Select a paragraph with a `class` of `intro` that is inside of another element (we’ll use `?` for now to represent “another element”)... 
+
+3. Select a paragraph with a `class` of `intro` that is inside of another element (we’ll use `?` for now to represent “another element”)...
 
     ```css
 ? p.intro {}
     ```
-		
-4. Select a paragraph with a `class` of `intro` that is inside of another element with a `class` of 
+
+4. Select a paragraph with a `class` of `intro` that is inside of another element with a `class` of
 `blog-summary`...
 
     ```css
@@ -131,11 +131,11 @@ CSS is a major topic, and our transition into this component of the technical si
 ### Specificity
 
 **6.4 When selectors conflict...**
-: the rules of *specificity* determine which styles get applied. The more specific selector will win over less specific selectors. 
+: the rules of *specificity* determine which styles get applied. The more specific selector will win over less specific selectors.
 
 Duckett discusses several crucial CSS concepts on pages 239-240. The concepts of cascade and inheritance are discussed. Under cascade Duckett introduces the subject of specificity, which addresses how conflicts in style settings between two rules are resolved based on which rule has a more specific selector.
 
-Basically, the more specific the selector, the more power the rule has in any conflicts. Specificity is governed by the number of tags, classes, and ids used in a selector. 
+Basically, the more specific the selector, the more power the rule has in any conflicts. Specificity is governed by the number of tags, classes, and ids used in a selector.
 
 First, a selector with more parts of a certain type wins over one with fewer parts. So the following selectors begin simple and get more specific just because we add more parts tot he selector—but all three style `<p>` tags:
 
@@ -144,16 +144,16 @@ First, a selector with more parts of a certain type wins over one with fewer par
     ```css
 p {}
     ```
-		
+
 * This selects all `<p>` tags that are somewhere inside a `<div>` tag:
 
     ```css
 div p {}
     ```
-		
-* This selects all `<p>` tags that are somewhere inside `<div>` tags that itself somewhere inside a 
+
+* This selects all `<p>` tags that are somewhere inside `<div>` tags that itself somewhere inside a
 `<section>` tag:
-		
+
     ```css
 section div p {}
     ```
@@ -161,7 +161,7 @@ section div p {}
 **6.5 Specificity is determined...**
 : by counting the number of tags, `class`es and `id`s in a selector. `id`s overpower `class`es, and `class`es overpower tags. If these simple power levels don’t make a clear winner, the more of a power level a selector has, the greater specificity it possesses.
 
-Second, `id` selectors trump `class` selectors, which in turn trump tag selectors. 
+Second, `id` selectors trump `class` selectors, which in turn trump tag selectors.
 
 Consider this markup:
 
@@ -189,16 +189,34 @@ So how will this render? Here’s what the browser shows:
 
 ![](/images/specificity.png)
 
-Can you figure out why each line is colored the way it is? 
+Can you figure out why each line is colored the way it is?
 
 Here’s an explanation:
 
 * Line 1 is not in any `<div>` or contained by anything with a `class` or `id`, so it gets the default black color.
-* Line 2 is inside a `<div>` and could be blue thanks to the `div p` selector. It is also inside the element that has a `class` of `main-article` so it could also be green thanks to the `.main-article p` selector. But it is also inside of an element that has an `id` of `intro`. Since the selector `#intro p` is the most specific and applies to this line, it is colored red. 
+* Line 2 is inside a `<div>` and could be blue thanks to the `div p` selector. It is also inside the element that has a `class` of `main-article` so it could also be green thanks to the `.main-article p` selector. But it is also inside of an element that has an `id` of `intro`. Since the selector `#intro p` is the most specific and applies to this line, it is colored red.
 * Line 3 is not in a `<div>`, so it will not be blue, but it is inside an element that has a `class` of `main-article` so it is styled green.
 * There are no paragraphs inside a `<div>` that is not styled more specifically, so no paragraphs are blue.
 
 Andy Clarke drew a memorable metaphor in [this article](http://www.stuffandnonsense.co.uk/archives/css_specificity_wars.html). Make sure you enlarge the image near the bottom for a chart with memorable examples of specificity.
+
+### Planning Style
+
+Before we get busy building out design comps we benefit from thinking broadly about the style of our website. Through moodboards and style tiles we can begin to flesh out potential directions for the site's visual style.
+
+***Read Chapter 1, pp.44--49 from Miller.***
+
+### Elements of Style Used in Planning
+
+For sake of our style tiles, let's jump over to another chapter from Miller to investigate elements of web design that relate. We'll read a portion of chapter 5 now but save the rest for another module when we're thinking about more details for our full comps.
+
+***Read Chapter 5, pp.146--157 from Miller.***
+
+### Web Typography
+
+We have a lot to take in as we plan typography for our websites. Miller devotes an entire chapter to this crucial element, and we benefit from thinking thoroughly about our typography options even now at this planning point in our process.
+
+***Read Chapter 6 from Miller.***
 
 ### Prepare to Apply
 
@@ -212,7 +230,14 @@ Ensure that you can…
 
 ### Study Tools
 
-Review the key takeaways from this module. Memorize each of the following tags or attributes and understand what they are used for: 
+Review the key takeaways from this module. Memorize each of the following tags or attributes and understand what they are used for:
 
 * `<link/>`
 * `<style>`
+
+Prepare answers to the following questions as you study for the exam covering this lesson:
+
+* What are mood boards and style tiles? Compare and contrast their purposes and components.
+* What role do metaphors play in planning site style?
+* What elements of web design come into play when planning design style?
+* What are some of the crucial features of working with typography on the web?

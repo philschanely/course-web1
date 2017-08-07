@@ -44,15 +44,22 @@ $color-indigo: #4533DB;
   .pager {
     .disabled {
       & > a,
+      & > a:visited
       & > span {
+        color: fade-out(white, .8);
         background-color: fade-out($link-color, .8);
         &:focus,
-        &:hover { background-color: fade-out($link-color, .8); }
+        &:hover {
+          color: fade-out(white, .8);
+          background-color: fade-out($link-color, .8);
+        }
       }
     }
     li {
       & > a,
+      & > a:visited,
       & > span {
+        color: white;
         background-color: fade-out($link-color, .1);
         &:hover,
         &:focus { background-color: $link-color; }

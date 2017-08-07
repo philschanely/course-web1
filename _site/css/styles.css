@@ -234,13 +234,19 @@ h1, h2, h3, h4 {
   .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
     background-color: #3398DB; }
 
-.pager .disabled > a, .pager .disabled > span {
+.pager .disabled > a, .pager .disabled > a:visited
+.pager .disabled > span {
+  color: rgba(255, 255, 255, 0.2);
   background-color: rgba(0, 188, 140, 0.2); }
-  .pager .disabled > a:focus, .pager .disabled > a:hover, .pager .disabled > span:focus, .pager .disabled > span:hover {
+  .pager .disabled > a:focus, .pager .disabled > a:hover, .pager .disabled > a:visited
+  .pager .disabled > span:focus, .pager .disabled > a:visited
+  .pager .disabled > span:hover {
+    color: rgba(255, 255, 255, 0.2);
     background-color: rgba(0, 188, 140, 0.2); }
-.pager li > a, .pager li > span {
+.pager li > a, .pager li > a:visited, .pager li > span {
+  color: white;
   background-color: rgba(0, 188, 140, 0.9); }
-  .pager li > a:hover, .pager li > a:focus, .pager li > span:hover, .pager li > span:focus {
+  .pager li > a:hover, .pager li > a:focus, .pager li > a:visited:hover, .pager li > a:visited:focus, .pager li > span:hover, .pager li > span:focus {
     background-color: #00BC8C; }
 
 strong em,

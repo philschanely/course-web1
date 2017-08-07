@@ -5,7 +5,7 @@ layout: lesson
 ### Hyperlinks
 
 **3.1: Hyperlinks**
-: Hyperlinks are created with the `<a>` tag. This usually wraps some HTML content such as text or an image that acts as the anchor for the link. 
+: Hyperlinks are created with the `<a>` tag. This usually wraps some HTML content such as text or an image that acts as the anchor for the link.
 
 Markup that gives structure to content provides a foundation for building web pages. But what makes web documents different from other documents is that web documents can include hyperlinks that connect them to each other.
 
@@ -13,7 +13,7 @@ Markup that gives structure to content provides a foundation for building web pa
 
 Chapter 4 covers the `<a>` tag and how to link to websites and pages within your own website. To provide you additional practice with these concepts, let’s start by looking more at how to add `<a>` tags and configure them to point to a website on the Internet.
 
-First of all, note that when we create hyperlinks we tend to call them just "links," and they are created with the `<a>` tag. This tag technically represents a "hyperlink anchor," since such a link is the launching point or anchor from which a user clicks to connect to another site, page, or document. However, there are a few other tags that could be confused with the `<a>` tag. 
+First of all, note that when we create hyperlinks we tend to call them just "links," and they are created with the `<a>` tag. This tag technically represents a "hyperlink anchor," since such a link is the launching point or anchor from which a user clicks to connect to another site, page, or document. However, there are a few other tags that could be confused with the `<a>` tag.
 
 Compare the `<a>` tag to two other tags that you might mistake as hyperlinks:
 
@@ -23,7 +23,7 @@ Compare the `<a>` tag to two other tags that you might mistake as hyperlinks:
 | `<link/>` | Script link | This is placed in the `<head>` element in order to import resources such as CSS style sheets. This is NOT a hyperlink or used to create links in the `<body>` tag even though it seems obviously named as a "link." We will call these "Script Links" or "head link tags." |
 | `<li>` | List item	 | This marks items in a list. It is NOT at all related to a link, even though it could appear to be an abbreviation for “link.” They represent “list item.” And for the record, we usually pronounce this tag as an an acronym "l-i" (or "el-eye") not "lee." |
 
-So make sure you understand that when you want to create a link in your content you use the `<a>` tag, not 
+So make sure you understand that when you want to create a link in your content you use the `<a>` tag, not
 `<link/>` or `<li>`. These serve other purposes.
 Observe each of these tags used correctly in the following code snippet:
 
@@ -38,9 +38,9 @@ Observe each of these tags used correctly in the following code snippet:
             <li>This is item 1 in a list.</li>
             <li>This is item 2 in a list.</li>
         </ol>
-        <p><a href="http://cedarville.edu">This is a hyperlink 
+        <p><a href="http://cedarville.edu">This is a hyperlink
            to the Cedarville homepage.</a></p>   
-    </body> 
+    </body>
 </html>
 ```
 
@@ -67,36 +67,36 @@ A helpful tip to ensure you get the right path is to actually visit the desired 
 
 Duckett goes on in chapter 4 to describe relative URLs or relative paths which allow us to point to files within our own site. Examine the chart that follows for more details and examples.
 
-* For files that reside in the same folder as the one from which we are pointing, we simply enter the file name and extension as the link path.	
+* For files that reside in the same folder as the one from which we are pointing, we simply enter the file name and extension as the link path.
 
     Here, the path from `index.html` to `styles.css` is: `styles.css`
-    
+
     ![](/images/path-direct.png)
 
-* If the file is deeper inside a folder and that folder is inside the same folder as the one from which we are pointing, we start by naming that folder, then entering a `/` forward slash, then listing the name of the file in that folder.	
+* If the file is deeper inside a folder and that folder is inside the same folder as the one from which we are pointing, we start by naming that folder, then entering a `/` forward slash, then listing the name of the file in that folder.
 
     Here, the path from `index.html` to `list.html` is: `products/list.html`
-    
+
     ![](/images/path-down.png)
 
-* If the file is several folders in, just continue to list each progressive folder.	
+* If the file is several folders in, just continue to list each progressive folder.
 
     Here, the path from `index.html` to `clogs.html` is: `products/men/shoes/clogs.html`
-    
+
     ![](/images/path-multi-down.png)
 
-* If the file is in a folder that is outside of the current file’s folder, start with `../` which moves out one folder. Continue to move out successive layers with more `../` if needed. 
+* If the file is in a folder that is outside of the current file’s folder, start with `../` which moves out one folder. Continue to move out successive layers with more `../` if needed.
 
-    Here, the path from index.html to list.html is: `../list.html`	
-    
-    ![](/images/path-up.png) 
+    Here, the path from index.html to list.html is: `../list.html`
 
-* Finally, enter the folder name to begin moving back inward again. Continue adding folders until you reach the desired folder and then enter the desired file name as in the first point above.	
+    ![](/images/path-up.png)
+
+* Finally, enter the folder name to begin moving back inward again. Continue adding folders until you reach the desired folder and then enter the desired file name as in the first point above.
 
     Here, the path from the `index.html` in the `men` folder to `catalogue.pdf` is: `../../docs/catalogue.pdf.	`
-    
+
     ![](/images/path-up-and-down.png)
-	 
+
 **3.4: `id` references and placeholder links**
 : The `#` pound sign can be used in `href` attributes as a placeholder or to point to another element in the document using its `id` attribute.
 
@@ -138,7 +138,7 @@ This assumes that in the current folder there is another folder called `images` 
 
 While Duckett discusses `<img/>` elements and their attributes in more detail, one you should note in particular is the `alt` attribute. This allows us to provide alternate text for an image. There are several instances where this is necessary:
 
-* Provide a caption for an image if the image’s surrounding content does not provide this. This also allows search engines to discover content of images in case this is relevant for your users. 
+* Provide a caption for an image if the image’s surrounding content does not provide this. This also allows search engines to discover content of images in case this is relevant for your users.
 * Provide fallback text for an image that contains text so that if the image is not available, the user will see text rather than just a broken image icon.\
 * It is a best practice to provide the `alt` attribute for every image you insert. The only common exceptions are when the image is purely decorative (it adds no content to the page, but adds a visual embellishment) or when surrounding text provides a clear enough caption for the image.
 
@@ -149,9 +149,9 @@ While Duckett discusses `<img/>` elements and their attributes in more detail, o
 
 We can do a lot today with CSS, especially when it comes to creating graphical layouts. We'll learn more about this later in the course. But now, as you learn how to include images in your content, it is important to consider what images you should include in your markup versus leave out with the intent of applying with with CSS later.
 
-As you study a document to mark up and encounter images, ask yourself whether the image contributes to the content or embellishes through decoration. Leave out any images that might be consider decoration or could be part of the background (textures, patterns, large background images, etc.). 
+As you study a document to mark up and encounter images, ask yourself whether the image contributes to the content or embellishes through decoration. Leave out any images that might be consider decoration or could be part of the background (textures, patterns, large background images, etc.).
 
-Be on the watch specifically for text content in images. As mentioned earlier, the `<img/>` tag allows text content to be recorded in the alt attribute. But why would text be in an image to begin with? Sometimes web designers prefer to create heading text as images so as to have more control of the font and related properties. When that information is frozen as pixels in an image (or line art in an SVG graphic) the the designer can maintain control of kerning, color, and font properties. This is not recommended today since we have access to many more fonts that we used to. 
+Be on the watch specifically for text content in images. As mentioned earlier, the `<img/>` tag allows text content to be recorded in the alt attribute. But why would text be in an image to begin with? Sometimes web designers prefer to create heading text as images so as to have more control of the font and related properties. When that information is frozen as pixels in an image (or line art in an SVG graphic) the the designer can maintain control of kerning, color, and font properties. This is not recommended today since we have access to many more fonts that we used to.
 
 One very common set of content to include as an image is the company's logo or wordmark, since this is often desired to be 100% consistent for branding reasons. This will also often be the worthy name of the site, so it might be best marked with an `<h1>` tag. The `<img/>` tag can go inside the `<h1>`. Then be sure to provide the text content of the logo in the alt attribute of the `<img/>` tag. Consider this markup for the Cedarville University website's masthead as a pattern that is used in many sites:
 
@@ -160,7 +160,7 @@ One very common set of content to include as an image is the company's logo or w
 ```html
 <header id="site-masthead">
     <h1>
-        <img src="images/logo.png" 
+        <img src="images/logo.png"
              alt="Cedarville University" />
     </h1>
     <nav id="nav-main">...</nav>
@@ -190,7 +190,7 @@ If we look at this in a browser we’ll see an icon representing a broken link, 
 Some prefer a more intentional look, so another option is to use a service such as placehold.it like this:
 
 ```html
-<img src="http://placehold.it/300x200" 
+<img src="http://placehold.it/300x200"
      alt="Candid shot of the kids at the pool" />
 ```
 
@@ -213,6 +213,24 @@ Later in the course we'll talk more about the process by which we export images 
 
 Bottom line: I typically use either PNG or JPEG depending on whether transparency is needed. Only when an image has just a few colors will I opt to use a GIF.
 
+### Website Planning, Research, and Discovery
+
+As part of our course's purpose is to discuss contemporary practices in web design, we'll use Brian Miller's fantastic text, *Above the Fold* as a primary source. We begin our in-depth study with an excerpt from Chapter 1. In this chapter, Miller lays out the overall process we go through to plan a website. We'll read just the section related to understanding a given website project.
+
+***Read Chapter 1, pp.22--29 from Miller's Above the Fold, 2nd Edition ("Miller" henceforth).***
+
+Let's leave this chapter for now in order to look more closely at what can go into understanding a website's needs or requirements from the user's standpoint.
+
+### Elements of Usability
+
+A major initiative in contemporary web design is to focus on the user's needs and represent them in any business discussion. This often takes a concerted effort on our part, because, ironically, business owners are often thinking about their own needs, preferences, or interests for their company's website. Chapter 2 from Miller provides an excellent overview of the study of usability. When we plan in this fashion, we can think beyond the day-to-day grind of building sites and instead show a care for the actual experience users have when visiting a site.
+
+***Read Chapter 2 from Miller.***
+
+We benefit greatly from determining the business goals for a website. We benefit even more from understanding how those goals line up with actual user needs.
+
+Think back to the deliverables covered in your reading from Chapter 1. SWOT Analysis can bring both of these elements together, reflecting those strengths, weaknesses, opportunities, and threats from both the business and the user's perspective. A Creative Brief is a great way to outline your understanding and expectations for a project to ensure you and your client are on the same page before starting.
+
 ### Prepare to Apply
 
 Ensure that you can do the following:
@@ -220,11 +238,22 @@ Ensure that you can do the following:
 * Create valid relative paths
 * Add placeholder images
 * Add images to content with correct paths
-* User `alt` attributes correctly 
+* User `alt` attributes correctly
 
 ### Study Tools
 
-Review the key takeaways from this module. Memorize each of the following tags or attributes and understand what they are used for: 
+Review the key takeaways from this module. Memorize each of the following tags or attributes and understand what they are used for:
 
 * `<a>` and `href`
 * `<img/>`, `src`, and `alt`
+
+Prepare answers to the following questions as you study for the exam covering this lesson:
+
+* Describe the nature and purpose of SWOT Analysis.
+* Describe the nature and purpose of a Creative Brief in the context of web design.
+* Miller outlines seven broad factors that usability professionals consider. List and describe them in your own words.
+* What is persistent navigation and what are some things Miller describes that we can do to make them clear and usable?
+* What purpose do breadcrumbs navigation play in usability?
+* What are some principles Miller describes for making buttons and links usable?
+* What factors are involved in making site search features usable?
+* How do form submissions, error messages, and the use of surprise and delight relate to each other in relation to user experience?

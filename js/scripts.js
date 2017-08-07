@@ -65,6 +65,13 @@ function pagify(_context, _marker) {
             var $target = $(e.target);
             if ($target.hasClass("subnav-link") || $target.hasClass("page-nav-link")) {
                 e.preventDefault();
+
+                // Move page up
+                $("html, body").animate({
+                  scrollTop: "0px",
+                }, 500, function(){});
+
+                // Get the target page number
                 var targetPageNum = Number($target.attr("href").replace("#page-", ""));
 
                 // Remove all active classes
@@ -122,8 +129,6 @@ function chunkify(_object, _context, _marker) {
           alias: $this.text().toLowerCase().replaceAll(' ', '-'),
           class: i == 0 ? "active" : ""
       };
-
-      console.log(chunk);
 
       // Add this page to the overall list of pages
       _object.items.push(chunk);

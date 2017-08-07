@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Lesson 12: Layout Patterns</title>
-    <meta name="description" content="Introduction">
+    <title>Lesson 10: Building Layouts</title>
+    <meta name="description" content="Building Tiles and Containers">
 
     <link rel="stylesheet" href="/css/styles.css" />
-    <link rel="canonical" href="http://localhost:4000/lessons/12-layout-patterns.html">
+    <link rel="canonical" href="http://localhost:4000/lessons/10-building-layouts.html">
     <link rel="alternate" type="application/rss+xml" title="Web Design I" href="/feed.xml">
 
     <!---->
@@ -37,15 +37,83 @@
 </nav>
 
 <main class="pagify page-lesson">
-    <h1 class="page-title">Lesson 12: Layout Patterns</h1>
+    <h1 class="page-title">Lesson 10: Building Layouts</h1>
     <div class="content">
-        <h3 id="introduction">Introduction</h3>
+        <h3 id="building-tiles-and-containers">Building Tiles and Containers</h3>
+
+<p>Once you’ve completed the Layout Analysis you are ready to move into building out the comp, a phase I call Reconstruction.</p>
+
+<p>The rows and columns you identified in Layout Analysis can be built out by applying the following style sets to each corresponding element:</p>
+
+<p><strong>Containers:</strong></p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="o">[</span><span class="nt">container</span> <span class="nt">selector</span><span class="o">]</span> <span class="p">{</span>
+    <span class="nl">display</span><span class="p">:</span><span class="n">flex</span><span class="p">;</span>
+    <span class="c">/*
+        Other settings optional such as
+        - justify-content
+        - flex-flow
+        - align-items    
+    */</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p><strong>Tiles:</strong></p>
+
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="o">[</span><span class="nt">tile</span><span class="o">(</span><span class="nt">s</span><span class="o">)</span> <span class="nt">selector</span><span class="o">]</span> <span class="p">{</span>
+    <span class="nl">box-sizing</span><span class="p">:</span><span class="n">border-box</span><span class="p">;</span>
+    <span class="c">/* width setting */</span>
+    <span class="c">/* margin and padding as needed */</span>
+<span class="p">}</span>
+</code></pre>
+</div>
+
+<p>We’ll look at a series of common layout patterns in Lesson 12.</p>
+
+<h3 id="process-for-building-layouts">Process for Building Layouts</h3>
+
+<p>With this basic understanding of the CSS you need in order to build rows and columns you must also note that the they don’t just invent themselves in your markup. As you work to create the markup your layout demands, start with content markup as we discussed in Lessons 1–3, and 5. Then use the sectioning tags and <code class="highlighter-rouge">&lt;div&gt;</code> tags we learned in Lesson 4 to add groups wherever they’re needed. If a row or column includes multiple elements, consider using the most semantic grouping element you can in order to create such a group.</p>
+
+<h4 id="suggested-process">Suggested Process</h4>
+<p>Use this process to complete the reconstruction in a methodical, efficient way:</p>
+
+<ol>
+  <li>First, create simple, clean, semantic HTML based on the content in your comp. You might also benefit from some simple grouping with <code class="highlighter-rouge">&lt;div&gt;</code> tags. Use the <code class="highlighter-rouge">class</code> attribute to distinguish such a group from other groups.</li>
+  <li>Through Layout Analysis you identified tiles and containers. With basic HTML in place you must now ensure that your simple, semantic HTML is also compatible with the tile and container structure you identified.
+    <ul>
+      <li><strong>Tiles</strong> should alway be a single element. This means that you will need to ensure that each thing you marked as a tile in your analysis is either already a single element or is a collection of elements grouped together by a single <code class="highlighter-rouge">&lt;div&gt;</code> or other more semantic option.</li>
+      <li><strong>Containers</strong> should be the direct parent element of the set of tiles you mean to display as tiles. Often these will naturally be the closest grouping element, but if a simple single element does not wrap around your tiles, you might consider adding such an element. <code class="highlighter-rouge">&lt;div&gt;</code> with a meaningful class is usually a safe option here.</li>
+    </ul>
+
+    <p>Bottom line here is that you must have markup that matches your analysis: Tiles must be a single element and the container must be the direct parent of all the related tiles.</p>
+  </li>
+  <li>For each container you identified, you must select it and turn on <code class="highlighter-rouge">display:flex</code>. You might also benefit from one or more of the following <em>also set on this container</em>:
+    <ul>
+      <li><code class="highlighter-rouge">flex-flow</code> – if your set of tiles spans more than one “row” in the layout turn this setting on, and set it to <code class="highlighter-rouge">row wrap</code>. There are other settings for this property, but this is the most common. You’ll likely want to control such an element’s width to ensure tiles it contains wrap in the desired space.</li>
+      <li><code class="highlighter-rouge">justify-contents</code> – this setting helps with <em>some</em> spacing scenarios. You can experiment with the following to see if the desired results fit your comp closely enough:
+        <ul>
+          <li><code class="highlighter-rouge">center</code> – helpful for creating a center-aligned flow for the set of elements.</li>
+          <li><code class="highlighter-rouge">space-between</code> – helpful when you have a few items in a single row and want the outer two hugging the outer bounds and the inner ones spaced evenly from each other.</li>
+          <li><code class="highlighter-rouge">space-around</code> – helpful when you have an even gutter between each tile and space on the outside gutters that is half of the inner gutter.</li>
+        </ul>
+
+        <p>If these do not suffice, you may need to move on to specify spacing on the tiles themselves.</p>
+      </li>
+    </ul>
+  </li>
+  <li>Move to the tiles inside this container and, if needed, specify a <code class="highlighter-rouge">width</code> setting to ensure they each occupy the desired space. In addition, if some of the flex box settings from the container do not have the desired effect for spacing these elements, add margin and/or padding and other box model settings as needed.</li>
+</ol>
+
+<p>Continue to refine styles overall to ensure all aspects match the desired style.</p>
+
+<h3 id="layout-patterns-introduction">Layout Patterns Introduction</h3>
 
 <p>Most layouts on the web can be created easily with the flex box settings. There are a relatively small number of patterns that can be applied to such situations.</p>
 
 <p>First conduct layout analysis in order to identify rows and columns. Then, consider which of the patterns that follow fits each row the best. Apply the overall settings but customize the particular values as needed.</p>
 
-<h3 id="pattern-a-row-on-its-own">Pattern A: Row on its own</h3>
+<h3 id="layout-pattern-a-row-on-its-own">Layout Pattern A: Row on its own</h3>
 
 <p>The simplest pattern to build out is a row of content that contains no actual columns; all elements inside the row stack on top of each other according to default behavior. In such a case <strong>DO NOT</strong> use <code class="highlighter-rouge">display:flex</code> on the row; I’m calling these out to show you many things that can be done without flex box.</p>
 
@@ -144,7 +212,7 @@
 <p><strong>CSS:</strong> Here we assume <code class="highlighter-rouge">width</code> is either <code class="highlighter-rouge">100%</code> or the default <code class="highlighter-rouge">width</code> value and just adding <code class="highlighter-rouge">padding</code> and a <code class="highlighter-rouge">height</code> setting. <code class="highlighter-rouge">box-sizing:border-box</code> also often proves useful here.</p>
 
 <div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.followup-3</span> <span class="p">{</span>
-    <span class="nl">background</span><span class="p">:</span><span class="no">black</span> 
+    <span class="nl">background</span><span class="p">:</span><span class="no">black</span>
         <span class="sx">url(images/followup-3.png)</span>
         <span class="nb">left</span> <span class="nb">top</span> <span class="nb">no-repeat</span><span class="p">;</span>
     <span class="nl">box-sizing</span><span class="p">:</span><span class="n">border-box</span><span class="p">;</span>
@@ -168,7 +236,7 @@
 <p><strong>CSS:</strong> Here as in the previous example we use <code class="highlighter-rouge">padding</code> and <code class="highlighter-rouge">height</code> with the background settings to achieve the overall offset. But we’ve also center-aligned the text for the <code class="highlighter-rouge">&lt;h2&gt;</code> and the <code class="highlighter-rouge">&lt;a&gt;</code>.</p>
 
 <div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.hero</span> <span class="p">{</span>
-    <span class="nl">background</span><span class="p">:</span><span class="sx">url(images/hero.png)</span> 
+    <span class="nl">background</span><span class="p">:</span><span class="sx">url(images/hero.png)</span>
         <span class="nb">top</span> <span class="nb">center</span> <span class="nb">no-repeat</span><span class="p">;</span>
     <span class="nl">box-sizing</span><span class="p">:</span><span class="n">border-box</span><span class="p">;</span>
     <span class="nl">padding</span><span class="p">:</span><span class="m">520px</span> <span class="m">420px</span> <span class="m">0</span><span class="p">;</span>
@@ -185,7 +253,7 @@
 </code></pre>
 </div>
 
-<h3 id="pattern-b-row-with-columns">Pattern B: Row with columns</h3>
+<h3 id="layout-pattern-b-row-with-columns">Layout Pattern B: Row with columns</h3>
 
 <p>Building off of the basics or working with rows, we next examine patterns that make use of columns in various forms.</p>
 
@@ -225,7 +293,7 @@
 
 <p><strong>CSS:</strong> The <code class="highlighter-rouge">flex:1</code> setting is a flexible way to set them all to the same size but feel free to set a pixel or percentage value instead if you like.</p>
 
-<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.categories</span> <span class="p">{</span> 
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nc">.categories</span> <span class="p">{</span>
     <span class="nl">display</span><span class="p">:</span><span class="n">flex</span><span class="p">;</span>
     <span class="nl">justify-content</span><span class="p">:</span><span class="n">space-around</span><span class="p">;</span>
     <span class="nl">margin</span><span class="p">:</span><span class="m">0</span><span class="p">;</span>
@@ -253,14 +321,14 @@
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"lead"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;h3&gt;</span>Praesent id purus<span class="nt">&lt;/h3&gt;</span>
-        <span class="nt">&lt;p&gt;</span>Nec sem bibendum bibendum at...<span class="nt">&lt;/p&gt;</span> 
+        <span class="nt">&lt;p&gt;</span>Nec sem bibendum bibendum at...<span class="nt">&lt;/p&gt;</span>
         ...
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"lead"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;h3&gt;</span>Suspendisse maximus<span class="nt">&lt;/h3&gt;</span>
         <span class="nt">&lt;p&gt;</span>Tempor felis in volutpat...<span class="nt">&lt;/p&gt;</span>
         ...
-    <span class="nt">&lt;/div&gt;</span> 
+    <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 </code></pre>
 </div>
@@ -302,8 +370,8 @@
 <p><strong>CSS:</strong></p>
 
 <div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="c">/* Key settings for the layout */</span>
-<span class="nc">.features</span> <span class="p">{</span> 
-    <span class="nl">display</span><span class="p">:</span><span class="n">flex</span><span class="p">;</span> 
+<span class="nc">.features</span> <span class="p">{</span>
+    <span class="nl">display</span><span class="p">:</span><span class="n">flex</span><span class="p">;</span>
     <span class="nl">justify-content</span><span class="p">:</span><span class="n">space-between</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="nc">.features</span> <span class="nc">.left</span> <span class="p">{</span>
@@ -358,7 +426,7 @@
 
 <p><strong>CSS:</strong> Here we use the very helpful <code class="highlighter-rouge">center</code> setting for <code class="highlighter-rouge">justify-content</code> to quickly ensure the <code class="highlighter-rouge">li</code> elements align on the center axis. Note that instead of <code class="highlighter-rouge">flex:1</code> though we need a <code class="highlighter-rouge">width</code> value to ensure the items don’t just fill the container. We use <code class="highlighter-rouge">auto</code> to just allow the elements to be as wide as their contents demand. We then use <code class="highlighter-rouge">margin</code> to enforce even spacing between the items.</p>
 
-<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nt">header</span> <span class="nt">ul</span> <span class="p">{</span> 
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="nt">header</span> <span class="nt">ul</span> <span class="p">{</span>
     <span class="nl">justify-content</span><span class="p">:</span><span class="nb">center</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="nt">header</span> <span class="nt">li</span> <span class="p">{</span>
@@ -374,7 +442,7 @@
 
 <p>Building off of the other patterns so far, sometimes you’ll have a row that has a restricted width that also has columns in it. In such a case, you should first set up the restricted width settings on the row using the patterns described above in A1–4, then treat the columns as needed inside of the resulting space as described in B1–3. Also be careful where you apply the <code class="highlighter-rouge">.row</code> so that it is on the direct parent element for the columns.</p>
 
-<h3 id="pattern-c-tiles">Pattern C: Tiles</h3>
+<h3 id="layout-pattern-c-tiles">Layout Pattern C: Tiles</h3>
 
 <p>Tiles can be implemented where a set of elements form a predictable series of rows and columns, typically where all items occupy the same width and height, such as in a product thumbnail list.</p>
 
@@ -444,7 +512,7 @@
 
 <p>In order to affect the first item on each row in the tile set you can use this formula for the pseudo-class selector…</p>
 
-<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="o">[</span><span class="nt">tile</span> <span class="nt">item</span> <span class="nt">selector</span><span class="o">]</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">xn</span><span class="o">+</span><span class="nt">1</span><span class="o">)</span> 
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="o">[</span><span class="nt">tile</span> <span class="nt">item</span> <span class="nt">selector</span><span class="o">]</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">xn</span><span class="o">+</span><span class="nt">1</span><span class="o">)</span>
 </code></pre>
 </div>
 
@@ -452,7 +520,7 @@
 
 <p>To affect the last item in each row in the tile set use this formula for the pseudo-class selector…</p>
 
-<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="o">[</span><span class="nt">tile</span> <span class="nt">item</span> <span class="nt">selector</span><span class="o">]</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">xn</span><span class="o">)</span> 
+<div class="language-css highlighter-rouge"><pre class="highlight"><code><span class="o">[</span><span class="nt">tile</span> <span class="nt">item</span> <span class="nt">selector</span><span class="o">]</span><span class="nd">:nth-child</span><span class="o">(</span><span class="nt">xn</span><span class="o">)</span>
 </code></pre>
 </div>
 

@@ -44,13 +44,13 @@ Here is a bird's-eye-view of the course schedule. Additional details can be foun
 [l1]: /lessons/01-intro-to-html.html
 [l2]: /lessons/02-content-markup.html
 [l3]: /lessons/03-links-images.html
-[l4]: /lessons/temp.html
-[l5]: /lessons/temp.html
-[l6]: /lessons/temp.html
-[l7]: /lessons/temp.html
-[l8]: /lessons/temp.html
-[l9]: /lessons/temp.html
-[l10]: /lessons/temp.html
+[l4]: /lessons/04-organizers.html
+[l5]: /lessons/05-forms-tables.html
+[l6]: /lessons/06-intro-to-css.html
+[l7]: /lessons/07-styling-content.html
+[l8]: /lessons/08-box-model.html
+[l9]: /lessons/09-css-layout.html
+[l10]: /lessons/10-building-layouts.html
 
 [es1]: /activities/es01.html
 [es2]: /activities/es02.html
