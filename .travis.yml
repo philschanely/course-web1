@@ -23,11 +23,11 @@ notifications:
 
 script:
   - chmod +x _script/build.sh
-  - _scripts/build.sh
+  - _script/build.sh
 
 after_success:
   - chmod +x _script/deploy.sh
-  - _scripts/deploy.sh
+  - _script/deploy.sh
 
 sudo: false
 addons:
