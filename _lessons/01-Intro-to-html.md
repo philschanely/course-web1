@@ -32,7 +32,7 @@ Ever since you first learned to use a computer, you’ve been working with diffe
 **1.2: Common file types on the web**
 : The most common files on the web are categorized as documents, scripts, and images. It is important to recognize documents we use most often such as `.html`, scripts such as `.js`, `.css`, and images such as `.png`, `.gif`, and `.jpg`.
 
-Recognizing common web file extensions is key to distinguishing between different file types and understanding the files that make up a website. 
+Recognizing common web file extensions is key to distinguishing between different file types and understanding the files that make up a website.
 
 These file types can be grouped into one of three categories:
 
@@ -53,13 +53,13 @@ Here are some common files you will encounter when working with the web:
 | GIF        | Image    | `.gif`    | A raster-based image file format you’ll learn more about later in this course in the module that covers images for the web. |
 | JPEG       | Image    | `.jpg`    | A raster-based image file format you’ll learn more about later in this course in the module that covers images for the web. |
 | PNG        | Image    | `.png`    | A raster-based image file format you’ll learn more about later in this course in the module that covers images for the web. |
-| SVG        | Image    | `.svg`    | A vector-based image file format you’ll learn more about later in this course in the module that covers images for the web. |	
+| SVG        | Image    | `.svg`    | A vector-based image file format you’ll learn more about later in this course in the module that covers images for the web. |
 
 ### Creating Web Files
 
 Now that you have learned a set of common files used on the web, the next thing to consider is how to appropriately name files for the web.
 
-**1.3: Rules for naming files** 
+**1.3: Rules for naming files**
 : We must follow specific rules when we name files for the web, including that we must avoid spaces and special characters and not start file names with numbers or capital letters.
 
 What makes file names for the web different from file names for any other purpose? People access web files from a web server from anywhere in the world. Web servers all have different standards for how they access files, and some are pickier than others. Therefore, to ensure your files will work on any server, it is best to use the most restrictive context for how we name our files.
@@ -83,7 +83,7 @@ Here are some common ways to deal with replacing spaces in file names:
 
 * *Hyphen method:* Replace all spaces with hyphens and use all lowercase letters:
 `hiking in Switzerland.html` becomes `hiking-in-switzerland.html`
-* *Underscore method:* Replace all spaces with underscores and use all lowercase letters: 
+* *Underscore method:* Replace all spaces with underscores and use all lowercase letters:
 `my favorite books.html` becomes `my_favorite_books.html`
 * *camelCase method:* Remove all spaces and capitalize the first letter of each new word after the first word:
 `cookie recipes handout.pdf` becomes `cookieRecipesHandout.pdf`
@@ -95,12 +95,12 @@ So as we’re approaching files that we want to use in a website, we have two sc
 * *Working with existing files:* Quite often we will need to take existing files such as images, PDFs, and Word documents and link to them from within a web page.
     * Remember to evaluate each file’s name and rename any that are not valid for use on the web.
     * Sometimes the client will provide file types that are not best to use for the web. We will need to convert the file to a format that is more appropriate to use on the web. For example, if a client provides a Photoshop file for an image to use in a web page, we should convert that image to one of the web-appropriate file formats and name it with a web-safe filename.
-* *Creating new files:* As we build a site we will most likely also create a series of new files such as images, HTML documents, and CSS scripts. In each case, we must remember two things: first we must provide a valid file name, and second, we must apply the appropriate file extension. 
+* *Creating new files:* As we build a site we will most likely also create a series of new files such as images, HTML documents, and CSS scripts. In each case, we must remember two things: first we must provide a valid file name, and second, we must apply the appropriate file extension.
 
 ### Creating a Site File and Folder Structure
 
 **1.5 Root folder and homepage**
-: A valid website will contain at least a single homepage named `index.html` along with any other files needed. All these will be contained in a single root folder and subfolders as needed. 
+: A valid website will contain at least a single homepage named `index.html` along with any other files needed. All these will be contained in a single root folder and subfolders as needed.
 
 Now that you know how to name files and ensure that they are in the appropriate format for the web, let’s talk about how to set up the files and folders commonly used in a website.
 
@@ -158,7 +158,7 @@ HTML documents must all contain the following basic structure to be considered v
 
 These three elements are really the essential backbone of HTML documents. For completeness, note that you’ll often see the following:
 
-* `<!DOCTYPE html>` -- This is placed before the opening HTML tag and is a picky setting that tells the browser this is indeed an HTML document. It is optional, but good to include. 
+* `<!DOCTYPE html>` -- This is placed before the opening HTML tag and is a picky setting that tells the browser this is indeed an HTML document. It is optional, but good to include.
 * `<meta charset="UTF-8" />` -- This is one of many meta tag settings allowed inside the `<head>` tag and specifies what set of text characters this document should expect to use. It is also optional but recommended.
 
 Therefore, a complete document structure is...
@@ -251,7 +251,7 @@ Now consider this:
 Finally, as a best practice for creating clean code, it is customary to indent nested tags with either a single tab and then vertically align the parent’s closing tag with the opening tag. This keeps our code nice and neat and can make it easier to keep track of opening and closing tags. See examples above as a reference for how to do this.
 
 **1.11: Rule Three---The Attribute Rule**
-: Opening tags can contain specifically formatted attributes that provide additional settings for an element. 
+: Opening tags can contain specifically formatted attributes that provide additional settings for an element.
 
 Let’s add one last rule: *Opening tags can contain specifically formatted attributes that provide additional settings for an element.*
 
@@ -267,22 +267,22 @@ They are placed inside an opening tag like this:
 <a href="http://www.example.com">Click me</a>
 ```
 
-Note that you do not put an attribute in both opening and closing tags; only in the opening tag. 
+Note that you do not put an attribute in both opening and closing tags; only in the opening tag.
 
 **1.12: The `id` and `class` Attributes...**
 : ...can be placed on any element and are used to identify and categorize them beyond their basic use.
 
 Some common attributes that can be used on all elements are...
 
-`id` -- short for “identifier,” this attribute can be used to provided a unique name for the element. This is helpful for three uses: 
+`id` -- short for “identifier,” this attribute can be used to provided a unique name for the element. This is helpful for three uses:
 
-* this attribute allows you to provide labels that help you distinguish one element from another of the same kind, specifically significant elements that are set apart from others in some way; 
-* we often want to apply styles to a specific element or its children, so this attribute is helpful for CSS; 
-* other technologies such as JavaScript make use of this unique identifier. 
+* this attribute allows you to provide labels that help you distinguish one element from another of the same kind, specifically significant elements that are set apart from others in some way;
+* we often want to apply styles to a specific element or its children, so this attribute is helpful for CSS;
+* other technologies such as JavaScript make use of this unique identifier.
 
-As you use `id` attributes, remember two rules: 
+As you use `id` attributes, remember two rules:
 
-* `id` attributes must follow the same rules that filenames follow: no spaces or special characters are allowed; 
+* `id` attributes must follow the same rules that filenames follow: no spaces or special characters are allowed;
 * a particular `id` attribute can only be used once in a document. In other words, if we add `id="masthead"` to an element, we cannot use `id="masthead"` again on any other element in that document.
 
 `class` -- similar to the `id` attribute, the `class` attribute allows us to provide a label for an element. However, whereas the `id` attribute must be unique, the `class` attribute can be used several or even many times in a single document. This helps us provide more information about an element and what it is used to mark as well as identify it as part of a series of other similar items.
@@ -298,7 +298,7 @@ Now you’re ready to apply what you’ve learned. Before beginning this module�
 
 ### Study Tools
 
-Review the key takeaways from this module. Memorize each of the following tags or attributes and understand what they are used for: 
+Review the key takeaways from this module. Memorize each of the following tags or attributes and understand what they are used for:
 
 * `<!DOCTYPE html>`
 * `<html>`
