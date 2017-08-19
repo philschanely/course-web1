@@ -289,6 +289,12 @@ As you use `id` attributes, remember two rules:
 
 Many other attributes provide specific settings and may only be used on certain tags. Watch for these as you learn each new tag.
 
+### Files and Content in Codio
+
+Watch this to learn how to work with files and content in Codio:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/b4wI369hdF8?list=PLuOViGmL7TfXlFl74Hf84NwSQPR_LDR0d" frameborder="0" allowfullscreen></iframe>
+
 ### Prepare to Apply
 
 Now you’re ready to apply what you’ve learned. Before beginning this module’s application activity, make sure you can do the following:

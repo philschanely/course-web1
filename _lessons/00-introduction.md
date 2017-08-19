@@ -5,7 +5,7 @@ title:  "Introduction"
 
 ### Course Introduction
 
-Welcome to Web Design I! This course is built to help you master the foundational skills you need in order to build effective websites. First, we tackle the concepts and skills related to creating content for the web. This includes creating web pages and structuring the content we put in those pages using HTML. Next we discuss how to add visual appeal to this content and build out web page layouts using CSS. Along the way we'll discuss principles of contemporary web design, how to plan websites, and how to measure their success. 
+Welcome to Web Design I! This course is built to help you master the foundational skills you need in order to build effective websites. First, we tackle the concepts and skills related to creating content for the web. This includes creating web pages and structuring the content we put in those pages using HTML. Next we discuss how to add visual appeal to this content and build out web page layouts using CSS. Along the way we'll discuss principles of contemporary web design, how to plan websites, and how to measure their success.
 
 As this course is currently offered online you'll need to keep the following in mind:
 
@@ -14,11 +14,17 @@ As this course is currently offered online you'll need to keep the following in 
 * You have access to the computer labs in the Tyler building where you can use software you will otherwise need to purchase. We recommend that you carve out regular times each week to go to the labs and complete coursework. While every unit does not require software installed in these labs, some do, and we don't want you to be caught by surprise.
 * Your professor cares very much to hear from you if you have any questions or concerns. But you must take initiative to reach out for help if you need it. This is appropriate practice for what you may find in the workplace, where your employer trusts you to complete the work assigned and ask for guidance or clarification.
 
-***Now read the course syllabus*** provided on the home page of this site in order to be sure you understand what will be required of you during this course. Then continue reading the next section of this lesson.
+***Now read the course syllabus*** provided on the home page of this site in order to be sure you understand what will be required of you during this course.
+
+***Next read the project overview*** provided on the home page and under Activities. This explains the course project in more details.
+
+Then continue reading the next section of this lesson.
+
+### Technology Overview
 
 Watch this introduction to course technologies:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/fUnvVpmo5ek" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/fUnvVpmo5ek?list=PLuOViGmL7TfXlFl74Hf84NwSQPR_LDR0d" frameborder="0" allowfullscreen></iframe>
 
 ### More About Lessons
 

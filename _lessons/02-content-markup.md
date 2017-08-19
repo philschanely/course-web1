@@ -33,20 +33,20 @@ A small set of elements provide the backbone  for all other tags. These are the 
 
 #### Headings and Paragraphs
 
-**2.1: Paragraphs and headings...** 
+**2.1: Paragraphs and headings...**
 : ...form the backbone of well-structured web content. HTML offers the `<p>` tag for paragraphs and six levels of headings, `<h1>` -- `<h6>`.
 
 ***Read chapter 2 (pp.40-44, 52) and chapter 3 from Duckett.***
 
 The author has introduced us to a number of tags that help us mark HTML content. He has also introduced the subject of semantic markup. Let’s review some important tags that were covered:
-  
+
 * `<p>` -- Paragraph -- This tag is the most basic of tags for text content. If you’re not sure what content is, start by marking it as a paragraph.
 * `<h1>` -- Primary heading -- This tag is used to mark the single most important heading of a section or page. In most sites I build, I use this to mark the branding or site’s name.
 * `<h2>` -- Secondary heading -- This tag is used to mark the direct subheadings under an `<h1>` tag. In other words, if I was to make an outline of the heading structure (headings, sub-headings, sub-sub headings, etc.) of my web page, `<h2>` tags would be the point in the outline directly underneath the `<h1>` tag.
 * `<h3>` -- Tertiary heading -- Like the `<h2>` tag, this tag marks subheadings, but this time, subheadings that fall directly under the `<h2>` tags.
 * `<h4>`, `<h5>`, `<h6>` -- Fourth-, Fifth- and Sixth-level headings -- These three tags each mark successive levels of subheadings each under the one higher in the “outline.”
 
-It may be tempting when you’re learning to use a heading level in order to make a heading look larger or smaller. But this is not semantic! When we’re writing HTML we should be focused on the meaning of the content—the semantics of the content. We will affect the appearance of elements later with CSS (size, color, weight, spacing, font, etc.). 
+It may be tempting when you’re learning to use a heading level in order to make a heading look larger or smaller. But this is not semantic! When we’re writing HTML we should be focused on the meaning of the content—the semantics of the content. We will affect the appearance of elements later with CSS (size, color, weight, spacing, font, etc.).
 
 #### Long Quotations
 
@@ -57,8 +57,8 @@ One final helpful tag to discuss is the `<blockquote>` tag, which is used to mar
 
 ```html
 <blockquote>
-    <p>A quiet answer 
-       turns away wrath.</p> 
+    <p>A quiet answer
+       turns away wrath.</p>
 </blockquote>
 ```
 
@@ -66,17 +66,17 @@ Notice that the quote is wrapped with a paragraph first and then the paragraph i
 
 ```html
 <blockquote>
-    <p>When wickedness comes, contempt comes also, 
+    <p>When wickedness comes, contempt comes also,
        and with dishonor comes disgrace.</p>
-    <p>The words of a man’s mouth are deep waters; 
-       the fountain of wisdom is a bubbling brook.</p> 
+    <p>The words of a man’s mouth are deep waters;
+       the fountain of wisdom is a bubbling brook.</p>
 </blockquote>
 ```
 
 #### Lists
 
-**2.3: List markup...** 
-: ...provides an excellent way to mark up related series of data. The `<ul>` and `<ol>`, and `<dl>` elements group series of `<li>` elements to form itemized lists and the `<dl>` element groups series of `<dt>` and `<dd>` to form definition lists. 
+**2.3: List markup...**
+: ...provides an excellent way to mark up related series of data. The `<ul>` and `<ol>`, and `<dl>` elements group series of `<li>` elements to form itemized lists and the `<dl>` element groups series of `<dt>` and `<dd>` to form definition lists.
 
 Headings and paragraphs add a good bit of structure to our content and account for a good majority of basic web content. Another set of tags to add to your library is the list markup tags. Lists should be used in HTML content any time you identify a group of items that follow a list-like pattern. Examples include the following:
 
@@ -89,7 +89,7 @@ You’ll discover when you really dig into it, that there are many more lists in
 
 There are two categories of lists:
 
-1. Itemized lists: 
+1. Itemized lists:
     1. Itemized lists are made of a group of list items, `<li>` tags grouped either as an ordered list `<ol>` or unordered list `<ul>`.
     2. Use ordered lists to mark a series of items that are presented in a specific and intentional order such as steps in a process. Items grouped in an ordered list `<ol>` will appear numbered by default, but CSS can adjust this.
     3. Use unordered lists to mark a series of items that form a list but don’t have a particular order to them such as a list of features or a list of products that aren’t sorted in any way. Items grouped in an unordered list `<ul>` will appear bulleted by default, but CSS can adjust this.
@@ -152,19 +152,25 @@ To actually apply the concept of semantic markup in context, follow this process
 
 As you get to know HTML better, you’ll begin to see the world differently. Instead of just seeing a web page you might begin to wonder what HTML markup is actually being used. And if you dig in and look at what others have done, you might be horribly surprised to find a tangled ugly mess. Having taken this course, you are capable of writing much better markup!
 
+### Markup from Comp to Code
+
+Watch how to add markup to content based on a design comp:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TSABgnKPoxc?list=PLuOViGmL7TfXlFl74Hf84NwSQPR_LDR0d" frameborder="0" allowfullscreen></iframe>
+
 ### Block-level vs. Inline Tags
 
 **2.6: Block-level vs. Inline elements**
 : Block-level elements such as `<h1>`--`<h6>`, `<p>` fill 100% of their container and allow contents to wrap inside of them. Inline elements such as `<a>`, `<em>`, `<strong>` and others only take up the space their content requires.
 
-As we've covered a lot of tags so far it is important to call out one more way we categorize them. All tags are considered either block-level or inline. 
+As we've covered a lot of tags so far it is important to call out one more way we categorize them. All tags are considered either block-level or inline.
 
-*Block-level* tags fill 100% of their container's width regardless of how much content they contain. So a paragraph will technically span the width of its container even if the content in that paragraph does not fill that space. But if the content does fill that space, the browser knows to wrap the text from line to line. 
+*Block-level* tags fill 100% of their container's width regardless of how much content they contain. So a paragraph will technically span the width of its container even if the content in that paragraph does not fill that space. But if the content does fill that space, the browser knows to wrap the text from line to line.
 
 Block-level tags we've covered so far include:
 
 ```html
-<h1> <h2> <h3> <h4> <h5> <h6> <p> <blockquote> <ul> <ol> <li> <dl> <dt> <dd> 
+<h1> <h2> <h3> <h4> <h5> <h6> <p> <blockquote> <ul> <ol> <li> <dl> <dt> <dd>
 ```
 
 And a few more we'll cover later in the course are:
@@ -173,7 +179,7 @@ And a few more we'll cover later in the course are:
 <div> <header> <footer> <article> <aside> <nav> <section>
 ```
 
-*Inline tags* only occupy the width that their content requires. So an `<em>` tag only takes up as much space as the words inside that tag take up; an image will naturally take up as much space as needed based on its pixel width and height. 
+*Inline tags* only occupy the width that their content requires. So an `<em>` tag only takes up as much space as the words inside that tag take up; an image will naturally take up as much space as needed based on its pixel width and height.
 
 Inline tags covered so far are:
 
@@ -187,7 +193,7 @@ And others we'll cover later in the course are:
 <a> <img/>
 ```
 
-This distinction is important to note because it will have an impact on the CSS properties that can be used with these elements, which we will discuss later in the course. For now, ensure you can can categorize tags as they've been distinguished in this module. 
+This distinction is important to note because it will have an impact on the CSS properties that can be used with these elements, which we will discuss later in the course. For now, ensure you can can categorize tags as they've been distinguished in this module.
 
 ### Prepare to Apply
 
@@ -200,7 +206,7 @@ The application activity that accompanies this module challenges you to apply ty
 
 ### Study Tools
 
-Review the key takeaways from this module. Memorize each of the following tags or attributes and understand what it is used for: 
+Review the key takeaways from this module. Memorize each of the following tags or attributes and understand what it is used for:
 
 #### Block-level Content Tags
 
