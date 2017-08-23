@@ -41,7 +41,7 @@ Here is a bird's-eye-view of the course schedule. Additional details can be foun
 \*Completed in Codio. \| \*\*Completed in InVision. \| \*\*\*Completed in Moodle
 
 [l0]: /lessons/00-introduction.html
-[l1]: /lessons/01-intro-to-html.html
+[l1]: /lessons/01-Intro-to-html.html
 [l2]: /lessons/02-content-markup.html
 [l3]: /lessons/03-links-images.html
 [l4]: /lessons/04-organizers.html
