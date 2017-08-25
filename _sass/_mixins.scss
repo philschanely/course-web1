@@ -108,8 +108,15 @@ h4 {
   margin-top: 30px;
 }
 
-li, p {
+li{
   @include max-width;
+  line-height: 2.4rem;
+  margin-bottom: 6px;
+}
+
+p {
+  @include max-width;
+  line-height: 2.4rem;
 }
 
 pre {
