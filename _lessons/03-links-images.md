@@ -97,6 +97,11 @@ Duckett goes on in chapter 4 to describe relative URLs or relative paths which a
 
     ![](/images/path-up-and-down.png)
 
+
+See paths explained in this video:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/jsh1m-34ieQ?list=PLuOViGmL7TfXlFl74Hf84NwSQPR_LDR0d" frameborder="0" allowfullscreen></iframe>
+
 **3.4: `id` references and placeholder links**
 : The `#` pound sign can be used in `href` attributes as a placeholder or to point to another element in the document using its `id` attribute.
 
@@ -109,6 +114,14 @@ Notice that the href attribute here simply points to the element that has an id 
 Note as well that if you want to enter a link to a file but you don't know where the file is yet or you haven't created it yet, the best thing to do is provide just a # as the href as a placeholder. The result is that the link appears in the browser, but when the user clicks on it, they're not taken anywhere. Just don't forget to come back later and provide an actual path!
 
 ### Image Markup
+
+#### Preparing Images for the web
+
+Watch this short introduction to preparing images to use in a website.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HFF9KO1ga4w?list=PLuOViGmL7TfXlFl74Hf84NwSQPR_LDR0d" frameborder="0" allowfullscreen></iframe>
+
+#### The `<img/>` tag
 
 **3.5: Images**
 : Images are created with the `<img/>` tag and the desired image is indicating using the `src` attribute.
