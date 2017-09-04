@@ -119,7 +119,7 @@ Note as well that if you want to enter a link to a file but you don't know where
 
 Watch this short introduction to preparing images to use in a website.
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/HFF9KO1ga4w?list=PLuOViGmL7TfXlFl74Hf84NwSQPR_LDR0d" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BQ3xQIR-j1c" frameborder="0" allowfullscreen></iframe>
 
 #### The `<img/>` tag
 
