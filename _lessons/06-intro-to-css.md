@@ -27,6 +27,10 @@ Duckett explained sufficiently how to do both of these.
 
 ***Read chapter 10 (pp. 237-240; 242-244) from Duckett*** for details about the different kinds of selectors we use to target specific HTML elements and apply styles to them and for an explanation of the concepts of the cascade and inheritance.
 
+Watch this overview of attaching stylesheets and working with selectors:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pfnyUlzFQF4" frameborder="0" allowfullscreen></iframe>
+
 Duckett’s overview of selector types in this chapter provides a helpful introduction to the assortment of selectors with which you’ll be working. Part of the challenge here is to identify first what element or set of elements you want to style. Use these questions as a guide:
 
 * Do I want to style one very specific element or a group of similar elements?
@@ -220,7 +224,7 @@ We have a lot to take in as we plan typography for our websites. Miller devotes 
 
 ### Prepare to Apply
 
-This module’s application activity gives you the opportunity to finish a simple website reconstruction by adding the correct selectors to an existing style sheet. 
+This module’s application activity gives you the opportunity to finish a simple website reconstruction by adding the correct selectors to an existing style sheet.
 
 Ensure that you can…
 
