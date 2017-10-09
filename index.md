@@ -31,9 +31,9 @@ Here is a bird's-eye-view of the course schedule. Additional details can be foun
 | Oct 21--27    | 8    | [Lesson 6][l6]     | Exercise 6 *    | [Project Deliverable 7][pd7] **                       |
 | Oct 28--Nov 3 | 9    | [Lesson 7][l7]     | Exercise 7 *    | ---                                                   |
 | Nov 4--10     | 10   | [Lesson 8][l8]     | Exercise 8 *    | [Project Deliverable 8][pd8] **                       |
-| Nov 11--17    | 11   | [Lesson 9][l9]     | Exercise 9 *    | [Project Deliverable 9][pd9] *                        |
-| Nov 18--24    | x    | Thanksgiving break | ---             | ---                                                   |
-| Nov 25--Dec 1 | 12   | [Lesson 10][l10]   | Exercise 11 *   | [Project Deliverable 10][pd10] *                      |
+| Nov 11--17    | 11   | [Lesson 9][l9]     | ---             | [Project Deliverable 9][pd9] *                        |
+| Nov 18--24    | x    | Thanksgiving break | Exercise 9 * _(extension)_ | ---                                        |
+| Nov 25--Dec 1 | 12   | [Lesson 10][l10]   | ---             | [Project Deliverable 10][pd10] *                      |
 | Dec 2--8      | 13   | ---                | ---             | Exam 2 ***                                            |
 | Dec 9--15     | 14   | ---                | ---             | [Project Final][pdfs] \*\*\* and [Essay 3][es3] ***   |
 
