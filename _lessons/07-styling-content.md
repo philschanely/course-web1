@@ -116,6 +116,11 @@ But if you are working from a design comp in software such as Sketch you will li
 * Set the `font-size` on `html`, the root element, to `10px`.
 * Set the `font-size` for elements using the `rem` unit to the font size in your comp divided by 10. So a font size of `14pt` in your comp would be set to `1.4rem` in your CSS; just move the decimal one digit to the left.
 
+Watch this demonstration of how to create content styles based on all we've discussed so far in this lesson:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/6HsP6uCJ4gA" frameborder="0" allowfullscreen></iframe>
+
+
 ### Grids and Layout Design
 
 One last element to address in the overall process of planning a website is the prototype.
