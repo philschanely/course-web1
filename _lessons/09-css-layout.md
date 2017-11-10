@@ -70,6 +70,10 @@ While there are many helpful ways to configure flex box elements, here are some 
     * with equal space around them with `space-around`. In contrast to `space-between` this adds even spacing between elements, but by ensuring the same space is added on both sides of the elements, creating a gutter between them and half that gutter on the outer elements in a given "row".
 * `align-items`: Use this to adjust the default setting that can result in stretching items to the same height. Set it to `flex-start`, for example, to ensure all elements hang from a common top line but are otherwise as tall as they naturally would be without flex box.
 
+Watch this demonstration of how to create content styles based on all we've discussed so far in this lesson:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xI862wjBpIA" frameborder="0" allowfullscreen></iframe>
+
 ### Future of Layouts
 
 As the web grows and designers and developers desire new, easier ways to accomplish things we can expect the techniques and technologies themselves to change.
