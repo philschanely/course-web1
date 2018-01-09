@@ -1,0 +1,17 @@
+---
+
+---
+Welcome to Web Design I!
+
+I'm excited to kick off Web Design I with you all this spring. This course is packed with information, techniques, and activities that are aimed to help you understand the fundamentals of working with HTML and CSS and generally designing for the web.
+
+The course materials are now visible in Moodle, so log in and take a look! Here are some tips for getting started:
+
+- You can find all the information and instructions for the course in the Course Website link provided in Moodle. Feel free to bookmark this link for easy access throughout the course. The homepage for the Course Website shows the course schedule and has a link to the course syllabus.
+- Be sure to keep an eye out for announcement emails like this. I post them in  Moodle and you should be automatically subscribed to receive them by email as well. This is a key tool for communicating throughout the course so don't miss out!
+- This week is an introductory week aimed to help you ease into the course readings and requirements. Next week the real action begins with the first activities due. Use your time well this week by completing the Introductory lesson and Essay 1, browsing the course website, and if possible, working ahead on lesson 1.
+- There will be a few key technologies to get set up with early in the course. These are explained in the Introductory unit and there is also a supporting resources website linked in the course website. The first technology you'll need is Codio, which you must purchase to use for submitting coded activities such as exercises and project deliverables. We have reduced the course fee this term to help account for this expense. ***Please set up your account ASAP as there have been some billing challenges with this vendor in the past.*** One common issue is that because this vendor is in the UK some US banks or credit card companies require you to authorize an international purchase. *Please stay on top of this so you don't get caught be a deadline next week!*
+- Although this course is online and does not have any required class meetings I am very interested to hear from you! One easy way to get assistance and stay connected is to attend the optional open labs I will hold *most of the time* on Monday nights from 8--10pm in TYL 107. We play music, have fun, and get stuff done. Sometimes I even bring treats! :) I will let you know in advance any weeks I will not be present, so please try to attend whenever you can. You can also always feel free to e-mail me at philschanely@cedarville.edu. I check it often and will get back to you as soon as possible. However, writing me on the same night as an item is due can reflect poor planning and puts both of us in a bind. Instead, plan to complete work a day or more before the deadline just in case we need to have some back and forth.
+- Note that the schedule is a little odd. We'll typically start course "units" or "weeks" on Saturdays and run through the following Friday. You can therefore use the weekends as a key time to complete the lessons and get started on the unit's activities. You'll typically have exercises due on Tuesday nights by 5pm and project deliverables, exams, and/or essays due by 5pm Friday nights. A few variations to this schedule are clearly visible on the course schedule.
+
+Please let me know if you have any questions or concerns. Looking forward to getting to know you soon!

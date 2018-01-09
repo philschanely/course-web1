@@ -26,8 +26,14 @@ dl {
 h4 {
   margin-top: 30px; }
 
-li, p {
-  max-width: 800px; }
+li {
+  max-width: 800px;
+  line-height: 2.4rem;
+  margin-bottom: 6px; }
+
+p {
+  max-width: 800px;
+  line-height: 2.4rem; }
 
 pre {
   border-color: transparent;

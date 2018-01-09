@@ -24,6 +24,8 @@ collections:
     output: true
   activities:
     output: true
+  announcements:
+    output: true
 
 # Build settings
 markdown: kramdown
