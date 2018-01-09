@@ -34,8 +34,8 @@ Here is a bird's-eye-view of the course schedule. Additional details can be foun
 | Mar 31--Apr 6 | x    | ---                | ---             | [Project Deliverable 8][pd8] **                          |
 | Apr 7--13     | 11   | [Lesson 9][l9]     | Exercise 9 *    | [Project Deliverable 9][pd9] *                           |
 | Apr 14--20    | 12   | [Lesson 10][l10]   | ---             | [Project Deliverable 10][pd10] *                         |
-| Apr 21--27    | 13   | ---                | ---             | Exam 2 ***                                               |
-| Apr 28--May 4 | 14   | ---                | ---             | [Project Final][pdfs] \*\*\* and [Essay 3][es3] \*\*\*   |
+| Apr 21--27    | 13   | ---                | ---             | Exam 2 *** and [Essay 3][es3] \*\*\*                     |
+| Apr 28--May 4 | 14   | ---                | ---             | [Project Final][pdfs] \*\*\*                             |
 
 
 \*Completed in Codio. \| \*\*Completed in InVision. \| \*\*\*Completed in Moodle
