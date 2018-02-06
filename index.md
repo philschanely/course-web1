@@ -23,7 +23,7 @@ Here is a bird's-eye-view of the course schedule. Additional details can be foun
 | Jan 13--19    | 1    | [Lesson 1][l1]     | Exercise 1 *    | [Project Deliverable 1][pd1] \*\*\*                      |
 | Jan 20--26    | 2    | [Lesson 2][l2]     | Exercise 2 *    | [Project Deliverable 2][pd2] *                           |
 | Jan 27--Feb 2 | 3    | [Lesson 3][l3]     | Exercise 3 *    | [Project Deliverable 3][pd3] \*\*\*                      |
-| Feb 3--9      | 4    | [Lesson 4][l4]     | Exercise 4 *    | [Project Deliverable 4][pd4] *                           |
+| Feb 3--9      | 4    | [Lesson 4][l4]     | Exercise 4 * *(extended to Weds)* | [Project Deliverable 4][pd4]           |
 | Feb 10--16    | 5    | [Lesson 5][l5]     | Exercise 5 *    | [Project Deliverable 5][pd5] *                           |
 | Feb 17--23    | 6    | ---                | ---             | Exam 1 \*\*\* and [Essay 2][es2] \*\*\*                  |
 | Feb 24--Mar 2 | 7    | ---                | ---             | [Project Deliverable 6][pd6] *                           |
