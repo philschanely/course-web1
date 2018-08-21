@@ -1,5 +1,5 @@
 ---
-title: "Lesson 9: CSS Layout Tools and Layout Analysis"
+title: "Lesson 9: CSS Layout Tools"
 layout: lesson
 ---
 
