@@ -35,7 +35,7 @@ Here is a bird's-eye-view of the course schedule. Additional details can be foun
 | Nov 17--23    | 12a  | [Lesson 10][l10]   | Exercise 9 *    | *--Thanksgiving Break--*                                 |
 | Nov 24--30    | 12b  | ---       | *--Thanksgiving Break--* | [Project Deliverable 10][pd10] *                         |
 | Dec 1--7      | 13   | ---                | *(Take exam)*   | Exam 2 *** and [Essay 3][es3] \*\*\*                     |
-| Dec 8--14     | 14   | ---                | ---             | [Project Final][pdfs] \*\*\*                             |
+| Dec 8--14     | 14   | ---                | [Project Final][pdfs] \*\*\* | *--Course finished--*                       |
 
 
 \*Completed in Codio. \| \*\*Completed in InVision. \| \*\*\*Completed in Moodle
