@@ -19,23 +19,23 @@ Here is a bird's-eye-view of the course schedule. Additional details can be foun
 
 |               | Unit | Reading            | Due 5pm Tue     | Due 5pm Fri                                              |
 |---------------|:-----|:-------------------|:----------------|:---------------------------------------------------------|
-| Aug 22--24    | 0    | [Lesson 0][l0]     | ---             | [Essay 1][es1] \*\*\*                                    |
-| Aug 25--31    | 1    | [Lesson 1][l1]     | Exercise 1 *    | [Project Deliverable 1][pd1] \*\*\*                      |
-| Sep 1--7      | 2    | [Lesson 2][l2]     | Exercise 2 *    | [Project Deliverable 2][pd2] *                           |
-| Sep 8--14     | 3    | [Lesson 3][l3]     | Exercise 3 *    | [Project Deliverable 3][pd3] \*\*\*                      |
-| Sep 15--21    | 4    | [Lesson 4][l4]     | Exercise 4 *    | [Project Deliverable 4][pd4]                             |
-| Sep 22--28    | 5    | [Lesson 5][l5]     | Exercise 5 *    | [Project Deliverable 5][pd5] *                           |
-| Sep 29--Oct 5 | 6    | ---                | *(Take exam)*   | Exam 1 \*\*\* and [Essay 2][es2] \*\*\*                  |
-| Oct 6--12     | 7    | ---                | ---             | [Project Deliverable 6][pd6] *                           |
-| Oct 13--19    | x    | *--Fall break--*   | ---             | ---                                                      |
-| Oct 20--26    | 8    | [Lesson 6][l6]     | ---             | **Exercise 6** \*                                        |
-| Oct 27--Nov 2 | 9    | [Lesson 7][l7]     | Exercise 7 *    | [Project Deliverable 7][pd7] **                          |
-| Nov 3--9      | 10   | [Lesson 8][l8]     | Exercise 8 *    | [Project Deliverable 8][pd8] **                          |
-| Nov 10--16    | 11   | [Lesson 9][l9]     | ---             | [Project Deliverable 9][pd9] *                           |
-| Nov 17--23    | 12a  | [Lesson 10][l10]   | Exercise 9 *    | *--Thanksgiving Break--*                                 |
-| Nov 24--30    | 12b  | ---       | *--Thanksgiving Break--* | [Project Deliverable 10][pd10] *                         |
-| Dec 1--7      | 13   | ---                | *(Take exam)*   | Exam 2 *** and [Essay 3][es3] \*\*\*                     |
-| Dec 8--14     | 14   | ---                | [Project Final][pdfs] \*\*\* | *--Course finished--*                       |
+| Jan 8--11     | 0    | [Lesson 0][l0]     | ---             | [Essay 1][es1] \*\*\*                   |
+| Jan 12--18    | 1    | [Lesson 1][l1]     | Exercise 1 *    | [Project Deliverable 1][pd1] \*\*\*     |
+| Jan 19--25    | 2    | [Lesson 2][l2]     | Exercise 2 *    | [Project Deliverable 2][pd2] *          |
+| Jan 26--Feb 1 | 3    | [Lesson 3][l3]     | Exercise 3 *    | [Project Deliverable 3][pd3] \*\*\*     |
+| Feb 2--8      | 4    | [Lesson 4][l4]     | Exercise 4 *    | [Project Deliverable 4][pd4]            |
+| Feb 9--15     | 5    | [Lesson 5][l5]     | Exercise 5 *    | [Project Deliverable 5][pd5] *          |
+| Feb 16--22    | 6    | ---                | *(Take exam)*   | Exam 1 \*\*\* and [Essay 2][es2] \*\*\* |
+| Feb 23--Mar 1 | 7    | ---                | ---             | [Project Deliverable 6][pd6] *          |
+| Mar 2--8      | x    | ---                | *(Spring break)* | *(Spring break)*                       |
+| Mar 9--15     | 8    | [Lesson 6][l6]     | ---             | Exercise 6 *                            |
+| Mar 16--22    | 9    | [Lesson 7][l7]     | Exercise 7 *    | [Project Deliverable 7][pd7] **         |
+| Mar 23--29    | 10   | [Lesson 8][l8]     | Exercise 8 *    | [Project Deliverable 8][pd8] **         |
+| Mar 30--Apr 5 | 11   | [Lesson 9][l9]     | ---             | [Project Deliverable 9][pd9] *          |
+| Apr 6--12     | 12   | [Lesson 10][l10]   | Exercise 9 *    | (Progress on PD9)                       |
+| Apr 13--19    | 13a  | ---                | [Project Deliverable 10][pd10] * | *(Easter Break)*       |
+| Apr 20--26    | 13b  | ---                | *(Easter Break)* | [Project Final][pdfs] \*\*\*           |
+| Apr 27--May 3 | 14   | ---                | Exam 2 \*\*\* and [Essay 3][es3] \*\*\* | *--Course finished--* |
 
 
 \*Completed in Codio. \| \*\*Completed in InVision. \| \*\*\*Completed in Moodle
