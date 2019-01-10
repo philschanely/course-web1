@@ -82,7 +82,7 @@ We’ve looked briefly at an analogy that web design is related to traditional p
 
 What do you know about the Internet? Are you familiar with terms such as Internet browser, operating system, color depth, and monitor resolution? Have you considered how these components impact how we design for this medium? How is the audience different for the web than those for traditional print design? Try to answer these questions as you read the next selection from the Miller text.
 
-***Read 'Introduction to Web Design' from Miller.***
+***Read 'Introduction to Web Design' from Miller.*** Note that if you are waiting for your book to arrive you can make up this reading as soon as it arrives.
 
 So what is web design? In your first reflection essay you’ll be challenged to answer this question.
 
