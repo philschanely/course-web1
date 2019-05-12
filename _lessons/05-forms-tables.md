@@ -63,6 +63,9 @@ Consider this as a prototype for how to mark up a more complex form in a meaning
 
 There are many different structures forms could follow off of this and they can get quite complex. In this course, we’ll use mostly simple structures like these.
 
+**NOTE:** Forms covered in this class really just touch the "tip of the iceberg" in that there is a lot more to learn about using the fields well and configuring things to work with a server processing script. In your activities in this course you will not need to understand all these nuances, including the fact that you will not necessarily have any processing script to send form data to through the `action` attribute. We return to work with forms more in future classes in our web program.
+
+
 ### Marking Information with Tables
 
 **5.3: Table markup was misused in the past...**

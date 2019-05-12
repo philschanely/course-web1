@@ -26,6 +26,10 @@ collections:
     output: true
   announcements:
     output: true
+  professor:
+    output: true
+  extras:
+    output: true
 
 # Build settings
 markdown: kramdown

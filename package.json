@@ -1,0 +1,25 @@
+{
+  "name": "course-web1",
+  "version": "1.0.0",
+  "description": "Web Design I course content",
+  "main": "_site/index.html",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build": "bundle exec jekyll build",
+    "serve": "bundle exec jekyll serve",
+    "start": "npm run serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/philschanely/course-web1.git"
+  },
+  "author": "Phil Schanely",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/philschanely/course-web1/issues"
+  },
+  "homepage": "https://github.com/philschanely/course-web1#readme"
+}

@@ -13,7 +13,7 @@ Read the [course syllabus &raquo;](/docs/syllabus.pdf)
 The course is broken up into "week/units" that generally run from Saturday to the following Friday:
 
 * *Saturday--Tuesday* complete the assigned readings and, if applicable, the activity noted as due by Tue.
-* *Wednesday--Friday* complete the activity indicated as due by Fri.
+* *Wednesday--Friday* complete the activity indicated as due by Fri. 
 
 Here is a bird's-eye-view of the course schedule. Additional details can be found in each link provided below.
 
@@ -25,14 +25,14 @@ Here is a bird's-eye-view of the course schedule. Additional details can be foun
 | Jan 26--Feb 1 | 3    | [Lesson 3][l3]     | Exercise 3 *    | [Project Deliverable 3][pd3] \*\*\*     |
 | Feb 2--8      | 4    | [Lesson 4][l4]     | Exercise 4 *    | [Project Deliverable 4][pd4]            |
 | Feb 9--15     | 5    | [Lesson 5][l5]     | Exercise 5 *    | [Project Deliverable 5][pd5] *          |
-| Feb 16--22    | 6    | ---                | *(Take exam)*   | Exam 1 \*\*\* and [Essay 2][es2] \*\*\* |
-| Feb 23--Mar 1 | 7    | ---                | ---             | [Project Deliverable 6][pd6] *          |
+| Feb 16--22    | 6    | ---                | *(Take exam)*   | [Essay 2][es2] \*\*\* |
+| Feb 23--Mar 1 | 7    | ---                | Exam 1 \*\*\* *extended deadline* | [Project Deliverable 6][pd6] *          |
 | Mar 2--8      | x    | ---                | *(Spring break)* | *(Spring break)*                       |
 | Mar 9--15     | 8    | [Lesson 6][l6]     | ---             | Exercise 6 *                            |
 | Mar 16--22    | 9    | [Lesson 7][l7]     | Exercise 7 *    | [Project Deliverable 7][pd7] **         |
 | Mar 23--29    | 10   | [Lesson 8][l8]     | Exercise 8 *    | [Project Deliverable 8][pd8] **         |
 | Mar 30--Apr 5 | 11   | [Lesson 9][l9]     | ---             | [Project Deliverable 9][pd9] *          |
-| Apr 6--12     | 12   | [Lesson 10][l10]   | Exercise 9 *    | (Progress on PD9)                       |
+| Apr 6--12     | 12   | [Lesson 10][l10]   | Exercise 9 *    | (Progress on PD10)                       |
 | Apr 13--19    | 13a  | ---                | [Project Deliverable 10][pd10] * | *(Easter Break)*       |
 | Apr 20--26    | 13b  | ---                | *(Easter Break)* | [Project Final][pdfs] \*\*\*           |
 | Apr 27--May 3 | 14   | ---                | Exam 2 \*\*\* and [Essay 3][es3] \*\*\* | *--Course finished--* |
