@@ -1,8 +1,30 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Web Design I`,
+    description: `Learn essential building blocks of designing and building websites.`,
+    author: `@philschanely`,
+    pages: [
+      {
+        label: "Home",
+        path: "/"
+      },
+      {
+        label: "Lessons",
+        path: "/lessons/"
+      },
+      {
+        label: "Activities",
+        path: "/activities/"
+      },
+      {
+        label: "Resources",
+        path: "/resources"
+      }
+    ]
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -13,22 +35,57 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        name: `activities`,
+        path: `${__dirname}/src/pages/activities`,
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `lessons`,
+        path: `${__dirname}/src/pages/lessons`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `snippets`,
+        path: `${__dirname}/src/snippets`,
+      },
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-mdx`,
+      options: {
+        extensions: ['.mdx', '.md'],
+        defaultLayouts: {
+          default: require.resolve('./src/components/layouts/simple-layout.js'),
+          activities: require.resolve('./src/components/layouts/paginated-layout.js'),
+          lessons: require.resolve('./src/components/layouts/paginated-layout.js'),
+          snippets: require.resolve('./src/components/layouts/snippet-layout.js')
+        },
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: true,
+              noInlineHighlight: false,
+            },
+          },
+        ]
+      }
+    },
+    {
+      resolve: "gatsby-plugin-stylelint",
+      options: { files: ["src/**/*.scss"] }
+    },
   ],
 }

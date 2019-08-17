@@ -1,42 +1,44 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+// import { Link } from "gatsby"
+import PropTypes from "prop-types";
+import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
-)
+import NavMain from "./nav-main";
+import Brand from "./brand";
+
+const Header = ({ activePath }) => {
+  const data = useStaticQuery(graphql`
+    query HeaderQuery {
+      site {
+        siteMetadata {
+          title,
+          pages {
+            label,
+            path
+          }
+        }
+      }
+    }
+  `);
+
+  return (
+    <header className="masthead masthead--course">
+  		<Brand />
+  		<h1 className="masthead__brand brand">
+  			<a className="brand__course-name" href="/">{data.site.siteMetadata.title}</a>
+  		</h1>
+  		<NavMain pages={data.site.siteMetadata.pages} activePath={activePath} />
+  	</header>
+  );
+};
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
-}
+  activePath: PropTypes.string,
+};
 
 Header.defaultProps = {
-  siteTitle: ``,
-}
+  siteTitle: `Course name`,
+};
 
-export default Header
+export default Header;
