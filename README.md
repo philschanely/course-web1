@@ -1,2 +1,3 @@
-# course-web1
-Web Design I course content
+# Web Design I Course for LearnUXD
+
+This is just a landing place for a test page...
