@@ -10,8 +10,6 @@ navPath: "/resources"
 
 Codio is a web-based platform for coding solutions, especially in the context of a class like what you’re taking at Cedarville University.
 
-Learn more from the Codio website »
-
 ### Getting started with Codio
 
 #### Create an account
