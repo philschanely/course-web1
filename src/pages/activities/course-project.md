@@ -32,14 +32,14 @@ The final submission will fulfill the following requirements:
 
 In the first 5 lessons of the course we'll build an HTML-only but fully functional prototype of the site. In the last five lessons we'll design our site using Sketch and then build out the styles and layout using CSS.
 
-</Subpage>
-<Subpage slug="resources">
-
-### General Resources
-
 Watch this video that introduces the project wireframes and the sample site:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/DhBhaLiC7uY" frameborder="0" allowfullscreen></iframe>
+
+</Subpage>
+<Subpage slug="resources">
+
+### Resources
 
 * View the [professor's example prototype in InVision &raquo;](https://invis.io/BE9ONJ6VF#/210649118_Home)
 * Download the [sitemap template](/docs/project-sitemap.pdf)
@@ -128,7 +128,7 @@ Watch this video demonstration for some tips on how to collect content and prepa
 
 #### Submission
 
-You do not need to attach any files for your submission of this assignment but instead simply list the names of the articles and products you have collected.
+You do not need to attach any files for your submission of this assignment but instead simply indicate that you have completed this important step in the process.
 
 </Subpage>
 <Subpage slug="deliverable-4">
