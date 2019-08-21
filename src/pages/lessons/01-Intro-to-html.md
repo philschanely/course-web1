@@ -4,7 +4,7 @@ title:  "Introduction to HTML"
 number: 1
 cover: "https://source.unsplash.com/3lJMJ3g37IE"
 ---
-import Subpage from "../../components/subpage.js"
+import { Subpage, Callout } from "course-components";
 
 <Subpage slug="getting-started">
 
@@ -12,7 +12,11 @@ import Subpage from "../../components/subpage.js"
 
 To cover many of the technical logistics, we’ll use a second textbook, John Duckett’s beautiful book *HTML & CSS*. I’ll supplement this with video demonstrations and some written additions. We’ll always focus each module around practical application—immediately, as you apply skills to a simulated activity in the module, and collectively, as you build your first complete website throughout the course.
 
-***Read the 'Introduction' chapter from Duckett.***
+<Callout lead={true} color="secondary">
+
+Read the _Introduction_ chapter from Duckett.
+
+</Callout>
 
 Now, try answering these questions on your own:
 
@@ -29,8 +33,11 @@ Now, try answering these questions on your own:
 
 Now let’s spend a little time talking about the different kinds of files used to create websites and how to categorize them.
 
-**1.1: File extensions...**
-: ...establish the format or type of a given file. They are placed after the name of the file and begin with a `.` (period).
+<Callout number="1.1" term="File extensions..." color="alternate">
+
+...establish the format or type of a given file. They are placed after the name of the file and begin with a `.` (period).
+
+</Callout>
 
 Ever since you first learned to use a computer, you’ve been working with different kinds of files. Think about the programs you use often. What kinds of files are you aware of that you work with frequently? A few that come to my mind are Microsoft Word files, Microsoft Excel files, Adobe Acrobat PDF files, and JPEG image files. Do you know how to distinguish each of these file types? If you look at a folder of files on your computer you should see that there are two or three parts to each file:
 
@@ -38,8 +45,11 @@ Ever since you first learned to use a computer, you’ve been working with diffe
 * *The name of the file:* The way we distinguish one file from another is by giving it a name. This helps us remember what we put in the file. In this module we’ll talk about how to name files specifically to use on the web as there are some rules we must follow so that our files will work consistently in different settings.
 * *The file extension:* Each different kind of file is distinguished by a unique two- to four-letter acronym that is added after a file name and separated from it by a period. When we refer to a file extension, we’ll usually express it with the period, such as `.doc` or `.pdf`.
 
-**1.2: Common file types on the web**
-: The most common files on the web are categorized as documents, scripts, and images. It is important to recognize documents we use most often such as `.html`, scripts such as `.js`, `.css`, and images such as `.png`, `.gif`, and `.jpg`.
+<Callout number="1.2" term="Common file types on the web" color="alternate">
+
+The most common files on the web are categorized as documents, scripts, and images. It is important to recognize documents we use most often such as `.html`, scripts such as `.js`, `.css`, and images such as `.png`, `.gif`, and `.jpg`.
+
+</Callout>
 
 Recognizing common web file extensions is key to distinguishing between different file types and understanding the files that make up a website.
 
@@ -71,8 +81,11 @@ Here are some common files you will encounter when working with the web:
 
 Now that you have learned a set of common files used on the web, the next thing to consider is how to appropriately name files for the web.
 
-**1.3: Rules for naming files**
-: We must follow specific rules when we name files for the web, including that we must avoid spaces and special characters and not start file names with numbers or capital letters.
+<Callout number="1.3" term="Rules for naming files" color="alternate">
+
+We must follow specific rules when we name files for the web, including that we must avoid spaces and special characters and not start file names with numbers or capital letters.
+
+</Callout>
 
 What makes file names for the web different from file names for any other purpose? People access web files from a web server from anywhere in the world. Web servers all have different standards for how they access files, and some are pickier than others. Therefore, to ensure your files will work on any server, it is best to use the most restrictive context for how we name our files.
 
@@ -88,8 +101,11 @@ Here are the rules:
     * Spaces characters. Instead, use `-` (hyphens), `_` (underscores), or capital letters to separate words (we’ll talk more about these methods soon).
 * File names *should start with a lowercase letter* rather than a capital letter, a number, a hyphen, or an underscore.
 
-**1.4: Avoiding spaces in filenames**
-: Instead of spaces in filenames we can use hyphens, underscore or conventions such as camelCase to separate words.
+<Callout number="1.4" term="Avoiding spaces in filenames" color="alternate">
+
+Instead of spaces in filenames we can use hyphens, underscore or conventions such as camelCase to separate words.
+
+</Callout>
 
 Here are some common ways to deal with replacing spaces in file names:
 
@@ -114,8 +130,11 @@ So as we’re approaching files that we want to use in a website, we have two sc
 
 ### Creating a Site File and Folder Structure
 
-**1.5 Root folder and homepage**
-: A valid website will contain at least a single homepage named `index.html` along with any other files needed. All these will be contained in a single root folder and subfolders as needed.
+<Callout number="1.5" term="Root folder and homepage" color="alternate">
+
+A valid website will contain at least a single homepage named `index.html` along with any other files needed. All these will be contained in a single root folder and subfolders as needed.
+
+</Callout>
 
 Now that you know how to name files and ensure that they are in the appropriate format for the web, let’s talk about how to set up the files and folders commonly used in a website.
 
@@ -137,15 +156,22 @@ Here is a visual example of what a folder structure and file set for a website s
 
 ***Now read chapter 1 from Duckett to learn more about HTML and basic file structure.***
 
-**1.6 Markup (tags)...**
-: are sets of characters that add structure to plain text and result in formatting in a web browser.
+<Callout number="1.6" term="Markup (tags)..." color="alternate">
+
+are sets of characters that add structure to plain text and result in formatting in a web browser.
+
+</Callout>
 
 Having read about markup in the Duckett text, allow me to suggest a definition of a crucial term:
 
 > *Markup* is a set of special characters called *tags* that allow web designers to add structure to plain text content so that web browsers can apply visual formatting to the content.
 
-**1.7 Elements...**
-: ...are complete sets of markup that include an opening tag, closing tag, and content in-between.
+
+<Callout number="1.7" term="Elements..." color="alternate">
+
+...are complete sets of markup that include an opening tag, closing tag, and content in-between.
+
+</Callout>
 
 Content that has been marked with tags correctly is considered an element in HTML. Elements tend to have the following structure:
 
@@ -168,8 +194,11 @@ Self-closing tags include the tags listed below and are allowed to do this becau
 
 ### Required Document Structure
 
-**1.8 Three tags every HTML document should contain**
-: A valid HTML document contains one `<html>` element that contains one `<head>` (for information about the page) followed by one `<body>` (for actual content of the page).
+<Callout number="1.8" term="Three tags every HTML document should contain" color="alternate">
+
+A valid HTML document contains one `<html>` element that contains one `<head>` (for information about the page) followed by one `<body>` (for actual content of the page).
+
+</Callout>
 
 HTML documents must all contain the following basic structure to be considered valid documents:
 
@@ -202,8 +231,11 @@ Therefore, a complete document structure is...
 
 ### Rules of Markup
 
-**1.9: Rule One---The Element Rule**
-: All tags must open and close correctly.
+<Callout number="1.9" term="Rule One---The Element Rule" color="alternate">
+
+All tags must open and close correctly.
+
+</Callout>
 
 Here is the first basic rule of markup: *All tags must open and close correctly.*
 
@@ -217,8 +249,11 @@ Tags that have an error of some kind are called *invalid*. So you have an invali
 * You mismatch an opening tag and closing tag.
 * You use a tag that is not a true HTML tag either because you misspelled it or because it doesn’t exist to begin with. For example, I’ve seen several students over the years try to create tags such as `<p1>`, `<p2>`, `<p3>`, or `<h7>`, `<h8>`, or `<heading>`. These are not real HTML tags, so they are considered invalid markup.
 
-**1.10: Rule Two--The Nesting Rule**
-: Tags that contain other tags must open before the inner tag and close after the inner tag has closed.
+<Callout number="1.10" term="Rule Two--The Nesting Rule" color="alternate">
+
+Tags that contain other tags must open before the inner tag and close after the inner tag has closed.
+
+</Callout>
 
 Now note the second rule of markup: *Tags that contain other tags must open before the inner tag and close after the inner tag has closed.*
 
@@ -274,8 +309,11 @@ Now consider this:
 
 Finally, as a best practice for creating clean code, it is customary to indent nested tags with either a single tab and then vertically align the parent’s closing tag with the opening tag. This keeps our code nice and neat and can make it easier to keep track of opening and closing tags. See examples above as a reference for how to do this.
 
-**1.11: Rule Three---The Attribute Rule**
-: Opening tags can contain specifically formatted attributes that provide additional settings for an element.
+<Callout number="1.11" term="Rule Three---The Attribute Rule" color="alternate">
+
+Opening tags can contain specifically formatted attributes that provide additional settings for an element.
+
+</Callout>
 
 Let’s add one last rule: *Opening tags can contain specifically formatted attributes that provide additional settings for an element.*
 
@@ -293,8 +331,11 @@ They are placed inside an opening tag like this:
 
 Note that you do not put an attribute in both opening and closing tags; only in the opening tag.
 
-**1.12: The `id` and `class` Attributes...**
-: ...can be placed on any element and are used to identify and categorize them beyond their basic use.
+<Callout number="1.12" term="The `id` and `class` Attributes.." color="alternate">
+
+...can be placed on any element and are used to identify and categorize them beyond their basic use.
+
+</Callout>
 
 Some common attributes that can be used on all elements are...
 
@@ -320,8 +361,7 @@ Many other attributes provide specific settings and may only be used on certain 
 
 Watch this to learn how to work with files and content in Codio:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/b4wI369hdF8?list=PLuOViGmL7TfXlFl74Hf84NwSQPR_LDR0d" frameborder="0" allowfullscreen></iframe>
-
+<iframe width="560" height="315" src="https://www.youtube.com/embed/b4wI369hdF8?list=PLuOViGmL7TfXlFl74Hf84NwSQPR_LDR0d" frameBorder="0" allowFullScreen></iframe>
 
 </Subpage>
 <Subpage slug="study-tools">
