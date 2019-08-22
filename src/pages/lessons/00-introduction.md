@@ -4,7 +4,7 @@ title: "Introduction"
 number: 0
 cover: "https://source.unsplash.com/iar-afB0QQw"
 ---
-import Subpage from "../../components/subpage.js"
+import { Subpage, Callout } from "../../course-components";
 
 <Subpage slug="intro">
 
@@ -32,10 +32,17 @@ Watch this introduction to course technologies:
 
 This is the first of many "lessons" you’ll find in this course. Each lesson will walk you through all the required readings in a given unit as well as provide additional notes and links to videos. You’ve encountered some of these conventions already, but here’s a formal orientation to the different color coding you’ll see throughout:
 
-**0.1 Summary Boxes...**
-: ...will call out key take-aways that summarize or condense the discussion that follows. These are included to help you as you study since much of the material can be highly technical.
+<Callout number="0.1" term="Summary Boxes..." color="alternate">
 
-***Watch for callouts like this.*** They clue you in to an activity that you complete outside of the lesson itself, whether it is a prompt to read from one of your textbooks, watch a video, or to complete a practice activity of some sort.
+...will call out key take-aways that summarize or condense the discussion that follows. These are included to help you as you study since much of the material can be highly technical.
+
+</Callout>
+
+<Callout lead={true} color="secondary">
+
+Watch for callouts like this. They clue you in to an activity that you complete outside of the lesson itself, such as completing reading from your textbook.
+
+</Callout>
 
 Words `colored like this` and entered in a monospace font indicate code values or filenames.
 
@@ -52,7 +59,11 @@ Have you ever thought about how the layout of a web page is similar to the folde
 
 Now, have you ever designed or built a web page? Certainly you’ve visited a web page or two in your lifetime. How do you think designing a web page is similar to designing a folded newspaper? While they certainly have their differences, you might be surprised by how they’re similar.
 
-***Read the Preface from Miller.***
+<Callout lead={true} color="secondary">
+
+Read the Preface from Miller.
+
+</Callout>
 
 After reading, think back on what you read. What is the concept of designing “above the fold”?
 
@@ -86,7 +97,11 @@ We’ve looked briefly at an analogy that web design is related to traditional p
 
 What do you know about the Internet? Are you familiar with terms such as Internet browser, operating system, color depth, and monitor resolution? Have you considered how these components impact how we design for this medium? How is the audience different for the web than those for traditional print design? Try to answer these questions as you read the next selection from the Miller text.
 
-***Read 'Introduction to Web Design' from Miller.*** Note that if you are waiting for your book to arrive you can make up this reading as soon as it arrives.
+<Callout lead={true} color="secondary">
+
+Read 'Introduction to Web Design' from Miller. *Note that if you are waiting for your book to arrive you can make up this reading as soon as it arrives.*
+
+</Callout>
 
 So what is web design? In your first reflection essay you’ll be challenged to answer this question.
 
@@ -97,7 +112,7 @@ We’ll return to the Miller text later in the course.
 
 ### Study Tools
 
-Each content lesson will include this “Study Tools” section that will provide a succinct list of key terms you should review in order to help prepare for exams. 
+Each content lesson will include this “Study Tools” section that will provide a succinct list of key terms you should review in order to help prepare for exams.
 
 Be sure you understand the following from the required readings in this Introductory unit:
 
