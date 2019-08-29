@@ -4,7 +4,7 @@ type: lessons
 number: 3
 cover: "https://source.unsplash.com/J90zM9OtBXY"
 ---
-import Subpage from "../../components/subpage.js"
+import { Subpage, Callout } from "../../course-components";
 
 <Subpage slug="hyperlinks">
 
@@ -15,7 +15,13 @@ import Subpage from "../../components/subpage.js"
 
 Markup that gives structure to content provides a foundation for building web pages. But what makes web documents different from other documents is that web documents can include hyperlinks that connect them to each other.
 
-***Read chapter 4 (pp. 74-80, 85-90) from Duckett*** to learn some of the basics about using the `<a>` tag and its attributes.
+<Callout lead={true} color="secondary">
+
+Read pp. 74-80 and 85-90 in Ch.4 of Duckett
+
+<small>to learn some of the basics about using the <code>&lt;a&gt;</code> tag and its attributes.</small>
+
+</Callout>
 
 Chapter 4 covers the `<a>` tag and how to link to websites and pages within your own website. To provide you additional practice with these concepts, let’s start by looking more at how to add `<a>` tags and configure them to point to a website on the Internet.
 
@@ -74,7 +80,13 @@ A helpful tip to ensure you get the right path is to actually visit the desired 
 **3.3: Relative paths...**
 : ...point from one file to another file within the same computer directory, be it further into a folder structure, or a few folders up from the current file.
 
-***Read chapter 4 (pp. 81-84, 91-92) from Duckett*** to learn more about linking to files using paths and to see a summary of this chapter on links.
+<Callout lead={true} color="secondary">
+
+Read pp. 81-84 and 91-92 in Ch. 4 of Duckett
+
+<small>to learn more about linking to files using paths and to see a summary of this chapter on links.</small>
+
+</Callout>
 
 Duckett goes on in chapter 4 to describe relative URLs or relative paths which allow us to point to files within our own site. Examine the chart that follows for more details and examples.
 
@@ -143,7 +155,11 @@ Watch this short introduction to preparing images to use in a website.
 
 Our final area of focus is in creating markup that allows us to incorporate image files into our web pages.
 
-***Read chapter 5 from Duckett.***
+<Callout lead={true} color="secondary">
+
+Read Ch. 5 from Duckett.
+
+</Callout>
 
 So far we've talked about paths in the context of adding hyperlinks from one document to the next. Chapter 5 from Duckett elaborates on how to use paths and the `<img/>` tag in order to insert images into our markup. The `<img/>` tag is one of those tricky self-closing tags; so we DO NOT do this:
 
@@ -248,7 +264,11 @@ Bottom line: I typically use either PNG or JPEG depending on whether transparenc
 
 As part of our course's purpose is to discuss contemporary practices in web design, we'll use Brian Miller's fantastic text, *Above the Fold* as a primary source. We begin our in-depth study with an excerpt from Chapter 1. In this chapter, Miller lays out the overall process we go through to plan a website. We'll read just the section related to understanding a given website project.
 
-***Read Chapter 1, pp.22--29 from Miller's Above the Fold, 2nd Edition ("Miller" henceforth).***
+<Callout lead={true} color="secondary">
+
+Read pp. 22--29 in Ch. 1 of Miller.
+
+</Callout>
 
 Let's leave this chapter for now in order to look more closely at what can go into understanding a website's needs or requirements from the user's standpoint.
 
@@ -259,7 +279,11 @@ Let's leave this chapter for now in order to look more closely at what can go in
 
 A major initiative in contemporary web design is to focus on the user's needs and represent them in any business discussion. This often takes a concerted effort on our part, because, ironically, business owners are often thinking about their own needs, preferences, or interests for their company's website. Chapter 2 from Miller provides an excellent overview of the study of usability. When we plan in this fashion, we can think beyond the day-to-day grind of building sites and instead show a care for the actual experience users have when visiting a site.
 
-***Read Chapter 2 from Miller.***
+<Callout lead={true} color="secondary">
+
+Read Ch. 2 from Miller.
+
+</Callout>
 
 We benefit greatly from determining the business goals for a website. We benefit even more from understanding how those goals line up with actual user needs.
 

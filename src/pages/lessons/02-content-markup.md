@@ -4,7 +4,7 @@ title: "Essential Content Markup"
 number: 2
 cover: "https://source.unsplash.com/ywqa9IZB-dU"
 ---
-import Subpage from "../../components/subpage.js"
+import { Subpage, Callout } from "../../course-components";
 
 <Subpage slug="intro-to-markup">
 
@@ -45,7 +45,11 @@ A small set of elements provide the backbone  for all other tags. These are the 
 **2.1: Paragraphs and headings...**
 : ...form the backbone of well-structured web content. HTML offers the `<p>` tag for paragraphs and six levels of headings, `<h1>` -- `<h6>`.
 
-***Read chapter 2 (pp.40-44, 52) and chapter 3 from Duckett.***
+<Callout lead={true} color="secondary">
+
+Read pp. 40-44 and 52 in Ch. 2 and Ch. 3 from Duckett.
+
+</Callout>
 
 The author has introduced us to a number of tags that help us mark HTML content. He has also introduced the subject of semantic markup. Let’s review some important tags that were covered:
 
@@ -118,7 +122,13 @@ There are two categories of lists:
 
 Now that you have a basic library of typographical markup including headings, paragraphs, and lists, there are a number of tags that add additional finesse.
 
-***Read chapter 2 (pp. 45–48; 51–60) from Duckett.*** Note that p.50 introduces semantic markup, which we discuss in more detail later in this module. My definition differs slightly from the author’s definition.
+<Callout lead={true} color="secondary">
+
+Read pp. 45–48 and 51–60 in Ch. 2 of Duckett.
+
+<small>Note that p.50 introduces semantic markup, which we discuss in more detail later in this module. My definition differs slightly from the author’s definition.</small>
+
+</Callout>
 
 Here is a small set of useful tags that allows you to add more nuanced meaning to your content:
 

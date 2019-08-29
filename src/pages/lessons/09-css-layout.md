@@ -4,7 +4,7 @@ type: lessons
 number: 9
 cover: "https://source.unsplash.com/tZc3vjPCk-Q"
 ---
-import Subpage from "../../components/subpage.js"
+import { Subpage, Callout } from "../../course-components";
 
 <Subpage slug="float-and-clear">
 
@@ -13,7 +13,13 @@ import Subpage from "../../components/subpage.js"
 **9.1: Float and clear...**
 : Are helpful CSS properties that begin to assist with multi-column layouts. The "natural float" is the best use for floats today.
 
-***Read chapter 15 from Duckett*** for a survey of techniques used to recreate layouts with HTML and CSS. This chapter surveys a number of topics that relate to how to build layouts with HTML and CSS. However, many things have changed in the last year or so with which this book has not yet caught up.
+<Callout lead={true} color="secondary">
+
+Read Ch. 15 from Duckett
+
+<small>for a survey of techniques used to recreate layouts with HTML and CSS. This chapter surveys a number of topics that relate to how to build layouts with HTML and CSS. However, many things have changed in the last year or so with which this book has not yet caught up.</small>
+
+</Callout>
 
 The most meaningful use for the float property today is to accomplish a "natural float:" simple effect of have an image or box set off to the side of a container while the surrounding text flows around it, as in traditional print media.
 
@@ -31,16 +37,20 @@ Simply select the target image or group and set it to `float:left` or `float:rig
 
 An emerging and stable tool to use for creating multi-column layouts today is the flexbox technology.
 
-***Read a very nice explanation of Flexbox [from Chris Coyier at CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).***
+<Callout lead={true} color="secondary">
+
+Read [a very nice explanation of Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) from Chris Coyier at CSS Tricks.
+
+</Callout>
 
 Here is a basic process for using flex box:
 
 * Ensure that a container exists around all the "columns" and set it to `display:flex`.
 Each item directly inside that container will now tile up side-by side.
 * Control dimensions of the items using one of the following:
-    * Set an explicit `width` such as `300px`.
-    * Set a relative `width` such as `50%`.
-    * Set a flex box size ratio instead of width using the `flex` property and a value such as `1`, `2`, `5`, etc. More on this below.
+  * Set an explicit `width` such as `300px`.
+  * Set a relative `width` such as `50%`.
+  * Set a flex box size ratio instead of width using the `flex` property and a value such as `1`, `2`, `5`, etc. More on this below.
 * Add other settings to further tweak the configuration (see section below).
 
 </Subpage>

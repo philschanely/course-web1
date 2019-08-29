@@ -4,7 +4,7 @@ type: lessons
 number: 4
 cover: "https://source.unsplash.com/r6mBXuHnxBk"
 ---
-import Subpage from "../../components/subpage.js"
+import { Subpage, Callout } from "../../course-components";
 
 <Subpage slug="intro-to-organizers">
 
@@ -22,7 +22,11 @@ Another crucial set of new tags to discuss in this module is a set of structural
 
 It’s an appropriate time now to discuss the new structural elements that have enhanced how we can organize and group content, and that we will use later to construct layouts: they all relate to the concept of sectioning.
 
-***Read chapters 8 and 17 from Duckett.***
+<Callout lead={true} color="secondary">
+
+Read Chs. 8 and 17 from Duckett.
+
+</Callout>
 
 Sectioning means dividing our content up into distinct groups of related content. `<section>` tags (or their derivatives) should be used when…
 
