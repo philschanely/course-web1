@@ -4,7 +4,7 @@ type: lessons
 number: 6
 cover: "https://source.unsplash.com/waAAaeC9hns"
 ---
-import Subpage from "../../components/subpage.js"
+import { Subpage, Callout } from "../../course-components";
 
 <Subpage slug="intro-to-css">
 
@@ -20,7 +20,13 @@ In this module we make a dramatic shift in our focus. Assuming we have solid, se
 **6.1 CSS scripts are placed...**
 : ...either in a `<style>` element in an HTML document or in a separate `.css` file and linked to an HTML document using the `<link/>` element.
 
-***Read chapter 10 (pp. 226-236; 241) from Duckett*** for an explanation of CSS, its basic syntax, and two methods for creating style sheets and incorporating them into a web page. This chapter, “Introducing CSS,” does an excellent job illustrating the building blocks of working with CSS.
+<Callout lead={true} color="secondary">
+
+Read pp. 226–236 and 241 in Ch. 10 of Duckett
+
+<small>for an explanation of CSS, its basic syntax, and two methods for creating style sheets and incorporating them into a web page. This chapter, “Introducing CSS,” does an excellent job illustrating the building blocks of working with CSS.</small>
+
+</Callout>
 
 Remember that CSS, Cascading Style Sheet, is a different language from HTML; but the two work hand-in-hand. CSS is used to apply presentational adjustments to existing HTML. A script that contains only CSS is often called a “style sheet.” In order to apply CSS, you have to do at least two things:
 
@@ -34,7 +40,13 @@ Duckett explained sufficiently how to do both of these.
 **6.2 Selectors...**
 : ...are part of the CSS rule that allow us to select certain elements from an HTML document that we desire to style. The most common kinds of selectors are tag selectors, `class` selectors, `id` selectors, nested selectors.
 
-***Read chapter 10 (pp. 237-240; 242-244) from Duckett*** for details about the different kinds of selectors we use to target specific HTML elements and apply styles to them and for an explanation of the concepts of the cascade and inheritance.
+<Callout lead={true} color="secondary">
+
+Read pp. 237-240 and 242-244 in Ch. 10 of Duckett
+
+<small>for details about the different kinds of selectors we use to target specific HTML elements and apply styles to them and for an explanation of the concepts of the cascade and inheritance.</small>
+
+</Callout>
 
 Watch this overview of attaching stylesheets and working with selectors:
 
@@ -49,34 +61,11 @@ Duckett’s overview of selector types in this chapter provides a helpful introd
     * If all of an element, such as all paragraphs or the `<body>` tag, use a single tag selector such as `p` or `body`.
     * If a more specific context is needed, keep asking...
 * Do the elements I want to style have a common characteristic such as...
-    * a common parent element? Use a nested selector such as...
-
-        ```css
-ul li {}
-        ```
-
-        (for all `<li>` tags inside a `<ul>` tag)
-
-    * a common class applied? Use a class selector such as...
-
-        ```css
-.blog-summary {}
-        ```
-
-        (for all elements that have a class of blog-summary)
-
+    * a common parent element? Use a nested selector such as `ul li` (for all `<li>` tags inside a `<ul>` tag)
+    * a common class applied? Use a class selector such as `.blog-summary` (for all elements that have a class of `blog-summary`)
     * a combination of these? Use a combination of nested selectors, tag selectors, and `id` and/or `class` selectors as needed. For example...
-        * to style all paragraphs inside a container that has a `class` of `blog-summary`, use:
-
-            ```css
-.blog-summary p {}
-            ```
-
-        * to style all `<a>` tags inside a `<nav>` tag that is inside the element that has an `id` of `masthead`, use:
-
-            ```css
-#masthead nav a {}
-            ```
+        * to style all paragraphs inside a container that has a `class` of `blog-summary`, use `.blog-summary p`
+        * to style all `<a>` tags inside a `<nav>` tag that is inside the element that has an `id` of `masthead`, use `#masthead nav a`
 
 **6.3 Read selectors from the right to the left...**
 : ...to ensure you grasp what element is selected and the context in which that element is expected to be.
@@ -87,27 +76,27 @@ For example...
 
 * this rule selects a paragraph:
 
-    ```css
-p {}
-    ```
+  ```css
+  p {}
+  ```
 
 * this rule selects a paragraph that is inside a `<div>`:
 
-    ```css
-div p {}
-    ```
+  ```css
+  div p {}
+  ```
 
 * this rule selects a paragraph that is inside another element with a `class` of `blog-summary`:
 
-    ```css
-.blog-summary p {}
-    ```
+  ```css
+  .blog-summary p {}
+  ```
 
 * this rule selects a paragraph with a `class` of `intro` and that is inside of another element with a `class` of `blog-summary`:
 
-    ```css
-.blog-summary p.intro {}
-    ```
+  ```css
+  .blog-summary p.intro {}
+  ```
 
 Do you see a pattern? First we describe that target element (and any attributes attached to it) and then move backward to describe outer elements. Also note that we describe each element fully before moving to another element. Let’s take apart the last example piece by piece and build the selector as we go.
 
@@ -116,28 +105,28 @@ Do you see a pattern? First we describe that target element (and any attributes 
 
 1. Select a paragraph...
 
-    ```css
-p {}
-    ```
+  ```css
+  p {}
+  ```
 
 2. Select a paragraph with a `class` of `intro`...
 
-    ```css
-p.intro {}
-    ```
+  ```css
+  p.intro {}
+  ```
 
 3. Select a paragraph with a `class` of `intro` that is inside of another element (we’ll use `?` for now to represent “another element”)...
 
-    ```css
-? p.intro {}
-    ```
+  ```css
+  ? p.intro {}
+  ```
 
 4. Select a paragraph with a `class` of `intro` that is inside of another element with a `class` of
 `blog-summary`...
 
-    ```css
-.blog-summary p.intro {}
-    ```
+  ```css
+  .blog-summary p.intro {}
+  ```
 
 CSS is a major topic, and our transition into this component of the technical side of web design cannot be stressed enough. We’re definitely moving from thinking just about the nature of the content on our page to how that content looks. Selecting what we want and in order to provide the desired appearance is crucial to moving forward.
 
@@ -157,22 +146,22 @@ First, a selector with more parts of a certain type wins over one with fewer par
 
 * This selects all `<p>` tags in the document:
 
-    ```css
-p {}
-    ```
+  ```css
+  p {}
+  ```
 
 * This selects all `<p>` tags that are somewhere inside a `<div>` tag:
 
-    ```css
-div p {}
-    ```
+  ```css
+  div p {}
+  ```
 
 * This selects all `<p>` tags that are somewhere inside `<div>` tags that itself somewhere inside a
 `<section>` tag:
 
-    ```css
-section div p {}
-    ```
+  ```css
+  section div p {}
+  ```
 
 **6.5 Specificity is determined...**
 : by counting the number of tags, `class`es and `id`s in a selector. `id`s overpower `class`es, and `class`es overpower tags. If these simple power levels don’t make a clear winner, the more of a power level a selector has, the greater specificity it possesses.
@@ -194,9 +183,17 @@ Consider this markup:
 Consider this set of styles:
 
 ```css
-div p { color:blue; }
-.main-article p { color:green; }
-#intro p { color:red; }
+div p {
+    color: blue;
+}
+
+.main-article p {
+    color: green;
+}
+
+#intro p {
+    color: red;
+}
 ```
 
 All three of these affect paragraphs, but each gets more specific—even though they all have two parts. The `#intro` context is much more specific than the `.main-article` context, which is itself more specific than just the `div` context. Remember the rules for when we can use `class` attributes versus `id` attributes: `class` attributes can be applied to any number of elements, but `id` attributes can only be applied to a single element. Therefore, when we use an `id` selector we can be sure we’re dealing with a very specific element or its children. On the other hand a `class` selector might apply to several contexts. Finally, tags can be used infinitely in a document and no `id` or `class` is required on them, so a tag selector is the least specific of all.
@@ -223,7 +220,11 @@ Andy Clarke drew a memorable metaphor in [this article](http://www.stuffandnonse
 
 Before we get busy building out design comps we benefit from thinking broadly about the style of our website. Through moodboards and style tiles we can begin to flesh out potential directions for the site's visual style.
 
-***Read Chapter 1, pp.44--49 from Miller.***
+<Callout lead={true} color="secondary">
+
+Read pp. 44–49 in Ch. 1 of Miller.
+
+</Callout>
 
 </Subpage>
 <Subpage slug="elements-of-style">
@@ -232,7 +233,11 @@ Before we get busy building out design comps we benefit from thinking broadly ab
 
 For sake of our style tiles, let's jump over to another chapter from Miller to investigate elements of web design that relate. We'll read a portion of chapter 5 now but save the rest for another module when we're thinking about more details for our full comps.
 
-***Read Chapter 5, pp.146--157 from Miller.***
+<Callout lead={true} color="secondary">
+
+Read pp. 146–157 in Ch. 5 of Miller.
+
+</Callout>
 
 </Subpage>
 <Subpage slug="typography">
@@ -241,7 +246,11 @@ For sake of our style tiles, let's jump over to another chapter from Miller to i
 
 We have a lot to take in as we plan typography for our websites. Miller devotes an entire chapter to this crucial element, and we benefit from thinking thoroughly about our typography options even now at this planning point in our process.
 
-***Read Chapter 6 from Miller.***
+<Callout lead={true} color="secondary">
+
+Read Ch. 6 from Miller.
+
+</Callout>
 
 </Subpage>
 <Subpage slug="study-tools">

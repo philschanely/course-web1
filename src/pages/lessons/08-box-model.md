@@ -4,7 +4,7 @@ type: lessons
 number: 8
 cover: "https://source.unsplash.com/t32lrFimPlU"
 ---
-import Subpage from "../../components/subpage.js"
+import { Subpage, Callout } from "../../course-components";
 
 <Subpage slug="box-model">
 
@@ -16,14 +16,20 @@ import Subpage from "../../components/subpage.js"
 Working with CSS basic properties and typography so far has allowed us to learn the ropes of CSS and have a lot more control of how our content looks. But we haven’t had much control over layout adjustments yet. This topic will be covered in the next few modules as these skills involve several different layers.
 In this module we will lay the foundation by looking at the box model. In the next module we’ll talk about how to achieve more complex layouts using the float and clear properties. In the following two modules we’ll look at even more possibilities with relative and absolute positioning.
 
-***Read chapter 13 from Duckett*** for an explanation of many of the box model properties.
+<Callout lead={true} color="secondary">
+
+Read Ch. 13 from Duckett
+
+<small>for an explanation of many of the box model properties.</small>
+
+</Callout>
 
 Once again, the assigned reading from the Duckett textbook provided an excellent summary of the tools and concepts behind the box model. This set of CSS properties allows us to control the dimensions (width and height), white space (margin and padding), borders (border and related properties), and background colors and imagery (background and its related properties) to add even more visual finesse to our HTML elements (these will be covered in the upcoming Duckett reading from chapter 14).
 
 Here is a table summarizing the properties, their uses, potential values, and common examples:
 
 | Property | What it does | Value options | Examples |
-|: =========|: =============|: ==============|: =========|
+|:---|:---|:---|:---|
 | `width` | Controls content box width | `auto` \| amount in `px`, `em`, or `%` | `width: 500px;` |
 | `height` | Controls content box height | `auto` \| amount in `px`, `em`, or `%` | `height: auto;` |
 | `margin` | Adds or removes outer whitespace (outside border)	auto | amount in `px`, `em`, or `%` | `margin: 10px 20px;` |
@@ -186,9 +192,13 @@ header p {
 **8.5: The `background-...` settings...**
 : ...allow a variety of layering effects including laying text over a texture or image and creating tiling patterns.
 
-***Read chapter 16 from Duckett*** for details about how to work with images in CSS, including setting dimensions of images in your markup as well as how to add images as a background behind other HTML elements. You also get a preview of the float property, which we’ll discuss more in the next module.
+<Callout lead={true} color="secondary">
 
-Note pp.413--416 in particular for a summary of the various settings that control backgrounds of boxes.
+Read Ch. 16 from Duckett
+
+<small>for details about how to work with images in CSS, including setting dimensions of images in your markup as well as how to add images as a background behind other HTML elements. You also get a preview of the float property, which we’ll discuss more in the next module. Note pp.413–416 in particular for a summary of the various settings that control backgrounds of boxes.</small>
+
+</Callout>
 
 When we design entire webpage layouts we often include visual effects that we need to export and use in our CSS as backgrounds on elements. Consider the backgrounds in the elements on this page:
 
@@ -215,7 +225,13 @@ Note these additional settings that help with decorating boxes:
 
 ### More on Color in CSS
 
-***Read chapter 11 from Duckett*** for more details about working with color in CSS.
+<Callout lead={true} color="secondary">
+
+Read Ch. 11 from Duckett
+
+<small>for more details about working with color in CSS.</small>
+
+</Callout>
 
 Note pp.251--254 in particular where RGB, Hex, and RGBA are discussed. On p.254 Duckett brings up `opacity` and `rgba`. Note the following differences:
 
@@ -229,7 +245,11 @@ Note pp.251--254 in particular where RGB, Hex, and RGBA are discussed. On p.254 
 
 While not a major emphasis in this course, we do want you to be exposed to what happens after websites launch. In this sphere, focus can be placed on evaluating how well the site actually meets the intended goals. The last few chapters of Miller provide an overview of related topics.
 
-***Read Chapters 7--9 from Miller.***
+<Callout lead={true} color="secondary">
+
+Read Chapters 7–9 from Miller.
+
+</Callout>
 
 </Subpage>
 <Subpage slug="study-tools">

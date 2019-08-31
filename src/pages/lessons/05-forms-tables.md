@@ -4,7 +4,7 @@ type: lessons
 number: 5
 cover: "https://source.unsplash.com/PkbZahEG2Ng"
 ---
-import Subpage from "../../components/subpage.js"
+import { Subpage, Callout } from "../../course-components";
 
 <Subpage slug="collecting-info-with-forms">
 
@@ -15,7 +15,11 @@ import Subpage from "../../components/subpage.js"
 
 One last set of tags that is helpful to know is the set of tags that are used to mark online forms. These tags allow us to collect information from users. However, note up front that while these tags set us up to collect information, a form must be paired with additional programming in order for that information to be processed in a meaningful way. In this course, our focus will be on using semantic markup to format forms, and, later, in applying CSS to make them appear in a visually pleasing and usable way. The programming skills necessary to process forms is a large topic that falls outside of the scope of this course.
 
-***Read chapter 7 from Duckett.***
+<Callout lead={true} color="secondary">
+
+Read Ch. 7 from Duckett.
+
+</Callout>
 
 </Subpage>
 <Subpage slug="form-semantics">
@@ -83,7 +87,13 @@ There are many different structures forms could follow off of this and they can 
 
 Another set of markup that will be beneficial to know is table markup.
 
-***Read chapter 6 from Duckett.*** The author does an excellent job describing table markup and when to use them to mark up tabular data. Remember that simple lists are better marked with unordered, ordered, or definition lists. Table markup makes it easy to create very clean and well-organized tables to present data or information that is multidimensional.
+<Callout lead={true} color="secondary">
+
+Read Ch. 6 from Duckett.
+
+<small>The author does an excellent job describing table markup and when to use them to mark up tabular data. Remember that simple lists are better marked with unordered, ordered, or definition lists. Table markup makes it easy to create very clean and well-organized tables to present data or information that is multidimensional.</small>
+
+</Callout>
 
 It is important to note that a very outdated method for creating page layouts is still taught and in use throughout the web, but it is NOT acceptable in this course. In the past, table rows and cells were discovered to be helpful for creating column-based layouts like what we see in print designs. The trend hit big and really made a significant improvement for web designers. However, tables are NOT semantic representations of content. Today, we use CSS to construct our layouts, which allows us to use much more semantic structural markup instead of marking content in table rows and cells.
 
@@ -107,7 +117,11 @@ In our last set of readings from Miller we looked at the early planning and rese
 
 Now we return to Chapter 1's overview of the planning process to look at the next steps in which we begin to conceptualize the site's organization and to envision components of the pages.
 
-***Read Chapter 1, pp.30--41 from Miller.***
+<Callout lead={true} color="secondary">
+
+Read pp. 30–41 in Ch. 1 of Miller.
+
+</Callout>
 
 While Miller gave many contextual examples of deliverables that are helpful in this phase, let's debrief on each of them:
 
@@ -116,13 +130,17 @@ While Miller gave many contextual examples of deliverables that are helpful in t
 * **Usability Diagrams** are also often referred to as use case flow charts or task diagrams. They might look like site maps, but their focus is to imagine the process an actual user would walk through in order complete a particular task on the website. If you build these early in the process you can focus solely on the natural process a user might expect to walk through and then aim to match this process in the site's structure through the site map and wireframes. If you build these later, they can become a feedback tool to evaluate whether the sitemap and wireframes you've built are simple and effective for accomplishing the user's goals.
 
 </Subpage>
-<Subpage slug="">
+<Subpage slug="anatomy-of-webpage">
 
 ### Anatomy of a Webpage
 
 With user goals, and a sitemap in mind we can begin to flesh out wireframes for the layouts of particular pages or page templates in our sites. Miller's fourth chapter outlines the elements of a typical webpage, which are helpful to consider as conventions upon which to base our plans.  
 
-***Read Chapter 4, pp.112--137 from Miller.***
+<Callout lead={true} color="secondary">
+
+Read pp. 112--137 in Ch. 4 of Miller.
+
+</Callout>
 
 </Subpage>
 <Subpage slug="study-tools">

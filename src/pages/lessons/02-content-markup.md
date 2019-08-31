@@ -4,7 +4,7 @@ title: "Essential Content Markup"
 number: 2
 cover: "https://source.unsplash.com/ywqa9IZB-dU"
 ---
-import Subpage from "../../components/subpage.js"
+import { Subpage, Callout } from "../../course-components";
 
 <Subpage slug="intro-to-markup">
 
@@ -42,25 +42,35 @@ A small set of elements provide the backbone  for all other tags. These are the 
 
 #### Headings and Paragraphs
 
-**2.1: Paragraphs and headings...**
-: ...form the backbone of well-structured web content. HTML offers the `<p>` tag for paragraphs and six levels of headings, `<h1>` -- `<h6>`.
+<Callout number="2.1" term="Paragraphs and headings..." color="alternate">
 
-***Read chapter 2 (pp.40-44, 52) and chapter 3 from Duckett.***
+...form the backbone of well-structured web content. HTML offers the `<p>` tag for paragraphs and six levels of headings, `<h1>` – `<h6>`.
+
+</Callout>
+
+<Callout lead={true} color="secondary">
+
+Read pp. 40-44 and 52 in Ch. 2 and Ch. 3 from Duckett.
+
+</Callout>
 
 The author has introduced us to a number of tags that help us mark HTML content. He has also introduced the subject of semantic markup. Let’s review some important tags that were covered:
 
-* `<p>` -- Paragraph -- This tag is the most basic of tags for text content. If you’re not sure what content is, start by marking it as a paragraph.
-* `<h1>` -- Primary heading -- This tag is used to mark the single most important heading of a section or page. In most sites I build, I use this to mark the branding or site’s name.
-* `<h2>` -- Secondary heading -- This tag is used to mark the direct subheadings under an `<h1>` tag. In other words, if I was to make an outline of the heading structure (headings, sub-headings, sub-sub headings, etc.) of my web page, `<h2>` tags would be the point in the outline directly underneath the `<h1>` tag.
-* `<h3>` -- Tertiary heading -- Like the `<h2>` tag, this tag marks subheadings, but this time, subheadings that fall directly under the `<h2>` tags.
-* `<h4>`, `<h5>`, `<h6>` -- Fourth-, Fifth- and Sixth-level headings -- These three tags each mark successive levels of subheadings each under the one higher in the “outline.”
+* `<p>` — Paragraph — This tag is the most basic of tags for text content. If you’re not sure what content is, start by marking it as a paragraph.
+* `<h1>` — Primary heading — This tag is used to mark the single most important heading of a section or page. In most sites I build, I use this to mark the branding or site’s name.
+* `<h2>` — Secondary heading — This tag is used to mark the direct subheadings under an `<h1>` tag. In other words, if I was to make an outline of the heading structure (headings, sub-headings, sub-sub headings, etc.) of my web page, `<h2>` tags would be the point in the outline directly underneath the `<h1>` tag.
+* `<h3>` — Tertiary heading — Like the `<h2>` tag, this tag marks subheadings, but this time, subheadings that fall directly under the `<h2>` tags.
+* `<h4>`, `<h5>`, `<h6>` — Fourth-, Fifth- and Sixth-level headings — These three tags each mark successive levels of subheadings each under the one higher in the “outline.”
 
 It may be tempting when you’re learning to use a heading level in order to make a heading look larger or smaller. But this is not semantic! When we’re writing HTML we should be focused on the meaning of the content—the semantics of the content. We will affect the appearance of elements later with CSS (size, color, weight, spacing, font, etc.).
 
 #### Long Quotations
 
-**2.2: Long quotations...**
-: ...can be marked with the `<blockquote>` tag.
+<Callout number="2.2" term="Long quotations..." color="alternate">
+
+...can be marked with the `<blockquote>` tag.
+
+</Callout>
 
 One final helpful tag to discuss is the `<blockquote>` tag, which is used to mark a long quotation. If a quotation takes up an entire sentence or more, use `<blockquote>` to identify it. Check it out:
 
@@ -84,8 +94,11 @@ Notice that the quote is wrapped with a paragraph first and then the paragraph i
 
 #### Lists
 
-**2.3: List markup...**
-: ...provides an excellent way to mark up related series of data. The `<ul>` and `<ol>`, and `<dl>` elements group series of `<li>` elements to form itemized lists and the `<dl>` element groups series of `<dt>` and `<dd>` to form definition lists.
+<Callout number="2.3" term="List markup..." color="alternate">
+
+...provides an excellent way to mark up related series of data. The `<ul>` and `<ol>`, and `<dl>` elements group series of `<li>` elements to form itemized lists and the `<dl>` element groups series of `<dt>` and `<dd>` to form definition lists.
+
+</Callout>
 
 Headings and paragraphs add a good bit of structure to our content and account for a good majority of basic web content. Another set of tags to add to your library is the list markup tags. Lists should be used in HTML content any time you identify a group of items that follow a list-like pattern. Examples include the following:
 
@@ -113,24 +126,33 @@ There are two categories of lists:
 
 ### Inline Content Markup
 
-**2.4: Inline content markup...**
-: ...allows for finesse in structuring smaller chunks of content. This larger library of tags add meaning and structure to your content usually inside of block-level elements. A short list of additional tags to know is: `<em>`, `<strong>`, `<q>`, `<cite>`, `<abbr>`, `<sup>`, `<sub>`, `<i>`, and `<b>`.
+<Callout number="2.4" term="Inline content markup..." color="alternate">
+
+...allows for finesse in structuring smaller chunks of content. This larger library of tags add meaning and structure to your content usually inside of block-level elements. A short list of additional tags to know is: `<em>`, `<strong>`, `<q>`, `<cite>`, `<abbr>`, `<sup>`, `<sub>`, `<i>`, and `<b>`.
+
+</Callout>
 
 Now that you have a basic library of typographical markup including headings, paragraphs, and lists, there are a number of tags that add additional finesse.
 
-***Read chapter 2 (pp. 45–48; 51–60) from Duckett.*** Note that p.50 introduces semantic markup, which we discuss in more detail later in this module. My definition differs slightly from the author’s definition.
+<Callout lead={true} color="secondary">
+
+Read pp. 45–48 and 51–60 in Ch. 2 of Duckett.
+
+<small>Note that p.50 introduces semantic markup, which we discuss in more detail later in this module. My definition differs slightly from the author’s definition.</small>
+
+</Callout>
 
 Here is a small set of useful tags that allows you to add more nuanced meaning to your content:
 
-* `<em>` -- Add emphasis to content. The result by default is for text to be italicized.
-* `<strong>` -- Add strong emphasis to content. The result by default is for text to be bolded.
-* `<q>` -- Mark a short quotation.
-* `<cite>` -- Identify the citation or source for a quotation or reference.
-* `<abbr>` -- Mark an abbreviation or acronym.
-* `<sup>` -- Mark superscript text such as the “nd” in 2^nd.
-* `<sub>` -- Mark subscript text such as the “2” on O<sub>2</sub>.
-* `<i>` -- Add italics to content without adding emphasis, such as marking the title of a book. Remember that `<em>` is better to use when italics are added for actual emphasis.
-* `<b>` -- Add boldface to content without adding emphasis. Most times, you’ll probably want to use `<strong>` since bolding is often used to mark content that has strong emphasis. But for cases where you simply want to portray a slightly different voice or style through bolding, this tag can be helpful.
+* `<em>` — Add emphasis to content. The result by default is for text to be italicized.
+* `<strong>` — Add strong emphasis to content. The result by default is for text to be bolded.
+* `<q>` — Mark a short quotation.
+* `<cite>` — Identify the citation or source for a quotation or reference.
+* `<abbr>` — Mark an abbreviation or acronym.
+* `<sup>` — Mark superscript text such as the “nd” in 2^nd.
+* `<sub>` — Mark subscript text such as the “2” on O<sub>2</sub>.
+* `<i>` — Add italics to content without adding emphasis, such as marking the title of a book. Remember that `<em>` is better to use when italics are added for actual emphasis.
+* `<b>` — Add boldface to content without adding emphasis. Most times, you’ll probably want to use `<strong>` since bolding is often used to mark content that has strong emphasis. But for cases where you simply want to portray a slightly different voice or style through bolding, this tag can be helpful.
 
 Others you may want to look up include `<br/>`, `<hr/>`, `<span>`, `<ins>`, `<del>`, `<dfn>`, `<pre>`, and `<code>`.
 
@@ -139,12 +161,15 @@ Others you may want to look up include `<br/>`, `<hr/>`, `<span>`, `<ins>`, `<de
 
 ### Semantic Markup
 
-**2.5: Semantic markup...**
-: ...means using the best possible markup for the content at hand. While the tags are easy to memorize, it takes practice and input from an expert to develop this skill, but it sets the professional apart from the novice.
+<Callout number="2.5" term="Semantic markup..." color="alternate">
+
+...means using the best possible markup for the content at hand. While the tags are easy to memorize, it takes practice and input from an expert to develop this skill, but it sets the professional apart from the novice.
+
+</Callout>
 
 Even monkeys can apply these basic tags to content. What makes the difference for us is an intelligent application of tags that don’t just affect appearance, but rather, tags that add meaning that matches what the content actually is.
 
-*Semantic markup* is markup that adds meaning to content. In other words, true web professionals think critically about the markup they use rather than just throwing this tag or that tag around content. Instead of shortcuts, they strive to use the most appropriate tag. Note that this definition differs from the one Duckett provided on pages 49--50. In the past, authors defined a series of tags as “semantic” and others as “non-semantic” or “presentational.” I’ve come to conclude that what is more core to the ideal of semantic markup is not as much defining some tags as semantic and others as not, but rather, in how and when tags are used. It’s simple: figure out what a block or chunk of content is and apply the best possible tag to match that content’s meaning.
+*Semantic markup* is markup that adds meaning to content. In other words, true web professionals think critically about the markup they use rather than just throwing this tag or that tag around content. Instead of shortcuts, they strive to use the most appropriate tag. Note that this definition differs from the one Duckett provided on pages 49–50. In the past, authors defined a series of tags as “semantic” and others as “non-semantic” or “presentational.” I’ve come to conclude that what is more core to the ideal of semantic markup is not as much defining some tags as semantic and others as not, but rather, in how and when tags are used. It’s simple: figure out what a block or chunk of content is and apply the best possible tag to match that content’s meaning.
 
 What usually gets in the way is that many automated website creation tools use WYSIGYG (what you see is what you get) editors that separate the content editing from the actual markup. While this is helpful for people who don’t understand HTML, many of these tools automate the markup and add programmed best-guess markup instead of intentional human markup.
 
@@ -181,8 +206,11 @@ Watch how to add markup to content based on a design comp:
 
 ### Block-level vs. Inline Tags
 
-**2.6: Block-level vs. Inline elements**
-: Block-level elements such as `<h1>`--`<h6>`, `<p>` fill 100% of their container and allow contents to wrap inside of them. Inline elements such as `<a>`, `<em>`, `<strong>` and others only take up the space their content requires.
+<Callout number="2.6" term="Block-level vs. Inline elements" color="alternate">
+
+Block-level elements such as `<h1>`–`<h6>`, `<p>` fill 100% of their container and allow contents to wrap inside of them. Inline elements such as `<a>`, `<em>`, `<strong>` and others only take up the space their content requires.
+
+</Callout>
 
 As we've covered a lot of tags so far it is important to call out one more way we categorize them. All tags are considered either block-level or inline.
 
@@ -233,7 +261,7 @@ Review the key takeaways from this module. Memorize each of the following tags o
 #### Block-level Content Tags
 
 * `<p>`
-* `<h1>` -- `<h6>` (each one counts as a separate tag here)
+* `<h1>` – `<h6>` (each one counts as a separate tag here)
 * `<blockquote>`
 * `<ol>`
 * `<ul>`

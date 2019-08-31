@@ -99,7 +99,8 @@ What do you know about the Internet? Are you familiar with terms such as Interne
 
 <Callout lead={true} color="secondary">
 
-Read 'Introduction to Web Design' from Miller. *Note that if you are waiting for your book to arrive you can make up this reading as soon as it arrives.*
+Read "Introduction to Web Design" from Miller.
+<small>*Note that if you are waiting for your book to arrive you can make up this reading as soon as it arrives.*</small>
 
 </Callout>
 

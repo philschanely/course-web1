@@ -14,7 +14,7 @@ To cover many of the technical logistics, we’ll use a second textbook, John Du
 
 <Callout lead={true} color="secondary">
 
-Read the _Introduction_ chapter from Duckett.
+Read the introduction chapter from Duckett.
 
 </Callout>
 
@@ -154,7 +154,12 @@ Here is a visual example of what a folder structure and file set for a website s
 
 ### Introduction to HTML
 
-***Now read chapter 1 from Duckett to learn more about HTML and basic file structure.***
+<Callout lead={true} color="secondary">
+
+Read Ch. 1 from Duckett
+<small>to learn more about HTML and basic file structure.</small>
+
+</Callout>
 
 <Callout number="1.6" term="Markup (tags)..." color="alternate">
 
