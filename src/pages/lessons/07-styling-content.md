@@ -10,8 +10,11 @@ import { Subpage, Callout } from "../../course-components";
 
 ### Introduction to Content Styles
 
-**7.1: Working with type...**
-: ...on web and in print have many similar components; technical logistics differ.
+<Callout number="7.1" term="Working with type..." color="alternate">
+
+...on web and in print have many similar components; technical logistics differ.
+
+</Callout>
 
 While we looked at an overview of CSS in the last module and learned about some technical logistics, it’s now time to get on to the fun part! We finally get to think beyond how our web pages are structured and on to actually altering how they look.
 
@@ -19,13 +22,16 @@ We'll read more about working with type on the web when we read from the Miller 
 
 <Callout lead={true} color="secondary">
 
-Read pp. 264--270, 273--276, and 279--288 in Ch. 12<br/>
-and pp. 330--340 in Ch. 14 of Duckett.
+Read pp. 264–270, 273–276, and 279–288 in Ch. 12<br/>
+and pp. 330–340 in Ch. 14 of Duckett.
 
 </Callout>
 
-**7.2 CSS properties for controlling type...**
-: ...include `color`, `font-family`, `font-size`, `font-weight`, `font-style`, `text-align`, `letter-spacing` (kerning), and `line-height` (leading) along with several other properties that come in handy for further style and finesse.
+<Callout number="7.2" term="CSS properties for controlling type..." color="alternate">
+
+...include `color`, `font-family`, `font-size`, `font-weight`, `font-style`, `text-align`, `letter-spacing` (kerning), and `line-height` (leading) along with several other properties that come in handy for further style and finesse.
+
+</Callout>
 
 These provide an excellent summary of the CSS properties that affect many aspects of how text is presented on the web. Here is a table summarizing the most commonly used properties, what each does, and common values or settings:
 
@@ -43,10 +49,10 @@ These provide an excellent summary of the CSS properties that affect many aspect
 | `text-shadow` | Adds or removes a drop shadow on text. | See p.288 of Duckett text. | |
 | `line-height` | Adjusts leading | Desired leading measurement followed immediately by the abbreviation for the unit of measurement, likely `em` or `%`. | `line-height: 1.3em;` |
 | `letter-spacing` | Adjusts kerning	 | Desired kerning measurement followed immediately by the abbreviation for the unit of measurement, likely `em` or `px`. | `letter-spacing: 0.1em;` |
-| `list-style` | Adds or removes bullets and other formatting options for list items | Three placeholders each separated from previous by a space that allows a short-hand version of `list-style-type`, `list-style-image`, and `list-style-image`. | Use `none` to remove any bullets or enumeration styling. See Duckett, pp.333--336. | `list-style: none;` |
+| `list-style` | Adds or removes bullets and other formatting options for list items | Three placeholders each separated from previous by a space that allows a short-hand version of `list-style-type`, `list-style-image`, and `list-style-image`. | Use `none` to remove any bullets or enumeration styling. See Duckett, pp.333–336. | `list-style: none;` |
 
 
-Note that when working with basic typography we can really only work with fonts that most users will have on their computers already. These “web safe” fonts are listed on pages 269--270 in the Duckett text. Later in this module we’ll talk about how to diversify and use a wider selection of fonts.
+Note that when working with basic typography we can really only work with fonts that most users will have on their computers already. These “web safe” fonts are listed on pages 269–270 in the Duckett text. Later in this module we’ll talk about how to diversify and use a wider selection of fonts.
 
 Intentionality and appeal can be applied to typography by paying attention to the spacing within blocks such as kerning and leading. Note that in CSS, kerning is controlled by the letter-spacing property, but applies to the whole element selected; therefore, we don’t yet have as much control of kerning without some nasty JavaScript hacks at this point. Leading, on the other hand, is controlled by the line-height property and is a valuable property to apply to make text readable.
 
@@ -55,8 +61,11 @@ Intentionality and appeal can be applied to typography by paying attention to th
 
 ### Fine-Tuning Space Around Type
 
-**7.3 Space between blocks...**
-: ...can be controlled using `margin-top` and `margin-bottom`.
+<Callout number="7.3" term="Space between blocks..." color="alternate">
+
+...can be controlled using `margin-top` and `margin-bottom`.
+
+</Callout>
 
 In addition to the styles discussed in Duckett, I find two additional properties helpful when fine-tuning text: margin-bottom and margin-top. These both control white space, or margin (which we’ll look at in much more detail in an upcoming module). We use a number followed immediately by a unit (`px`, `em`, `%`, etc.) to specify the desired spacing. So while leading controls space inside blocks (space between lines of text in a block), margin controls space outside blocks (space between blocks).
 
@@ -69,8 +78,11 @@ So you start with `0` and specify the desired spacing from there, checking each 
 
 ### Refining Selections with Pseudo-Class Selectors
 
-**7.4: The `:hover` pseudo-class...**
-: ...allows us to style links or other elements specifically when the user has hovered their mouse over them.
+<Callout number="7.4" term="The ':hover' pseudo-class..." color="alternate">
+
+...allows us to style links or other elements specifically when the user has hovered their mouse over them.
+
+</Callout>
 
 One last bit of content styling we want to consider is how to make links look one way by default and have a different look when the user hovers over them with their mouse cursor. This is accomplished simply by using two different CSS rules; one that styles just normal `<a>` tags and one that selects using the `:hover` pseudo-class like this:
 
@@ -83,10 +95,10 @@ This sets a blue color and removes underlines from links in their default state.
 
 Other pseudo-class selectors include:
 
-* `:focus` -- sets the style when an interactive element has focus such as through click or keyboard navigation.
-* `:active` -- sets the style when an interactive element has been activated such as through a click.
-* `:first-child` -- added to an element filters to select on the instance of that element that is the first child of a container.
-* `:last-child` -- inverse of `:first-child`.
+* `:focus` — sets the style when an interactive element has focus such as through click or keyboard navigation.
+* `:active` — sets the style when an interactive element has been activated such as through a click.
+* `:first-child` — added to an element filters to select on the instance of that element that is the first child of a container.
+* `:last-child` — inverse of `:first-child`.
 
 **Note:** The `:hover` pseudo-class can be used on any HTML element, not just `<a>` tags. But use it with caution so that you don't mislead users or break normal web conventions with fanciness.
 
@@ -95,26 +107,29 @@ Other pseudo-class selectors include:
 
 ### Using Custom Fonts
 
-**7.5: We can specific additional fonts in our websites...**
-: ...thanks to open licensing and the `@font-face` declaration in CSS.
+<Callout number="7.5" term="We can specific additional fonts in our websites..." color="alternate">
+
+...thanks to open licensing and the `@font-face` declaration in CSS.
+
+</Callout>
 
 Our browsers allow much more flexibility with fonts today than they used to.
 
 <Callout lead={true} color="secondary">
 
-Read pp. 271--272 in Ch. 12 of Duckett
+Read pp. 271–272 in Ch. 12 of Duckett
 <small>for a survey of some methods for implementing creative typography.</small>
 
 </Callout>
 
 <Callout lead={true} color="secondary">
 
-Read pp. 277--278 in Ch. 12 of Duckett
+Read pp. 277–278 in Ch. 12 of Duckett
 <small>for more information about the <code>@font-face</code> declaration and how to use custom fonts in your style sheets.</small>
 
 </Callout>
 
-Note, however, that font usage is a complicated issue--much more than we have time to get into, but here are the key logistics. Computers must "install" a font in order for software to implement and render it in some fashion. Most fonts are prepared with a very specific use in mind and have licenses that restrict it accordingly. This is to protect the creative work of typographers from illegitimate copies that rob them of profit for their work.
+Note, however, that font usage is a complicated issue—much more than we have time to get into, but here are the key logistics. Computers must "install" a font in order for software to implement and render it in some fashion. Most fonts are prepared with a very specific use in mind and have licenses that restrict it accordingly. This is to protect the creative work of typographers from illegitimate copies that rob them of profit for their work.
 
 So while we can simply place a font on our server and link to it in our style sheets, this could be a breech of the font’s license and thus a form of digital piracy. Therefore, while we have the `@font-face` property and can use it to import and use more fonts than the typical web safe set, we *CANNOT* just use any font we have on our computer. We must be sure to use only fonts that have licenses that allow use on websites.
 
@@ -123,8 +138,11 @@ So while we can simply place a font on our server and link to it in our style sh
 
 ### The Google Fonts API
 
-**7.6 Google makes working with custom fonts easier...**
-: ...thanks to the services available at fonts.google.com.
+<Callout number="7.6" term="Google makes working with custom fonts easier..." color="alternate">
+
+...thanks to the services available at fonts.google.com.
+
+</Callout>
 
 Specifying our own custom fonts requires understanding licensing and ensuring we have all the proper formats and correct syntax in our `@font-face` declarations. More than a few have found this challenging. Thankfully, some great work is being done at Google to make open license fonts easier to use. Visit [fonts.google.com](http://fonts.google.com) to browse a large library of fonts, many of which can be downloaded and installed during your design phase, or linked into your website.
 
@@ -148,8 +166,11 @@ While the library may be somewhat limited, there are still a large number of qua
 
 ### Matching Font Sizes to Your Comp
 
-**7.7 Match font sizes in CSS...**
-: ...with points from a comp by setting the `font-size` on html to 10px. Then the font size on an element can be the font size in the comp divided by 10 (move the decimal one digit to the left).
+<Callout number="7.7" term="Match font sizes in CSS..." color="alternate">
+
+...with points from a comp by setting the `font-size` on html to 10px. Then the font size on an element can be the font size in the comp divided by 10 (move the decimal one digit to the left).
+
+</Callout>
 
 In CSS we strongly prefer using the flexible `em` unit. However, browsers now support an even better unit called `rem`. Where `em` units were sized relative to the closest parent element, `rem` sizes based on the *root* size.
 

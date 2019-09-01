@@ -10,8 +10,11 @@ import { Subpage, Callout } from "../../course-components";
 
 ### Float and Clear
 
-**9.1: Float and clear...**
-: Are helpful CSS properties that begin to assist with multi-column layouts. The "natural float" is the best use for floats today.
+<Callout number="91." term="Float and clear..." color="alternate">
+
+Are helpful CSS properties that begin to assist with multi-column layouts. The "natural float" is the best use for floats today.
+
+</Callout>
 
 <Callout lead={true} color="secondary">
 
@@ -32,8 +35,11 @@ Simply select the target image or group and set it to `float:left` or `float:rig
 
 ### Layouts with Flexbox
 
-**9.2: Flexbox...**
-: ...is an emerging tool we can use to create multicolumn layouts for elements inside a container.
+<Callout number="9.2" term="Flexbox..." color="alternate">
+
+...is an emerging tool we can use to create multicolumn layouts for elements inside a container.
+
+</Callout>
 
 An emerging and stable tool to use for creating multi-column layouts today is the flexbox technology.
 
@@ -58,8 +64,11 @@ Each item directly inside that container will now tile up side-by side.
 
 #### Flexbox `flex` ratio-based sizing
 
-**9.3: `flex` sizing...**
-: ...is powerful and can be simple, ratio-based sizing, but might not always be practical to calculate.
+<Callout number="9.3" term="'flex' sizing..." color="alternate">
+
+...is powerful and can be simple, ratio-based sizing, but might not always be practical to calculate.
+
+</Callout>
 
 The flex box `flex` property is the most flexible and simple way to provide width settings for elements in a single row. The idea is to provide a ratio that describes each element's size compared to the others. Here's the idea:
 
@@ -80,8 +89,11 @@ If your elements are a more complex ratio than this or if there are more than tw
 
 #### Other Flexbox settings
 
-**9.3: Flexbox includes many other settings...**
-: ...but `flex-flow` and `justify-content` provide settings for two very common situations.
+<Callout number="9.4" term="Flexbox includes many other settings..." color="alternate">
+
+...but `flex-flow` and `justify-content` provide settings for two very common situations.
+
+</Callout>
 
 While there are many helpful ways to configure flex box elements, here are some you might find commonly useful:
 

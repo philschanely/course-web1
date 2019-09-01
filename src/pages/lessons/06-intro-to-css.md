@@ -17,8 +17,11 @@ In this module we make a dramatic shift in our focus. Assuming we have solid, se
 
 ### Cascading Style Sheets
 
-**6.1 CSS scripts are placed...**
-: ...either in a `<style>` element in an HTML document or in a separate `.css` file and linked to an HTML document using the `<link/>` element.
+<Callout number="6.1" term="CSS scripts are placed..." color="alternate">
+
+...either in a `<style>` element in an HTML document or in a separate `.css` file and linked to an HTML document using the `<link/>` element.
+
+</Callout>
 
 <Callout lead={true} color="secondary">
 
@@ -37,8 +40,11 @@ Remember that CSS, Cascading Style Sheet, is a different language from HTML; but
 
 Duckett explained sufficiently how to do both of these.
 
-**6.2 Selectors...**
-: ...are part of the CSS rule that allow us to select certain elements from an HTML document that we desire to style. The most common kinds of selectors are tag selectors, `class` selectors, `id` selectors, nested selectors.
+<Callout number="6.2" term="Selectors..." color="alternate">
+
+...are part of the CSS rule that allow us to select certain elements from an HTML document that we desire to style. The most common kinds of selectors are tag selectors, `class` selectors, `id` selectors, nested selectors.
+
+</Callout>
 
 <Callout lead={true} color="secondary">
 
@@ -67,8 +73,11 @@ Duckett’s overview of selector types in this chapter provides a helpful introd
         * to style all paragraphs inside a container that has a `class` of `blog-summary`, use `.blog-summary p`
         * to style all `<a>` tags inside a `<nav>` tag that is inside the element that has an `id` of `masthead`, use `#masthead nav a`
 
-**6.3 Read selectors from the right to the left...**
-: ...to ensure you grasp what element is selected and the context in which that element is expected to be.
+<Callout number="6.3" term="Read selectors from the right to the left..." color="alternate">
+
+...to ensure you grasp what element is selected and the context in which that element is expected to be.
+
+</Callout>
 
 The other challenge is being able to talk about selectors and to interpret selector prompts. The first funny thing about this is that we describe a selector from the right to the left, starting with the element that is being styled and moving back to its outer elements.
 
@@ -135,8 +144,11 @@ CSS is a major topic, and our transition into this component of the technical si
 
 ### Specificity
 
-**6.4 When selectors conflict...**
-: the rules of *specificity* determine which styles get applied. The more specific selector will win over less specific selectors.
+<Callout number="6.4" term="When selectors conflict..." color="alternate">
+
+...the rules of *specificity* determine which styles get applied. The more specific selector will win over less specific selectors.
+
+</Callout>
 
 Duckett discusses several crucial CSS concepts on pages 239-240. The concepts of cascade and inheritance are discussed. Under cascade Duckett introduces the subject of specificity, which addresses how conflicts in style settings between two rules are resolved based on which rule has a more specific selector.
 
@@ -163,8 +175,11 @@ First, a selector with more parts of a certain type wins over one with fewer par
   section div p {}
   ```
 
-**6.5 Specificity is determined...**
-: by counting the number of tags, `class`es and `id`s in a selector. `id`s overpower `class`es, and `class`es overpower tags. If these simple power levels don’t make a clear winner, the more of a power level a selector has, the greater specificity it possesses.
+<Callout number="6.5" term="Specificity is determined..." color="alternate">
+
+...by counting the number of tags, `class`es and `id`s in a selector. `id`s overpower `class`es, and `class`es overpower tags. If these simple power levels don’t make a clear winner, the more of a power level a selector has, the greater specificity it possesses.
+
+</Callout>
 
 Second, `id` selectors trump `class` selectors, which in turn trump tag selectors.
 
