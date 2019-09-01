@@ -17,8 +17,11 @@ Another crucial set of new tags to discuss in this module is a set of structural
 
 ### HTML5 Structure
 
-**4.1: The `<section>` tag...**
-: ...is used to create a significant group composed of one or more elements. Its derivates, `<header>`, `<nav>`, `<main>`, `<article>`, `<aside>`, and `<footer>`,  can be used for more specific kinds of groups.
+<Callout number="4.1" term="The 'section' tag..." color="alternate">
+
+...is used to create a significant group composed of one or more elements. Its derivates, `<header>`, `<nav>`, `<main>`, `<article>`, `<aside>`, and `<footer>`,  can be used for more specific kinds of groups.
+
+</Callout>
 
 It’s an appropriate time now to discuss the new structural elements that have enhanced how we can organize and group content, and that we will use later to construct layouts: they all relate to the concept of sectioning.
 
@@ -37,11 +40,11 @@ The basic sectioning tag is the `<section>` tag. Use this tag to create a sectio
 
 The following are derived from the `<section>` tag and provide more specific ways to group content:
 
-* `<main>` -- Almost as open and vague as the `<section>` itself, this tag can be used to contain a typical site's central content that comes between its masthead and footer. More on this to come below...
-* `<article>` -- Use this instead of `<section>` when the group of content you’re marking could stand completely on its own without surrounding content. Like the name suggests, a blog entry or article in an online newspaper are good examples of when to use this.
-* `<aside>` -- Use this specifically to mark sidebar content or groups of content inside an `<article>` or `<section>` that are not critical, but tangential content. If the surrounding content would be just fine without the group in question, an `<aside>` is a good sectioning tag to use.
+* `<main>` — Almost as open and vague as the `<section>` itself, this tag can be used to contain a typical site's central content that comes between its masthead and footer. More on this to come below...
+* `<article>` — Use this instead of `<section>` when the group of content you’re marking could stand completely on its own without surrounding content. Like the name suggests, a blog entry or article in an online newspaper are good examples of when to use this.
+* `<aside>` — Use this specifically to mark sidebar content or groups of content inside an `<article>` or `<section>` that are not critical, but tangential content. If the surrounding content would be just fine without the group in question, an `<aside>` is a good sectioning tag to use.
 * `<header>` – Use this to mark the heading and any other content that forms the overall `<header>` or masthead for a particular set of content. It is common to have an `<article>` grouping its content, and then inside it to have a `<header>`, `<section>`, and `<footer>` dividing the `<article>` content into distinct subsections.
-* `<footer>` -- Use this to mark content that provides additional information or resources relating to a section of content. Note as well that `<footer>` and `<header>` can be applied at the page level to mark persistent site masthead (`<header>`) and site information (`<footer>`).
+* `<footer>` — Use this to mark content that provides additional information or resources relating to a section of content. Note as well that `<footer>` and `<header>` can be applied at the page level to mark persistent site masthead (`<header>`) and site information (`<footer>`).
 * `<nav>` – Use this to mark groups of important navigation links. Every site that has multiple pages should have at least one `<nav>` section. Note, however, that this should be reserved for important or high-level link groups; it is not necessary for marking links in content.
 
 </Subpage>
@@ -49,8 +52,11 @@ The following are derived from the `<section>` tag and provide more specific way
 
 ### Common Page Structure
 
-**4.2: Many sites follow a common structure...**
-: ...that includes the following three components: a masthead, a main content area, and a footer.
+<Callout number="4.2" term="Many sites follow a common structure..." color="alternate">
+
+...that includes the following three components: a masthead, a main content area, and a footer.
+
+</Callout>
 
 Consider the following design:
 
@@ -98,13 +104,16 @@ Notice how we have three core groups directly inside `<body>`:
 
 ### Distinguish "head..." terms
 
-**4.3: Distinguishing "head..." terms**
-: Be sure you can distinguish between the `<head>` tag, the `<header>` tag and the `<h1>` -- `<h6>` tags from each other.
+<Callout number="4.3" term="Distinguishing 'head...' terms" color="alternate">
+
+Be sure you can distinguish between the `<head>` tag, the `<header>` tag and the `<h1>` – `<h6>` tags from each other.
+
+</Callout>
 
 In reference to the `<header>` tag, it is helpful to differentiate this tag from similarly-named but very different tags:
 
 * `<head>`: the required tag that provides information about the whole HTML document. This one goes right inside the root `<html>` element before the `<body>` element. Remember, “every HTML document needs a HEAD and a body.”
-* `<h1>` -- `<h6>`: the tags used to mark actual heading text. These can only be placed inside `<body>` and nested inside other container tags like `<div>` tags and sectioning tags. Remember, “headINGS label text.”
+* `<h1>` – `<h6>`: the tags used to mark actual heading text. These can only be placed inside `<body>` and nested inside other container tags like `<div>` tags and sectioning tags. Remember, “headINGS label text.”
 * `<header>`: the sectioning tag used to group headings and other content that marks the start of a section or other group. This must also always be inside the `<body>` tag or nested within other tags that are inside `<body>`. Remember “headERS group headings and other frontmatter.”
 
 </Subpage>
@@ -112,8 +121,11 @@ In reference to the `<header>` tag, it is helpful to differentiate this tag from
 
 ### Sections vs. Divs
 
-**4.4: Distinguish between when to use `<div>` and when to use `<section>`**
-: It is best to use `<div>` for everyday grouping of elements; the `<section>` tags are best reserved for significant groups of content. When in doubt, use a `<div>`.
+<Callout number="4.4" term="Distinguish between when to use 'div' and when to use 'section'" color="alternate">
+
+It is best to use `<div>` for everyday grouping of elements; the `<section>` tags are best reserved for significant groups of content. When in doubt, use a `<div>`.
+
+</Callout>
 
 Many students struggle to know when they should use sectioning tags and when to use `<div>` tags. In a nutshell, `<section>`, `<main>`, `<article>`, `<aside>`, `<nav>`, `<header>`, and `<footer>` should be used to identify significant groups of content that match their grouped intention. On the other hand, the `<div>` tag can be used to provide less significant grouping. Exactly how browsers interpret these tags is an advanced topic you can explore later in your studies. For now, ask yourself, “is this a major *section* or a minor *div*ision?” If your answer is a, “a major *section*,” then consider further the specific content you are grouping to further choose between `<section>`, `<article>`, `<aside>`, `<nav>`, `<header>`, and `<footer>`. And don’t be afraid to experiment. The activities that accompany this module provide an opportunity for you to practice and get feedback; solutions can be rather subjective.
 
@@ -121,15 +133,18 @@ When the sectioning tags discussed above were released, the `<div>` tag took a m
 
 However, `<div>` still has its uses. The key is that sectioning tags should mark significant sections of content—sections that contribute to the overall structure of the document. Imagine you needed to represent your document in an outline form. What would be the main points in the outline? These things should be marked with sectioning tags. Any sub-points in the outline could also be marked with sectioning tags.
 
-There are still many cases where you want to group related content, but that group is not as significant in the scope of the document. In such cases, the `<div>` tag---which stands for “division”---is completely acceptable.
+There are still many cases where you want to group related content, but that group is not as significant in the scope of the document. In such cases, the `<div>` tag—which stands for “division”—is completely acceptable.
 
 </Subpage>
 <Subpage slug="lists-as-structure">
 
 ### Lists as Structural Markup
 
-**4.5: List markup can also be used to create structure.**
-: While `<ol>` and `<ul>` tags can only contain `<li>` tags as direct children, `<li>` tags can contain any other kind of tag. This can be very useful for creating complex lists with beautiful, semantic structure.
+<Callout number="4.5" term="List markup can also be used to create structure." color="alternate">
+
+While `<ol>` and `<ul>` tags can only contain `<li>` tags as direct children, `<li>` tags can contain any other kind of tag. This can be very useful for creating complex lists with beautiful, semantic structure.
+
+</Callout>
 
 One additional structural markup element is the un-intimidating `<li>` element. Remember `<li>` tags in the context of marking ordered (`<ol>`) or unordered (`<ul>`) lists? While `<ul>` and `<ol>` tags can only contain `<li>` elements, `<li>` tags can contain just about any other tag, from headings and paragraphs to sections and `<div>` tags. Therefore, if a group of content is to be marked that follows a repeating pattern to form a larger list of content, consider using a list.
 
