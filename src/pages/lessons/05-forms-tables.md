@@ -10,8 +10,11 @@ import { Subpage, Callout } from "../../course-components";
 
 ### Collecting Information with Forms
 
-**5.1: We collect information from users through form markup.**
-: This makes the most sense when it is paired with additional programming code that processes the information.
+<Callout number="5.1" term="We collect information from users through form markup." color="alternate">
+
+This makes the most sense when it is paired with additional programming code that processes the information.
+
+</Callout>
 
 One last set of tags that is helpful to know is the set of tags that are used to mark online forms. These tags allow us to collect information from users. However, note up front that while these tags set us up to collect information, a form must be paired with additional programming in order for that information to be processed in a meaningful way. In this course, our focus will be on using semantic markup to format forms, and, later, in applying CSS to make them appear in a visually pleasing and usable way. The programming skills necessary to process forms is a large topic that falls outside of the scope of this course.
 
@@ -26,8 +29,11 @@ Read Ch. 7 from Duckett.
 
 ### Semantic Form Markup
 
-**5.2: Semantic markup with forms...**
-: is often accomplished through tasteful use of lists lists.
+<Callout number="5.2" term="Semantic markup with forms..." color="alternate">
+
+is often accomplished through tasteful use of lists lists.
+
+</Callout>
 
 Having read from Duckett, you should now have a sense of the markup we use to create and contain form elements. This includes the container `<form>` tag and the form control tags such as `<input>`, `<select>`, `<option>`, and `<textarea>`.
 
@@ -82,8 +88,11 @@ There are many different structures forms could follow off of this and they can 
 
 ### Marking Information with Tables
 
-**5.3: Table markup was misused in the past...**
-: ...for creating print-like layouts, but this method is no longer accepted as good practice. CSS should be used instead. Tables should be used only to mark up data in the forms of rows and columns.
+<Callout number="5.3" term="Table markup was misused in the past..." color="alternate">
+
+...for creating print-like layouts, but this method is no longer accepted as good practice. CSS should be used instead. Tables should be used only to mark up data in the forms of rows and columns.
+
+</Callout>
 
 Another set of markup that will be beneficial to know is table markup.
 
@@ -138,7 +147,7 @@ With user goals, and a sitemap in mind we can begin to flesh out wireframes for 
 
 <Callout lead={true} color="secondary">
 
-Read pp. 112--137 in Ch. 4 of Miller.
+Read pp. 112–137 in Ch. 4 of Miller.
 
 </Callout>
 

@@ -10,8 +10,11 @@ import { Subpage, Callout } from "../../course-components";
 
 ### The Box Model
 
-**8.1: The box model...**
-: ...is a conceptual framework for understanding the series of CSS properties that affect elements' size, border, background, and spacing.
+<Callout number="8.1" term="The box model..." color="alternate">
+
+...is a conceptual framework for understanding the series of CSS properties that affect elements' size, border, background, and spacing.
+
+</Callout>
 
 Working with CSS basic properties and typography so far has allowed us to learn the ropes of CSS and have a lot more control of how our content looks. But we haven’t had much control over layout adjustments yet. This topic will be covered in the next few modules as these skills involve several different layers.
 In this module we will lay the foundation by looking at the box model. In the next module we’ll talk about how to achieve more complex layouts using the float and clear properties. In the following two modules we’ll look at even more possibilities with relative and absolute positioning.
@@ -46,14 +49,16 @@ Here is a table summarizing the properties, their uses, potential values, and co
 | `background` | Shortcut property to set all background settings at once | Any background property values separated by a space. | `background: #fff url("image.png") repeat-y fixed left;` |
 | `box-sizing` | Determines which box properties are included when width and height are set. | `content-box` is the default; `border-box` ensures that padding and borders are both included in dimension settings. | `box-sizing: border-box` |
 
-
 </Subpage>
 <Subpage slug="block-vs-inline-revisited">
 
 ### Revisiting Block vs. Inline
 
-**8.2: We can convert between Block and Inline formatting...**
-: ...using the `display` property. This become helpful particularly when trying to apply box model settings to inline elements.
+<Callout number="8.2" term="We can convert between Block and Inline formatting..." color="alternate">
+
+...using the `display` property. This become helpful particularly when trying to apply box model settings to inline elements.
+
+</Callout>
 
 Earlier in the course we discussed how all HTML elements are either inline or block-level elements. It is important to note that box model styles behave differently for these. The simple statement is that the box model does not work on inline elements. The long statement begins with the fact that browsers allow different box-model settings on inline elements and interpret them differently. So, favoring the simple statement in this introductory course, avoid using box-model settings on inline elements.
 
@@ -68,8 +73,11 @@ However, a CSS property allows you to convert elements to block-level elements (
 
 ### Simplifying Box Dimensions
 
-**8.3: The `box-sizing: border-box` setting...**
-: ...allows us to simplify controlling and calculating box dimensions because it ensures `padding` and `border` are included inside an element's `width` and `height` setting instead of outside these.
+<Callout number="8.3" term="The 'box-sizing: border-box' setting..." color="alternate">
+
+...allows us to simplify controlling and calculating box dimensions because it ensures `padding` and `border` are included inside an element's `width` and `height` setting instead of outside these.
+
+</Callout>
 
 The box model is very helpful for understanding the properties that contribute to any element’s size, spacing, stroke and fill. One trick to note is the relationship between spacing, border and size properties in relation to controlling an elements overall dimensions.
 
@@ -148,8 +156,11 @@ Now the total width is simply:
 
 ### Creating and Centering a Single-column Layout
 
-**8.4: Center elements from a layout perspective...**
-: ...using `auto` margin on left and right and setting a width on the element.
+<Callout number="8.4" term="Center elements from a layout perspective..." color="alternate">
+
+...using `auto` margin on left and right and setting a width on the element.
+
+</Callout>
 
 The most basic of websites today will typically have a set of page content filling a certain width and centered in the browser window, as pictured below.
 
@@ -189,8 +200,11 @@ header p {
 
 ### Styling with Backgrounds and Other Effects
 
-**8.5: The `background-...` settings...**
-: ...allow a variety of layering effects including laying text over a texture or image and creating tiling patterns.
+<Callout number="8.5" term="The 'background-...' settings..." color="alternate">
+
+...allow a variety of layering effects including laying text over a texture or image and creating tiling patterns.
+
+</Callout>
 
 <Callout lead={true} color="secondary">
 
@@ -212,13 +226,16 @@ But in order to create these effects we must export images from our design comps
 * Watch for images that layer on top of other textures. Rather than exporting the image and the texture, separate the two and export the top image on a transparent background. Then you can achieve the same layered effect using HTML and CSS.
 * JPEG is a good default format to use for exporting slices unless they have transparency in which case PNG is likely the best so as to achieve smooth transparency and colors.
 
-**8.6: Other effects...**
-: ...such as `border-radius` and `box-shadow` allow us to further modify our box elements
+<Callout number="8.6" term="Other effects..." color="alternate">
+
+...such as `border-radius` and `box-shadow` allow us to further modify our box elements
+
+</Callout>
 
 Note these additional settings that help with decorating boxes:
 
-* `border-radius` -- allows us to set rounded borders on elements. See this [CSS Tricks article](https://css-tricks.com/almanac/properties/b/border-radius/) for more on how to use this and its variations.
-* `box-shadow` -- allows us to provide drop shadows of sorts on our boxes. [CSS Tricks](https://css-tricks.com/snippets/css/css-box-shadow/) has a great demo of how to use this property.
+* `border-radius` — allows us to set rounded borders on elements. See this [CSS Tricks article](https://css-tricks.com/almanac/properties/b/border-radius/) for more on how to use this and its variations.
+* `box-shadow` — allows us to provide drop shadows of sorts on our boxes. [CSS Tricks](https://css-tricks.com/snippets/css/css-box-shadow/) has a great demo of how to use this property.
 
 </Subpage>
 <Subpage slug="more-css-color">
@@ -233,7 +250,7 @@ Read Ch. 11 from Duckett
 
 </Callout>
 
-Note pp.251--254 in particular where RGB, Hex, and RGBA are discussed. On p.254 Duckett brings up `opacity` and `rgba`. Note the following differences:
+Note pp.251–254 in particular where RGB, Hex, and RGBA are discussed. On p.254 Duckett brings up `opacity` and `rgba`. Note the following differences:
 
 * `opacity` is an actual *CSS property* that governs the transparency of the entire element selected. Therefore, use `opacity` when you want to make an entire element and its content semi-transparent.
 * `rgba` is a potential *color value* you can use for the `color` or `background-color` properties. It is therefore useful when you want to set just a semi-transparent color such as on a background.

@@ -38,8 +38,8 @@ Watch for the following exceptions as you analyze your comp:
 
 | Description | Sample |
 |:--|:--|
-| **Background layering** -- If you have a section in the comp where a set of text is laid out overlapping with the image as a background, the image should be seen as a background of an element and not as a tile for layout analysis. Just be certain that there is really one set of content with each element stacked on top of the other; otherwise, there might be tiles inside of a container that lay over the image. | ![](/images/la-x-faux-col.png) |
-| **Natural Float** -- If you have a section on your comp where an image or set of elements is hanging out on one side or the other of some text that is just flowing around it, you probably don't have a true tile, but, rather, just a natural float. Use the `float` property to create this effect on that element or group. | ![](/images/la-x-natural-float.png) |
+| **Background layering** — If you have a section in the comp where a set of text is laid out overlapping with the image as a background, the image should be seen as a background of an element and not as a tile for layout analysis. Just be certain that there is really one set of content with each element stacked on top of the other; otherwise, there might be tiles inside of a container that lay over the image. | ![](/images/la-x-faux-col.png) |
+| **Natural Float** — If you have a section on your comp where an image or set of elements is hanging out on one side or the other of some text that is just flowing around it, you probably don't have a true tile, but, rather, just a natural float. Use the `float` property to create this effect on that element or group. | ![](/images/la-x-natural-float.png) |
 
 
 </Subpage>
@@ -82,7 +82,7 @@ We'll look at a series of common layout patterns in Lesson 12.
 
 ### Process for Building Layouts
 
-With this basic understanding of the CSS you need in order to build rows and columns you must also note that the they don't just invent themselves in your markup. As you work to create the markup your layout demands, start with content markup as we discussed in Lessons 1--3, and 5. Then use the sectioning tags and `<div>` tags we learned in Lesson 4 to add groups wherever they're needed. If a row or column includes multiple elements, consider using the most semantic grouping element you can in order to create such a group.
+With this basic understanding of the CSS you need in order to build rows and columns you must also note that the they don't just invent themselves in your markup. As you work to create the markup your layout demands, start with content markup as we discussed in Lessons 1–3, and 5. Then use the sectioning tags and `<div>` tags we learned in Lesson 4 to add groups wherever they're needed. If a row or column includes multiple elements, consider using the most semantic grouping element you can in order to create such a group.
 
 #### Suggested Process
 Use this process to complete the reconstruction in a methodical, efficient way:
@@ -95,11 +95,11 @@ Use this process to complete the reconstruction in a methodical, efficient way:
     Bottom line here is that you must have markup that matches your analysis: Tiles must be a single element and the container must be the direct parent of all the related tiles.
 
 3. For each container you identified, you must select it and turn on `display:flex`. You might also benefit from one or more of the following *also set on this container*:
-    * `flex-flow` -- if your set of tiles spans more than one "row" in the layout turn this setting on, and set it to `row wrap`. There are other settings for this property, but this is the most common. You'll likely want to control such an element's width to ensure tiles it contains wrap in the desired space.
-    * `justify-contents` -- this setting helps with *some* spacing scenarios. You can experiment with the following to see if the desired results fit your comp closely enough:
-        * `center` -- helpful for creating a center-aligned flow for the set of elements.
-        * `space-between` -- helpful when you have a few items in a single row and want the outer two hugging the outer bounds and the inner ones spaced evenly from each other.
-        * `space-around` -- helpful when you have an even gutter between each tile and space on the outside gutters that is half of the inner gutter.
+    * `flex-flow` — if your set of tiles spans more than one "row" in the layout turn this setting on, and set it to `row wrap`. There are other settings for this property, but this is the most common. You'll likely want to control such an element's width to ensure tiles it contains wrap in the desired space.
+    * `justify-contents` — this setting helps with *some* spacing scenarios. You can experiment with the following to see if the desired results fit your comp closely enough:
+        * `center` — helpful for creating a center-aligned flow for the set of elements.
+        * `space-between` — helpful when you have a few items in a single row and want the outer two hugging the outer bounds and the inner ones spaced evenly from each other.
+        * `space-around` — helpful when you have an even gutter between each tile and space on the outside gutters that is half of the inner gutter.
 
         If these do not suffice, you may need to move on to specify spacing on the tiles themselves.
 
@@ -406,9 +406,9 @@ On the other hand, if the columns inside the row are different sizes, its best t
 
 Adding onto B1 and B2, if you need spacing (whitespace) between columns, your solution should depend on whether the columns have a background image or color, or if there’s a border between the columns.
 
-* **No backgrounds** -- in this case it is simplest to use `padding` to enforce the spacing. Thanks to `box-sizing: border-box` you can keep the `width` set at the total space a column occupies and add padding inside of that space. See how spacing is established in the example provided with B1a. above. Alternatively, set `justify-content:space-between` on the row instead to make this even simpler.
-* **No backgrounds but a border in-between** -- you can actually follow the same pattern as above and use padding in combination with `width`, `border settings`, and `box-sizing:border-box`. See how spacing is established in the example provided with B1b above. It might not be helpful to use `justify-content:space-between` in this situation.
-* **Backgrounds, with or without border** -- in this situation, you need to use `padding` to provide the desired inset spacing between the text content and the outer edges of the background. This is much simpler if you’re also using `box-sizing:border-box` since this allows both padding and border to be included in the width setting. But spacing outside the edges needs to be accomplished with `margin`. See how spacing is established in the example provided with B2 above. Here the `justify-content:space-between` setting is once again very helpful.
+* **No backgrounds** — in this case it is simplest to use `padding` to enforce the spacing. Thanks to `box-sizing: border-box` you can keep the `width` set at the total space a column occupies and add padding inside of that space. See how spacing is established in the example provided with B1a. above. Alternatively, set `justify-content:space-between` on the row instead to make this even simpler.
+* **No backgrounds but a border in-between** — you can actually follow the same pattern as above and use padding in combination with `width`, `border settings`, and `box-sizing:border-box`. See how spacing is established in the example provided with B1b above. It might not be helpful to use `justify-content:space-between` in this situation.
+* **Backgrounds, with or without border** — in this situation, you need to use `padding` to provide the desired inset spacing between the text content and the outer edges of the background. This is much simpler if you’re also using `box-sizing:border-box` since this allows both padding and border to be included in the width setting. But spacing outside the edges needs to be accomplished with `margin`. See how spacing is established in the example provided with B2 above. Here the `justify-content:space-between` setting is once again very helpful.
 
 #### B4: Centered columns
 
@@ -449,7 +449,7 @@ header li {
 
 #### B5: Restricted-width row with columns
 
-Building off of the other patterns so far, sometimes you’ll have a row that has a restricted width that also has columns in it. In such a case, you should first set up the restricted width settings on the row using the patterns described above in A1--4, then treat the columns as needed inside of the resulting space as described in B1--3. Also be careful where you apply the `.row` so that it is on the direct parent element for the columns.
+Building off of the other patterns so far, sometimes you’ll have a row that has a restricted width that also has columns in it. In such a case, you should first set up the restricted width settings on the row using the patterns described above in A1–4, then treat the columns as needed inside of the resulting space as described in B1–3. Also be careful where you apply the `.row` so that it is on the direct parent element for the columns.
 
 </Subpage>
 <Subpage slug="tiles">
@@ -491,7 +491,7 @@ This is easy to achieve with flex box by setting `flex-flow:row wrap` on the row
 }
 ```
 
-Note as well that the items inside each of these tiles can be set up using flex box tiling. The three items---image, name, price---have a predictable pattern of size. The image fills the "row" while the name and price sit beside each other. Check out the simple settings to achieve this:
+Note as well that the items inside each of these tiles can be set up using flex box tiling. The three items—image, name, price—have a predictable pattern of size. The image fills the "row" while the name and price sit beside each other. Check out the simple settings to achieve this:
 
 ```css
 .products li {
