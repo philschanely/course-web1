@@ -77,7 +77,7 @@ Watch this video demonstration:
 
 Complete this deliverable in your project space in Codio by the deadline indicated in the course schedule.
 
-As this is a relatively short deliverable please look ahead at [Project Deliverable 3](/activities/pd03.html) and get started early.
+As this is a relatively short deliverable please look ahead at Project Deliverable 3 and get started early.
 
 </Subpage>
 <Subpage slug="deliverable-3">
