@@ -77,7 +77,7 @@ Watch this video demonstration:
 
 Complete this deliverable in your project space in Codio by the deadline indicated in the course schedule.
 
-As this is a relatively short deliverable please look ahead at [Project Deliverable 3](/activities/pd03.html) and get started early.
+As this is a relatively short deliverable please look ahead at Project Deliverable 3 and get started early.
 
 </Subpage>
 <Subpage slug="deliverable-3">
@@ -211,7 +211,7 @@ In recent years, a trend has emerged to use “style tiles” as a way to presen
 
 ***Read about [Style Tiles from Samantha Warren »](http://styletil.es/)***
 
-For those interested in more details, [read a longer description from Matthew Carver’s The Responsive Web »](http://0-proquest.safaribooksonline.com.library.cedarville.edu/book/web-design-and-development/9781617291241/part-2dot-designing-for-the-responsive-web/kindle_split_013_html#X2ludGVybmFsX0h0bWxWaWV3P3htbGlkPTk3ODE2MTcyOTEyNDElMkZraW5kbGVfc3BsaXRfMDEzX2h0bWwmcXVlcnk9)
+For those interested in more details, [read a longer description from Matthew Carver’s The Responsive Web »](https://learning.oreilly.com/library/view/the-responsive-web/9781617291241/)
 
 Your task for this deliverable is to create style tiles for your final project that help establish some styles you can use in upcoming deliverables.
 
