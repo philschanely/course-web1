@@ -4,7 +4,7 @@ title: "Introduction"
 number: 0
 cover: "https://source.unsplash.com/iar-afB0QQw"
 ---
-import { Subpage, Callout } from "../../course-components";
+import { Subpage, Callout } from "course-components";
 
 <Subpage slug="intro">
 
