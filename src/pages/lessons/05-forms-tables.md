@@ -4,7 +4,7 @@ type: lessons
 number: 5
 cover: "https://source.unsplash.com/PkbZahEG2Ng"
 ---
-import { Subpage, Callout } from "../../course-components";
+import { Subpage, Callout } from "course-components";
 
 <Subpage slug="collecting-info-with-forms">
 

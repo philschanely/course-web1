@@ -4,7 +4,7 @@ type: lessons
 number: 3
 cover: "https://source.unsplash.com/J90zM9OtBXY"
 ---
-import { Subpage, Callout } from "../../course-components";
+import { Subpage, Callout } from "course-components";
 
 <Subpage slug="hyperlinks">
 

@@ -4,7 +4,7 @@ type: lessons
 number: 9
 cover: "https://source.unsplash.com/tZc3vjPCk-Q"
 ---
-import { Subpage, Callout } from "../../course-components";
+import { Subpage, Callout } from "course-components";
 
 <Subpage slug="float-and-clear">
 

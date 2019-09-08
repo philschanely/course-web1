@@ -4,7 +4,7 @@ title: "Essential Content Markup"
 number: 2
 cover: "https://source.unsplash.com/ywqa9IZB-dU"
 ---
-import { Subpage, Callout } from "../../course-components";
+import { Subpage, Callout } from "course-components";
 
 <Subpage slug="intro-to-markup">
 

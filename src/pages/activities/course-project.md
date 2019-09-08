@@ -1,9 +1,9 @@
 ---
 type: activities
-title: Project Introduction and Resources
+title: Course Project
 cover: "https://source.unsplash.com/oBb-Y26PJgg"
 ---
-import Subpage from "../../components/subpage.js"
+import { Subpage, Callout } from "course-components";
 
 <Subpage slug="overall">
 
@@ -61,6 +61,12 @@ For your submission of this assignment:
 * If you are trying to decide between ideas and want feedback or direction, provide each idea along with what interests you about each.
 * Finally, be sure to include examples of articles and products you might include in the site according to the topic you’ve chosen. Ideally, include hyperlinks to the original articles or product pages.
 
+<Callout icon="flag-checkered" iconStyle="fa" color="tertiary" lead={true}>
+
+Submit your proposal in text form in the provided Assignment submission.
+
+</Callout>
+
 </Subpage>
 <Subpage slug="deliverable-2">
 
@@ -75,9 +81,13 @@ Watch this video demonstration:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/hoz93H8KwoY" frameborder="0" allowfullscreen></iframe>
 
-Complete this deliverable in your project space in Codio by the deadline indicated in the course schedule.
-
 As this is a relatively short deliverable please look ahead at Project Deliverable 3 and get started early.
+
+<Callout icon="flag-checkered" iconStyle="fa" color="tertiary" lead={true}>
+
+Complete this deliverable in Codio.
+
+</Callout>
 
 </Subpage>
 <Subpage slug="deliverable-3">
@@ -126,9 +136,13 @@ Watch this video demonstration for some tips on how to collect content and prepa
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/iMIbnULlsUw?list=PLuOViGmL7TfV9r1a7HdUBIulwVQFdBPwX" frameborder="0" allowfullscreen></iframe>
 
-#### Submission
+<Callout icon="flag-checkered" iconStyle="fa" color="tertiary" lead={true}>
 
-You do not need to attach any files for your submission of this assignment but instead simply indicate that you have completed this important step in the process.
+Submit the provided assignment to indicate you've finished this work.
+
+<small>You do not need to attach any files for your submission of this assignment but instead simply indicate that you have completed this important step in the process. You will add this content into Codio in future deliverables.</small>
+
+</Callout>
 
 </Subpage>
 <Subpage slug="deliverable-4">
@@ -154,7 +168,11 @@ Watch how to set up page templates and navigation:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/C3XGrLJnlrk" frameborder="0" allowfullscreen></iframe>
 
-Complete this deliverable in your project space in Codio by the deadline indicated in the course schedule.
+<Callout icon="flag-checkered" iconStyle="fa" color="tertiary" lead={true}>
+
+Complete this deliverable in your project space in Codio.
+
+</Callout>
 
 </Subpage>
 <Subpage slug="deliverable-5">
@@ -177,7 +195,11 @@ Watch a demonstration of how to create these list pages:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NtiQWOBstwg" frameborder="0" allowfullscreen></iframe>
 
-Complete this deliverable in your project space in Codio by the deadline indicated in the course schedule.
+<Callout icon="flag-checkered" iconStyle="fa" color="tertiary" lead={true}>
+
+Complete this deliverable in your project space in Codio.
+
+</Callout>
 
 </Subpage>
 <Subpage slug="deliverable-6">
@@ -200,7 +222,11 @@ Watch a demonstration of how to create these list pages:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/EWDCknjsEoE" frameborder="0" allowfullscreen></iframe>
 
-Complete this deliverable in your project space in Codio by the deadline indicated in the course schedule.
+<Callout icon="flag-checkered" iconStyle="fa" color="tertiary" lead={true}>
+
+Complete this deliverable in your project space in Codio.
+
+</Callout>
 
 </Subpage>
 <Subpage slug="deliverable-7">
@@ -209,7 +235,11 @@ Complete this deliverable in your project space in Codio by the deadline indicat
 
 In recent years, a trend has emerged to use “style tiles” as a way to present visual style ideas to a client and get feedback before spending the time and energy to build out the whole site as design comps.
 
-***Read about [Style Tiles from Samantha Warren »](http://styletil.es/)***
+<Callout lead={true} color="secondary" icon="globe">
+
+Read about [Style Tiles from Samantha Warren »](http://styletil.es/)
+
+</Callout>
 
 For those interested in more details, [read a longer description from Matthew Carver’s The Responsive Web »](https://learning.oreilly.com/library/view/the-responsive-web/9781617291241/)
 
@@ -251,14 +281,22 @@ Watch this rough cut video demonstrating how to complete Style Tiles and sync th
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/64Ms38kB7m8" frameborder="0" allowfullscreen></iframe>
 
-For your submission of this assignment just indicate that you are ready for the professor to review your work in InVision.
+<Callout icon="flag-checkered" iconStyle="fa" color="tertiary" lead={true}>
+
+Ensure your professor is a collaborator on your InVision project and submit the provided assignment to indicate you're ready for feedback.
+
+</Callout>
 
 </Subpage>
 <Subpage slug="deliverable-8">
 
 ### Deliverable 8 -- Design Comps
 
-**NOTE: Do not start on your design comps until you have feedback on your style tiles from the instructor. Otherwise you may be making changes you did not anticipate.**
+<Callout color="accent" icon="exclamation" iconStyle="fa" lead={true}>
+
+NOTE: Do not start on your design comps until you have feedback on your style tiles from the instructor. Otherwise you may be making changes you did not anticipate.
+
+</Callout>
 
 Now that you have some sense of visual style based on the approved style tiles from the last deliverable, its time to design the pages of your site. Complete the following steps:
 
@@ -272,7 +310,11 @@ Now that you have some sense of visual style based on the approved style tiles f
 8. When ready, use the Craft plugin in Sketch to link to your InVision Account and sync your work with the project in InVision. If you are unable to use Craft you can also export your art boards as PNG files and upload them directly into your project in InVision.
 9. Switch to InVision and set up hotspots on each page in order to simulate user navigation between pages.
 
-For your submission of this assignment just indicate that you are ready for the professor to review your work in InVision.
+<Callout icon="flag-checkered" iconStyle="fa" color="tertiary" lead={true}>
+
+Ensure your professor is a collaborator on your InVision project and submit the provided assignment to indicate you're ready for feedback.
+
+</Callout>
 
 </Subpage>
 <Subpage slug="deliverable-9">
@@ -289,7 +331,11 @@ Watch this demonstration of the tasks involved in this deliverable:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/uqt7TbbtWjE" frameborder="0" allowfullscreen></iframe>
 
-Complete this deliverable in your project space in Codio by the deadline indicated in the course schedule.
+<Callout icon="flag-checkered" iconStyle="fa" color="tertiary" lead={true}>
+
+Complete this deliverable in your project space in Codio.
+
+</Callout>
 
 </Subpage>
 <Subpage slug="deliverable-10">
@@ -300,7 +346,11 @@ Apply what you've learned about the box model and basic layout techniques to bui
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/NBdQGgTRpPA" frameborder="0" allowfullscreen></iframe>
 
-Complete this deliverable in your project space in Codio by the deadline indicated in the course schedule.
+<Callout icon="flag-checkered" iconStyle="fa" color="tertiary" lead={true}>
+
+Complete this deliverable in your project space in Codio.
+
+</Callout>
 
 </Subpage>
 <Subpage slug="final">
@@ -316,6 +366,10 @@ Based on your design comps from previous deliverables and the discussion of Layo
 
 Make final adjustments to your project to ensure each page looks clean, intentional, and appropriately matches your design comps.
 
-Complete this final deliverable in your project space in Codio by the deadline indicated in the course schedule.
+<Callout icon="flag-checkered" iconStyle="fa" color="tertiary" lead={true}>
+
+Complete this deliverable in your project space in Codio.
+
+</Callout>
 
 </Subpage>
