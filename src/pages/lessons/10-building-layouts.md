@@ -4,7 +4,7 @@ type: lessons
 number: 10
 cover: "https://source.unsplash.com/RFDP7_80v5A"
 ---
-import { Subpage, Callout } from "../../course-components";
+import { Subpage, Callout } from "course-components";
 
 <Subpage slug="layout-analysis">
 

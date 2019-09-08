@@ -4,7 +4,7 @@ type: lessons
 number: 4
 cover: "https://source.unsplash.com/r6mBXuHnxBk"
 ---
-import { Subpage, Callout } from "../../course-components";
+import { Subpage, Callout } from "course-components";
 
 <Subpage slug="intro-to-organizers">
 

@@ -4,7 +4,7 @@ type: lessons
 number: 8
 cover: "https://source.unsplash.com/t32lrFimPlU"
 ---
-import { Subpage, Callout } from "../../course-components";
+import { Subpage, Callout } from "course-components";
 
 <Subpage slug="box-model">
 

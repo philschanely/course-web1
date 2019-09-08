@@ -3,7 +3,7 @@ type: activities
 title: Essays
 cover: "https://source.unsplash.com/UgA3Xvi3SkA"
 ---
-import Subpage from "../../components/subpage.js"
+import { Subpage } from "course-components";
 
 <Subpage slug="essay-1">
 

@@ -1,9 +1,9 @@
 ---
 type: activities
-title: Project Introduction and Resources
+title: Course Project
 cover: "https://source.unsplash.com/oBb-Y26PJgg"
 ---
-import Subpage from "../../components/subpage.js"
+import { Subpage, Callout } from "course-components";
 
 <Subpage slug="overall">
 
@@ -209,7 +209,11 @@ Complete this deliverable in your project space in Codio by the deadline indicat
 
 In recent years, a trend has emerged to use “style tiles” as a way to present visual style ideas to a client and get feedback before spending the time and energy to build out the whole site as design comps.
 
-***Read about [Style Tiles from Samantha Warren »](http://styletil.es/)***
+<Callout lead={true} color="secondary" icon="globe">
+
+Read about [Style Tiles from Samantha Warren »](http://styletil.es/)
+
+</Callout>
 
 For those interested in more details, [read a longer description from Matthew Carver’s The Responsive Web »](https://learning.oreilly.com/library/view/the-responsive-web/9781617291241/)
 
@@ -258,7 +262,11 @@ For your submission of this assignment just indicate that you are ready for the 
 
 ### Deliverable 8 -- Design Comps
 
-**NOTE: Do not start on your design comps until you have feedback on your style tiles from the instructor. Otherwise you may be making changes you did not anticipate.**
+<Callout color="accent" icon="exclamation" iconStyle="fa">
+
+NOTE: Do not start on your design comps until you have feedback on your style tiles from the instructor. Otherwise you may be making changes you did not anticipate.
+
+</Callout>
 
 Now that you have some sense of visual style based on the approved style tiles from the last deliverable, its time to design the pages of your site. Complete the following steps:
 
