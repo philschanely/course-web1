@@ -82,10 +82,10 @@ What kind of overall structure could this page have? Allow me to suggest a struc
                 </ul>
             </nav>
         </header>
-        <section id="site-content">
+        <main id="site-content">
             <h2>[Page name]</h2>
             [Miscellaneous content; markup will vary based on site]
-        </section>
+        </main>
         <footer id="site-info">
             [Miscellaneous footer content; markup will vary based on site]
         </footer>
@@ -258,6 +258,35 @@ Another example on a smaller scale is a product list, where several pieces of in
     </li>
 </ul>
 ```
+
+</Subpage>
+<Subpage slug="navigation">
+
+### Navigation Structure
+
+Having identified our basic grouping elements and addressed the fact that lists make great groupers, now is a good time to call out a very common structure for site navigation.
+
+<Callout number="4.6" term="Site navigation..." color="alternate">
+
+...(the persistent navigation at the top of most pages in the site) is often created using a `<nav>` element that contains a list of hyperlinks that point to the main pages or sections of the site.
+
+</Callout>
+
+Here is what a standard navigation looks like:
+
+```html
+<nav class="nav-main">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="products/index.html">Products</a></li>
+    <li><a href="news/index.html">News</a></li>
+    <li><a href="contact.html">Contact Us</a></li>
+  </ul>
+</nav>
+```
+
+While the page names and paths will differ from one site to the next, this structure is a common and semantic structure to implement in most sites.
 
 </Subpage>
 <Subpage slug="study-tools">
