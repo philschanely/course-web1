@@ -146,6 +146,14 @@ So while we can simply place a font on our server and link to it in our style sh
 
 Specifying our own custom fonts requires understanding licensing and ensuring we have all the proper formats and correct syntax in our `@font-face` declarations. More than a few have found this challenging. Thankfully, some great work is being done at Google to make open license fonts easier to use. Visit [fonts.google.com](http://fonts.google.com) to browse a large library of fonts, many of which can be downloaded and installed during your design phase, or linked into your website.
 
+#### Installing Fonts to Use in mockups
+
+In order to work with fonts you find on Google Fonts from within a Sketch mockup file, you must first download and install the fonts. Watch this video overview of how to download and install fonts to use in a Sketch Mockup.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Ihd1hrM07ok" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+#### Using the Google Fonts API in a Site
+
 Here is a suggested process for choosing and using fonts from this service:
 
 1. Visit [fonts.google.com](http://fonts.google.com).
@@ -160,6 +168,8 @@ Here is a suggested process for choosing and using fonts from this service:
 While the library may be somewhat limited, there are still a large number of quality fonts. You will find this much easier to use while you're getting used to web design early on.
 
 *NOTE:* There are many sites and options for obtaining free web fonts such as fontsquirrel.com and fonts.com. There are also excellent paid services for delivering high quality fonts to a website such as [Adobe Typekit](https://typekit.com/) and [fonts.com](https://www.fonts.com/web-fonts). These services might appear to cost an arm and a leg, but better typography means a better web and ensures appropriate pay for the hard work that goes into designing a nice font.
+
+
 
 </Subpage>
 <Subpage slug="matching-font-sizes">
