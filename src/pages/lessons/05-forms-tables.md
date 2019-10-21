@@ -31,7 +31,7 @@ Read Ch. 7 from Duckett.
 
 <Callout number="5.2" term="Semantic markup with forms..." color="alternate">
 
-is often accomplished through tasteful use of lists lists.
+is often accomplished through tasteful use of lists.
 
 </Callout>
 
