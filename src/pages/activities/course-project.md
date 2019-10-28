@@ -214,9 +214,8 @@ Follow these steps:
 2. Add your About page content into `about.html`.
 3. In the `articles` folder add the content for each article to the correct page as you planned earlier in the course.
 4. Repeat this process for each of the pages in the `products` folder as well.
-5. Finally, add the content you wrote for your “about” page in the root folder.
-6. Test all of these pages in a browser to ensure things look as they should. Troubleshoot as needed.
-7. Check your full site in a browser to ensure the links are all working. At this point you should have a fully function website, even if it is a little bland and unstyled.
+5. Test all of these pages in a browser to ensure things look as they should. Troubleshoot as needed.
+6. Check your full site in a browser to ensure the links are all working. At this point you should have a fully function website, even if it is a little bland and unstyled.
 
 Watch a demonstration of how to create these list pages:
 
