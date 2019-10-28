@@ -22,7 +22,7 @@ We'll read more about working with type on the web when we read from the Miller 
 
 <Callout lead={true} color="secondary">
 
-Read pp. 264–270, 273–276, and 279–288 in Ch. 12<br/>
+Read pp. 264–270, 273–276, and 279–288 in Ch. 12
 and pp. 330–340 in Ch. 14 of Duckett.
 
 </Callout>
@@ -218,7 +218,7 @@ Finally, as we think about designing our own mockups we can finish off chapters 
 
 <Callout lead={true} color="secondary">
 
-Read pp.158–177 in Ch. 5 of Miller<br/>
+Read pp.158–177 in Ch. 5 of Miller
 and pp.138–145 in Ch. 4 of Miller.
 
 </Callout>
