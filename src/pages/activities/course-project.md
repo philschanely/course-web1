@@ -282,7 +282,7 @@ Watch this rough cut video demonstrating how to complete Style Tiles and sync th
 
 <Callout icon="flag-checkered" iconStyle="fa" color="tertiary" lead={true}>
 
-Ensure your professor is a collaborator on your InVision project and submit the provided assignment to indicate you're ready for feedback.
+Ensure your professor is a collaborator on your InVision project in order for this deliverable to count as completed and to receive feedback.
 
 </Callout>
 
@@ -311,7 +311,7 @@ Now that you have some sense of visual style based on the approved style tiles f
 
 <Callout icon="flag-checkered" iconStyle="fa" color="tertiary" lead={true}>
 
-Ensure your professor is a collaborator on your InVision project and submit the provided assignment to indicate you're ready for feedback.
+Ensure your professor is a collaborator on your InVision project in order for this deliverable to count as completed and to receive feedback.
 
 </Callout>
 
