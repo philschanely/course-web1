@@ -41,7 +41,7 @@ Watch this video that introduces the project wireframes and the sample site:
 
 ### Resources
 
-* View the [professor's example prototype in InVision &raquo;](https://invis.io/BE9ONJ6VF#/210649118_Home)
+* View the [professor's example prototype site in InVision &raquo;](https://invis.io/BE9ONJ6VF#/210649118_Home)
 * Download the [sitemap template](/docs/project-sitemap.pdf)
 * Download the [style tiles](/docs/style-tile-template.sketch) starter file for Sketch (used in PD7)
 * Download the [wireframe](/docs/project-wireframe.sketch) starter file for Sketch (used throughout, and built out as a design comp in PD8).
@@ -153,7 +153,7 @@ For this deliverable you will add branding, navigation, footer, and overall orga
 
 Follow these instructions:
 
-1. Review the interactive sample site provided for the finished site project provided in the course website. Note the overall organization of the site, particularly the branding, navigation, and footer.
+1. Review the [professor's example prototype site in InVision](https://invis.io/BE9ONJ6VF#/210649118_Home). Note the overall organization of the site, particularly the branding, navigation, and footer.
 2. In Codio, open your root home page. In it, add the markup that you need in order to create the necessary structure for the site using the organizing tags you learned about in Lesson 4.
     * This should go directly inside the `<body>` tag.
     * You will need to create hyperlinks in the navigation list that correctly point to the corresponding pages of your site.
