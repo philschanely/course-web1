@@ -146,11 +146,7 @@ So while we can simply place a font on our server and link to it in our style sh
 
 Specifying our own custom fonts requires understanding licensing and ensuring we have all the proper formats and correct syntax in our `@font-face` declarations. More than a few have found this challenging. Thankfully, some great work is being done at Google to make open license fonts easier to use. Visit [fonts.google.com](http://fonts.google.com) to browse a large library of fonts, many of which can be downloaded and installed during your design phase, or linked into your website.
 
-#### Installing Fonts to Use in mockups
-
-In order to work with fonts you find on Google Fonts from within a Sketch mockup file, you must first download and install the fonts. Watch this video overview of how to download and install fonts to use in a Sketch Mockup.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Ihd1hrM07ok" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+In order to work with fonts you find on Google Fonts from within a Figma mockup file, you must first download and install the fonts. A video a little later in this lesson will demonstrate this process.
 
 #### Using the Google Fonts API in a Site
 
@@ -160,7 +156,7 @@ Here is a suggested process for choosing and using fonts from this service:
 2. Search for fonts that might work for your design and click the plus icon for any such font to add it to a collection.
 3. Find the Collection panel in the lower portion of the screen and click "arrow" icon in the upper right to see all your fonts side-by-side.
 4. Back in the Collection panel for more options for using fonts:
-  * Click the "download" icon in the upper right to download the fonts in your collection. Install them on your system (using Font Book on a Mac) in order to use them in design software such as Sketch.
+  * Click the "download" icon in the upper right to download the fonts in your collection. Install them on your system (using Font Book on a Mac) in order to use them in design software such as Figma.
   * On the "Customize" tab you can select specific weights and styles for reach font you'd like to use in a website. Note these weights as well for use in the `font-weight` CSS setting.
   * On the "Embed" tab you can use either the "Standard" `<link>` tag to link to your styles as external stylesheets from an HTML document. I prefer to switch to the `@import` option and place the `@import url...` bit directly into a stylesheet.
   * With a Google Fonts stylesheet linked you can then use the provided settings under "Specify in CSS" to set an element to a particular font.
@@ -184,14 +180,14 @@ While the library may be somewhat limited, there are still a large number of qua
 
 In CSS we strongly prefer using the flexible `em` unit. However, browsers now support an even better unit called `rem`. Where `em` units were sized relative to the closest parent element, `rem` sizes based on the *root* size.
 
-But if you are working from a design comp in software such as Sketch you will likely be using points or pixels for fonts. Converting to `em`s can be a bit of a pain, unless you use this little trick:
+But if you are working from a design comp in software such as Figma you will likely be using points or pixels for fonts. Converting to `em`s can be a bit of a pain, unless you use this little trick:
 
 * Set the `font-size` on `html`, the root element, to `10px`.
 * Set the `font-size` for elements using the `rem` unit to the font size in your comp divided by 10. So a font size of `14pt` in your comp would be set to `1.4rem` in your CSS; just move the decimal one digit to the left.
 
 Watch this demonstration of how to create content styles based on all we've discussed so far in this lesson:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/6HsP6uCJ4gA" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/H0TZDDqhRO0" frameborder="0" allowfullscreen></iframe>
 
 </Subpage>
 <Subpage slug="grids-and-layout-design">
@@ -250,3 +246,6 @@ Prepare answers to the following questions as you study for the exam covering th
 * Describe the elements of scale, depth and dimension, animation, variability, modularity, and background in relation to web design.  
 
 </Subpage>
+
+[old-google-fonts]: https://www.youtube.com/embed/Ihd1hrM07ok
+[old-styling-content]: https://www.youtube.com/embed/6HsP6uCJ4gA
