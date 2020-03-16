@@ -272,7 +272,7 @@ JPEG and PNG are great image types for the web, depending on whether or not you 
 
 </Callout>
 
-Later in the course we'll talk more about the process by which we export images or "slices" from a design comp in Sketch which we call "slicing." As you learned about several image formats in the Duckett text, let me suggest a quick process you can walk through when choosing image types:
+Later in the course we'll talk more about the process by which we export images or "slices" from a design comp in Figma which we call "slicing." As you learned about several image formats in the Duckett text, let me suggest a quick process you can walk through when choosing image types:
 
 * Does the image require transparency?
     * If yes, does the image require either smooth colors such as in photography or gradients, or smooth transparency where some pixels are semitransparent?

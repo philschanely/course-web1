@@ -30,7 +30,7 @@ The final submission will fulfill the following requirements:
 * It will contain a single “images” folder placed directly in the “site” folder containing any images used in the site. These may be further organized in subfolders as needed. Each must be prepared in the most appropriate file format.
 * All final design assets will be prepared in Fireworks (or other software as approved by the instructor) and organized in a separate “artwork” folder.
 
-In the first 5 lessons of the course we'll build an HTML-only but fully functional prototype of the site. In the last five lessons we'll design our site using Sketch and then build out the styles and layout using CSS.
+In the first 5 lessons of the course we'll build an HTML-only but fully functional prototype of the site. In the last five lessons we'll design our site using Figma and then build out the styles and layout using CSS.
 
 Watch this video that introduces the project wireframes and the sample site:
 
@@ -41,10 +41,10 @@ Watch this video that introduces the project wireframes and the sample site:
 
 ### Resources
 
-* View the [professor's example prototype site in InVision &raquo;](https://invis.io/BE9ONJ6VF#/210649118_Home)
+* View the [professor's example prototype site &raquo;](https://www.figma.com/proto/u4JjTCl9VP2re8g4uxTamt/Demo-Course-Project-May-the-Bricks?node-id=0%3A2&viewport=1434%2C175%2C0.3787182569503784)
 * Download the [sitemap template](/docs/project-sitemap.pdf)
-* Download the [style tiles](/docs/style-tile-template.sketch) starter file for Sketch (used in PD7)
-* Download the [wireframe](/docs/project-wireframe.sketch) starter file for Sketch (used throughout, and built out as a design comp in PD8).
+* Download the [style tiles](/docs/style-tile-template.fig) starter file for Figma (used in PD7)
+* Download the [wireframe](/docs/starter.fig) starter file for Figma (used throughout, and built out as a design comp in PD8).
 
 </Subpage>
 <Subpage slug="deliverable-1">
@@ -128,7 +128,7 @@ As mentioned before, we typically would not download and use other people’s im
 
 #### Image processing
 
-You should also resize and/or crop any images you plan to use in the website based on the sizes you see in the provided wireframe file. This is your first chance to lear a bit about working with Sketch so be sure you've completed the Sketch tutorials provided in the Support section of the site and that you've identified where and when you'll use Sketch in the labs or on your own computer.
+You should also resize and/or crop any images you plan to use in the website based on the sizes you see in the provided wireframe file. This is your first chance to lear a bit about working with Figma so be sure you've completed the Figma tutorials provided in the Support section of the site and that you've identified where and when you'll use Figma in the labs or on your own computer.
 
 #### Demonstration
 
@@ -153,7 +153,7 @@ For this deliverable you will add branding, navigation, footer, and overall orga
 
 Follow these instructions:
 
-1. Review the [professor's example prototype site in InVision](https://invis.io/BE9ONJ6VF#/210649118_Home). Note the overall organization of the site, particularly the branding, navigation, and footer.
+1. Review the [professor's example prototype site &raquo;](https://www.figma.com/proto/u4JjTCl9VP2re8g4uxTamt/Demo-Course-Project-May-the-Bricks?node-id=0%3A2&viewport=1434%2C175%2C0.3787182569503784). Note the overall organization of the site, particularly the branding, navigation, and footer.
 2. In Codio, open your root home page. In it, add the markup that you need in order to create the necessary structure for the site using the organizing tags you learned about in Lesson 4.
     * This should go directly inside the `<body>` tag.
     * You will need to create hyperlinks in the navigation list that correctly point to the corresponding pages of your site.
@@ -262,8 +262,8 @@ Your task for this deliverable is to create style tiles for your final project t
 
     It is OK to use original images you found for the articles and products. However if you need new images or have other ideas you can search stock photography sites such as dreamstime.com, istockphoto.com, other such sites. [GraphicStock](http://graphicstock.com/authorize) provides free hi-resolutions downloads when you access this link from on campus.
 
-2. Download this [style tile template](/docs/style-tile-template.sketch) for Sketch that has a smaller set of elements to mock up than the style tiles you might have seen at Samantha Warren's site.
-3. Create **at least two style tiles** for your project site as two art boards in the same Sketch document. Use the following as a guide for using this template:
+2. Download this [style tile template](/docs/style-tile-template.fig) for Figma that has a smaller set of elements to mock up than the style tiles you might have seen at Samantha Warren's site.
+3. Create **at least two style tiles** for your project site as two art boards in the same Figma document. Use the following as a guide for using this template:
     * Start by adding imagery for your site in the provided space for imagery. This could be samples of products, cover images from articles, or other imagery that you think represents the style/feel you're going for.
     * Use the color panels to choose colors. Use the labels below each panel as a *guide* for what each color should represent in the site but feel free to modify this baseline as you need. *Remove any panels or labels that you are not using.*
     * Use the fonts you've researched, downloaded, and installed from Google Fonts to add sample styles. Move the elements up and down as needed in order to simulate the spacing around each element. In the paragraph and list item blocks, be sure to play around with the leading and space between blocks using the controls on the properties panel.
@@ -274,7 +274,7 @@ Your task for this deliverable is to create style tiles for your final project t
 
 Next create a desktop-based project in InVision using the account you set up earlier in the course. *Be sure to add your professor as a collaborator on the project.*
 
-Finally use the Craft plugin in Sketch to connect to your InVision account. Sync these two style tiles art boards to InVision. You do not need to link them together in InVision in any way; your professor will simply find them in your project.
+Finally use the Craft plugin in Figma to connect to your InVision account. Sync these two style tiles art boards to InVision. You do not need to link them together in InVision in any way; your professor will simply find them in your project.
 
 Watch this rough cut video demonstrating how to complete Style Tiles and sync them to InVision:
 
@@ -299,14 +299,14 @@ NOTE: Do not start on your design comps until you have feedback on your style ti
 
 Now that you have some sense of visual style based on the approved style tiles from the last deliverable, its time to design the pages of your site. Complete the following steps:
 
-1. Download the [provided Sketch wireframe](/docs/project-wireframe.sketch) as a starting point for your work.
+1. Download the [provided Figma wireframe](/docs/starter.fig) as a starting point for your work.
 2. Beginning with the home page, design the masthead and footer areas as well as the overall background/frame of your page.
 3. Duplicate these elements into the other pages of the site and finesse the content areas so that the whole layout is unified and appealing.
 4. Add imagery in place of the temporary grey boxes, cropping and resizing your images as needed in order to fit the context and sizes provided in the wireframe.
 5. Edit the content in the provided files to include actual content from these pages of your site.
 6. Add variety and visual interest to the pages while also ensuring you maintain unity in the layout and site overall.
 7. Review the [InVision 101 tutorials](https://projects.invisionapp.com/d/main#/learn) for more information on how to set up projects and interactive prototypes in InVision.
-8. When ready, use the Craft plugin in Sketch to link to your InVision Account and sync your work with the project in InVision. If you are unable to use Craft you can also export your art boards as PNG files and upload them directly into your project in InVision.
+8. When ready, use the Craft plugin in Figma to link to your InVision Account and sync your work with the project in InVision. If you are unable to use Craft you can also export your art boards as PNG files and upload them directly into your project in InVision.
 9. Switch to InVision and set up hotspots on each page in order to simulate user navigation between pages.
 
 <Callout icon="flag-checkered" iconStyle="fa" color="tertiary" lead={true}>
