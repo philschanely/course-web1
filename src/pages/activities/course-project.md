@@ -269,6 +269,10 @@ Your task for this deliverable is to create style tiles for your final project t
     * Duplicate the entire existing "Style Tile" frame (artboard) to create your second style tile set and make changes to *ensure the second style tile is distinctly different from your first one*.
     * Name your two art boards logically, "Styles A" and "Styles B" or something very similar.
 
+Watch this demonstration of the tasks involved in this deliverable:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HPXyLMzQynA" frameborder="0" allowfullscreen></iframe>
+
 <Callout icon="flag-checkered" iconStyle="fa" color="tertiary" lead={true}>
 
 Submit the provided assignment to indicate you've finished this work.
